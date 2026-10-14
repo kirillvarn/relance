@@ -1,0 +1,14 @@
+{
+ "addr": "004d9980",
+ "name": "GetStatePtr",
+ "size": 4,
+ "signature": "uchar * GetStatePtr(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [
+  "004d75e0",
+  "005b2f50"
+ ],
+ "bytes": "8d4104c3"
+}

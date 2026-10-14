@@ -1,0 +1,14 @@
+{
+ "addr": "005b735c",
+ "name": "~CDPMsgList",
+ "size": 6,
+ "signature": "void ~CDPMsgList(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "005b8a10",
+  "005b8a1b"
+ ],
+ "bytes": "ff25506d5c00"
+}

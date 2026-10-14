@@ -1,0 +1,6 @@
+; Import definitions for the original DACOM.dll (only symbols the ported
+; DLLs link against). Used to generate dacom.lib for the Win32 drop-in build.
+LIBRARY DACOM.dll
+EXPORTS
+    DACOM_Acquire
+    FDUMP DATA

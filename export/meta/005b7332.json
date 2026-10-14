@@ -1,0 +1,13 @@
+{
+ "addr": "005b7332",
+ "name": "CheckForSync",
+ "size": 6,
+ "signature": "bool CheckForSync(Vector * param_1, Vector * param_2, Quaternion * param_3)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "00541580"
+ ],
+ "bytes": "ff25946a5c00"
+}

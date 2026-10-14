@@ -1,0 +1,11 @@
+{
+ "addr": "0041c190",
+ "name": "IDPMsgHandler",
+ "size": 11,
+ "signature": "undefined IDPMsgHandler(IDPMsgHandler * param_1)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8bc1c70058935c00c20400"
+}

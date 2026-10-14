@@ -1,0 +1,1135 @@
+slot	init_fn	kind	target_globals	detail	atexit_dtor	constructs	evidence
+0060f004	00401000	const_copy	0061645c	= 0xbf19999a (-0.6, from .rdata 005c732c)	-	float/dword constant copy (static const from .rdata)	
+0060f008	00401010	const_copy	00616458	= 0xbf19999a (-0.6, from .rdata 005c732c)	-	float/dword constant copy (static const from .rdata)	
+0060f00c	00401020	const_copy	00616454	= 0x3f19999a (0.6, from .rdata 005c7330)	-	float/dword constant copy (static const from .rdata)	
+0060f010	00401030	object_ctor	00616440	ctor=FUN_004706b0 args=	00401060	std::map/set (MSVC6 _Tree, node 0x1c => value_type 0xc bytes)	ctor FUN_004706b0(this=00616440): node=new(0x1c) {left,parent,right,value@0xc,color@0x18,isnil@0x19}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 00401060 -> 0x401070
+0060f014	00401ea0	const_copy	0061646c	= 0xbf19999a (-0.6, from .rdata 005c7404)	-	float/dword constant copy (static const from .rdata)	
+0060f018	00401eb0	const_copy	00616468	= 0xbf19999a (-0.6, from .rdata 005c7404)	-	float/dword constant copy (static const from .rdata)	
+0060f01c	00401ec0	const_copy	00616464	= 0x3f19999a (0.6, from .rdata 005c7408)	-	float/dword constant copy (static const from .rdata)	
+0060f020	00402bf0	scalar_init	00616490	imm=0 reads=	-		
+0060f024	00402c00	scalar_init	0061648c	imm=ffffffff reads=	-		
+0060f028	00402c10	object_ctor	00616478	ctor=FUN_00404dd0 args=	00402c40	std::map/set (MSVC6 _Tree, node 0x48 => value_type 0x38 bytes)	ctor FUN_00404dd0(this=00616478): node=new(0x48) {left,parent,right,value@0xc,color@0x44,isnil@0x45}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 00402c40 -> 0x402c50
+0060f02c	00402d20	scalar_init	00616474	imm= reads=00616490	-		
+0060f030	004068a0	const_copy	006164ac	= 0xbf19999a (-0.6, from .rdata 005c7728)	-	float/dword constant copy (static const from .rdata)	
+0060f034	004068b0	const_copy	006164a8	= 0xbf19999a (-0.6, from .rdata 005c7728)	-	float/dword constant copy (static const from .rdata)	
+0060f038	004068c0	const_copy	006164a4	= 0x3f19999a (0.6, from .rdata 005c772c)	-	float/dword constant copy (static const from .rdata)	
+0060f03c	0040d2b0	scalar_init	006164a0	imm=5c845c reads=	-		
+0060f040	0040e220	const_copy	006164cc	= 0xbf19999a (-0.6, from .rdata 005c8460)	-	float/dword constant copy (static const from .rdata)	
+0060f044	0040e230	const_copy	006164c8	= 0xbf19999a (-0.6, from .rdata 005c8460)	-	float/dword constant copy (static const from .rdata)	
+0060f048	0040e240	const_copy	006164c4	= 0x3f19999a (0.6, from .rdata 005c8464)	-	float/dword constant copy (static const from .rdata)	
+0060f04c	0040e9c0	object_ctor	006164b0	ctor=FUN_004c5a10 args=	0040e9f0	std::map/set (MSVC6 _Tree, node 0x18 => value_type 0x8 bytes)	ctor FUN_004c5a10(this=006164b0): node=new(0x18) {left,parent,right,value@0xc,color@0x14,isnil@0x15}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 0040e9f0 -> 0x40ea00
+0060f050	00410100	const_copy	006164d4	= 0x447a0000 (1000, from .rdata 005c890c)	-	float/dword constant copy (static const from .rdata)	
+0060f054	00410120	const_copy	006164d0	= 0x469c4000 (20000, from .rdata 005c8910)	-	float/dword constant copy (static const from .rdata)	
+0060f058	004101c0	scalar_init	006164e0,006164e4,006164e8	imm= reads=	-		
+0060f05c	00411f90	const_copy	0061650c	= 0x3f800000 (1, from .rdata 005c8b64)	-	float/dword constant copy (static const from .rdata)	
+0060f060	00411fa0	const_copy	00616508	= 0x0 (0, from .rdata 005c89b8)	-	float/dword constant copy (static const from .rdata)	
+0060f064	00411fc0	scalar_init	006164fc,00616500,00616504	imm=0,0,0 reads=	-		
+0060f068	00411fe0	scalar_init	006164f0,006164f4,006164f8	imm= reads=006164fc,00616500,00616504	-		
+0060f06c	004125d0	const_copy	00616690	= 0xbf19999a (-0.6, from .rdata 005c8bb0)	-	float/dword constant copy (static const from .rdata)	
+0060f070	004125e0	const_copy	0061668c	= 0xbf19999a (-0.6, from .rdata 005c8bb0)	-	float/dword constant copy (static const from .rdata)	
+0060f074	004125f0	const_copy	00616688	= 0x3f19999a (0.6, from .rdata 005c8bb4)	-	float/dword constant copy (static const from .rdata)	
+0060f078	00412600	scalar_init	00616684	imm=0 reads=	-		
+0060f07c	00412610	scalar_init	00616680	imm=ffffffff reads=	-		
+0060f080	00412620	scalar_init	00616677,00616676,00616675,00616674,0061667c,00616678	imm=0,0 reads=	-		
+0060f084	00412650	crc32_id	00616670	= DACOM_CRC::GetCRC32("font")	-	uint = GetCRC32(name)	
+0060f088	00412780	object_ctor	00616640	ctor=FUN_004127a0 args=	004127c0	std::vector<T> + extra dword (0x14 bytes: alloc,first,last,end,+0x10=0)	ctor FUN_004127a0 zeroes +4..+0x10; dtor 004127c0 -> jmp 004de730 (operator delete(first), zero first/last/end = vector<POD> dtor); user 004152e0
+0060f08c	00413540	object_ctor	00616638,0061663c,00616638	ctor=wcslen+realloc args="-"	004135e0	wide-string buffer {wchar_t* ptr; uint cap} = L"-.0123456789MK%/"	init 00413540 malloc/realloc+wcsncpy of L"-.0123456789MK%/" into 00616638 (cap at 0061663c); registers atexit 004135e0 = free(ptr) (tsv atexit column '-' is wrong); guess: allowed-chars filter for numeric text entry; user 00414070
+0060f090	00413610	object_ctor	00616524	ctor=FUN_004c5a10 args=	00413640	std::map/set (MSVC6 _Tree, node 0x18 => value_type 0x8 bytes)	ctor FUN_004c5a10(this=00616524): node=new(0x18) {left,parent,right,value@0xc,color@0x14,isnil@0x15}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 00413640 -> 0x413650
+0060f094	004163e0	object_ctor	00616518,0061651c,00616520	ctor=FUN_005b7e84 args= ptrs=00000178	00416420	std::list<T> (head node 0x178 => value 0x170 bytes)	init 004163e0: alloc byte 00616518, head=new(0x178) self-linked at 0061651c, size 00616520=0; atexit 00416420 walks/frees nodes; element dtor 0x416490 called per node
+0060f098	00419050	object_ctor	0061669c,006166a0,006166a4	ctor=FUN_005b7e84 args= ptrs=00000038	00419090	std::list<T> (head node 0x38 => value 0x30 bytes)	init 00419050: alloc byte 0061669c, head=new(0x38) self-linked at 006166a0, size 006166a4=0; atexit 00419090 walks/frees nodes; element dtor 0x419100 called per node
+0060f09c	0041a5a0	const_copy	006166cc	= 0xbf19999a (-0.6, from .rdata 005c9024)	-	float/dword constant copy (static const from .rdata)	
+0060f0a0	0041a5b0	const_copy	006166c8	= 0xbf19999a (-0.6, from .rdata 005c9024)	-	float/dword constant copy (static const from .rdata)	
+0060f0a4	0041a5c0	const_copy	006166c4	= 0x3f19999a (0.6, from .rdata 005c9028)	-	float/dword constant copy (static const from .rdata)	
+0060f0a8	0041a610	scalar_init	006166bc,006166c0	imm=5c9230,1 reads=	-		
+0060f0ac	0041a830	const_copy	0061670c	= 0xbf19999a (-0.6, from .rdata 005c9278)	-	float/dword constant copy (static const from .rdata)	
+0060f0b0	0041a840	const_copy	00616708	= 0xbf19999a (-0.6, from .rdata 005c9278)	-	float/dword constant copy (static const from .rdata)	
+0060f0b4	0041a850	const_copy	00616704	= 0x3f19999a (0.6, from .rdata 005c927c)	-	float/dword constant copy (static const from .rdata)	
+0060f0b8	0041a860	object_ctor	-	ctor=InitializeCriticalSection args= ptrs=006166ec	0041a880	CRITICAL_SECTION	InitializeCriticalSection(&006166ec); atexit 0041a880 -> DeleteCriticalSection (IAT 005c6eec)
+0060f0bc	0041a890	object_ctor	006166d8	ctor=FUN_0041b310 args=	0041a8c0	std::map/set (MSVC6 _Tree, node 0x28 => value_type 0x18 bytes)	ctor FUN_0041b310(this=006166d8): node=new(0x28) {left,parent,right,value@0xc,color@0x24,isnil@0x25}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 0041a8c0 -> 0x41a8d0
+0060f0c0	0041be40	const_copy	0061671c	= 0xbf19999a (-0.6, from .rdata 005c932c)	-	float/dword constant copy (static const from .rdata)	
+0060f0c4	0041be50	const_copy	00616718	= 0xbf19999a (-0.6, from .rdata 005c932c)	-	float/dword constant copy (static const from .rdata)	
+0060f0c8	0041be60	const_copy	00616714	= 0x3f19999a (0.6, from .rdata 005c9330)	-	float/dword constant copy (static const from .rdata)	
+0060f0cc	0041d8d0	const_copy	00616838	= 0xbf19999a (-0.6, from .rdata 005c94d8)	-	float/dword constant copy (static const from .rdata)	
+0060f0d0	0041d8e0	const_copy	00616834	= 0xbf19999a (-0.6, from .rdata 005c94d8)	-	float/dword constant copy (static const from .rdata)	
+0060f0d4	0041d8f0	const_copy	00616830	= 0x3f19999a (0.6, from .rdata 005c94dc)	-	float/dword constant copy (static const from .rdata)	
+0060f0d8	0041d900	object_ctor	0061682d	ctor= args=	-	PerfOption registration 'mouse_speed' (heap obj 0x1c bytes, vtable 005c94e4)	init 0041d900: new(0x1c){vtbl,name,id=0x5dd,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0061682d is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060f0dc	0041dc00	scalar_init	00616794,00616798	imm= reads=	-		
+0060f0e0	0041dc10	scalar_init	00616740	imm=0 reads=	-		
+0060f0e4	0041dc20	object_ctor	00616728	ctor=FUN_0041dd20 args=	0041dc40	std::map/set (MSVC6 _Tree, node 0x5c => value_type 0x4c bytes)	ctor FUN_0041dd20(this=00616728): node=new(0x5c) {left,parent,right,value@0xc,color@0x58,isnil@0x59}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10 (+0x14 cached head/begin); atexit 0041dc40 -> 0x41dc50
+0060f0e8	00420ce0	const_copy	0061686c	= 0xbf19999a (-0.6, from .rdata 005c9688)	-	float/dword constant copy (static const from .rdata)	
+0060f0ec	00420cf0	const_copy	00616868	= 0xbf19999a (-0.6, from .rdata 005c9688)	-	float/dword constant copy (static const from .rdata)	
+0060f0f0	00420d00	const_copy	00616864	= 0x3f19999a (0.6, from .rdata 005c968c)	-	float/dword constant copy (static const from .rdata)	
+0060f0f4	00421150	empty	-		-		
+0060f0f8	00421160	object_ctor	006648dc,006648fc,006648ec,006648dc,006648f8,006648f4,006648f0,006648e8,006648e4,006648e0,00664908,00664904,00664900,00616888,006168a4,006168a8,006168ac,006168b0,006168b4,006648bc,006648c0,00664908,00664904,00664900,006648b8,006648c4,006648c8,006648cc,006648d0,006648d4,006648d8,0066490c,00664928	ctor=FUN_004215b0 args=	00421280	guess: global render/transform state struct with inline ctor (identity 3x3 Matrix at 006648dc, zero Vector 00664900, consts 0x3000)	init 00421160 writes 1.0 to 006648dc/006648ec/006648fc (identity 3x3), zeros, 00616888=-1, 006168a4/006168b0=0x3000, calls FUN_004215b0 (=Matrix::identity 3x3 on hidden ecx); atexit 00421280 is bare 'ret' (empty dtor); users 004213d0/004221f0/00422690/00422950
+0060f0fc	00422b50	const_copy	006649bc	= 0xbf19999a (-0.6, from .rdata 005c97e8)	-	float/dword constant copy (static const from .rdata)	
+0060f100	00422b60	const_copy	006649b8	= 0xbf19999a (-0.6, from .rdata 005c97e8)	-	float/dword constant copy (static const from .rdata)	
+0060f104	00422b70	const_copy	006649b4	= 0x3f19999a (0.6, from .rdata 005c97ec)	-	float/dword constant copy (static const from .rdata)	
+0060f108	00422fb0	const_copy	006679d4	= 0xbf19999a (-0.6, from .rdata 005c97f0)	-	float/dword constant copy (static const from .rdata)	
+0060f10c	00422fc0	const_copy	006679d0	= 0xbf19999a (-0.6, from .rdata 005c97f0)	-	float/dword constant copy (static const from .rdata)	
+0060f110	00422fd0	const_copy	006679cc	= 0x3f19999a (0.6, from .rdata 005c97f4)	-	float/dword constant copy (static const from .rdata)	
+0060f114	004242b0	const_copy	006679e8	= 0xbf19999a (-0.6, from .rdata 005c9808)	-	float/dword constant copy (static const from .rdata)	
+0060f118	004242c0	const_copy	006679e4	= 0xbf19999a (-0.6, from .rdata 005c9808)	-	float/dword constant copy (static const from .rdata)	
+0060f11c	004242d0	const_copy	006679e0	= 0x3f19999a (0.6, from .rdata 005c980c)	-	float/dword constant copy (static const from .rdata)	
+0060f120	00424470	object_ctor	006679de	ctor= args=	-	PerfOption registration 'gamma_ramp' (heap obj 0x1c bytes, vtable 005c9814)	init 00424470: new(0x1c){vtbl,name,id=0x534,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 006679de is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060f124	004245c0	object_ctor	006679dd	ctor= args=	-	PerfOption registration 'DitherControl' (heap obj 0x1c bytes, vtable 005c9840)	init 004245c0: new(0x1c){vtbl,name,id=0x67f,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 006679dd is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060f128	00424660	object_ctor	006679dc	ctor= args=	-	PerfOption registration 'MipFilterControlCallback' (heap obj 0x1c bytes, vtable 005c9864)	init 00424660: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 006679dc is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060f12c	004252a0	const_copy	00667a08	= 0xbf19999a (-0.6, from .rdata 005c9954)	-	float/dword constant copy (static const from .rdata)	
+0060f130	004252b0	const_copy	00667a04	= 0xbf19999a (-0.6, from .rdata 005c9954)	-	float/dword constant copy (static const from .rdata)	
+0060f134	004252c0	const_copy	00667a00	= 0x3f19999a (0.6, from .rdata 005c9958)	-	float/dword constant copy (static const from .rdata)	
+0060f138	00427870	const_copy	00667c94	= 0xbf19999a (-0.6, from .rdata 005c9cd8)	-	float/dword constant copy (static const from .rdata)	
+0060f13c	00427880	const_copy	00667c90	= 0xbf19999a (-0.6, from .rdata 005c9cd8)	-	float/dword constant copy (static const from .rdata)	
+0060f140	00427890	const_copy	00667c8c	= 0x3f19999a (0.6, from .rdata 005c9cdc)	-	float/dword constant copy (static const from .rdata)	
+0060f144	004278a0	object_ctor	00667c6c,00667c70,00667c74	ctor=FUN_005b7e84 args= ptrs=0000000c	004278e0	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 004278a0: alloc byte 00667c6c, head=new(0xc) self-linked at 00667c70, size 00667c74=0; atexit 004278e0 walks/frees nodes; dtor frees nodes only (POD elements)
+0060f148	00428ef0	scalar_init	00667a44,00667a48,00667a4c,00667a50	imm=30,ffffffff reads=	-		
+0060f14c	00428f20	scalar_init	00667a34,00667a38,00667a3c,00667a40	imm=64,ffffffff reads=	-		
+0060f150	00428f50	scalar_init	00667a24,00667a28,00667a2c,00667a30	imm=40,ffffffff reads=	-		
+0060f154	00429020	scalar_init	00667c58	imm=7f7fffff reads=	-		
+0060f158	00429030	scalar_init	00667a20	imm= reads=00667c58	-		
+0060f15c	0042aa70	const_copy	00667ce0	= 0xbf19999a (-0.6, from .rdata 005ca358)	-	float/dword constant copy (static const from .rdata)	
+0060f160	0042aa80	const_copy	00667cdc	= 0xbf19999a (-0.6, from .rdata 005ca358)	-	float/dword constant copy (static const from .rdata)	
+0060f164	0042aa90	const_copy	00667cd8	= 0x3f19999a (0.6, from .rdata 005ca35c)	-	float/dword constant copy (static const from .rdata)	
+0060f168	0042aaa0	create_id	00667cd4	= CreateID("NONE")	-	uint ID = CreateID(name)	
+0060f16c	0042aac0	object_ctor	00667cc0	ctor=FUN_0042abc0 args=	0042aae0	std::map/set (MSVC6 _Tree, node 0x3c => value_type 0x2c bytes)	ctor FUN_0042abc0(this=00667cc0): node=new(0x3c) {left,parent,right,value@0xc,color@0x38,isnil@0x39}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 0042aae0 -> 0x42aaf0
+0060f170	0042cbe0	const_copy	00667cf0	= 0xbf19999a (-0.6, from .rdata 005ca798)	-	float/dword constant copy (static const from .rdata)	
+0060f174	0042cbf0	const_copy	00667cec	= 0xbf19999a (-0.6, from .rdata 005ca798)	-	float/dword constant copy (static const from .rdata)	
+0060f178	0042cc00	const_copy	00667ce8	= 0x3f19999a (0.6, from .rdata 005ca79c)	-	float/dword constant copy (static const from .rdata)	
+0060f17c	0042d620	const_copy	00667d2c	= 0xbf19999a (-0.6, from .rdata 005ca854)	-	float/dword constant copy (static const from .rdata)	
+0060f180	0042d630	const_copy	00667d28	= 0xbf19999a (-0.6, from .rdata 005ca854)	-	float/dword constant copy (static const from .rdata)	
+0060f184	0042d640	const_copy	00667d24	= 0x3f19999a (0.6, from .rdata 005ca858)	-	float/dword constant copy (static const from .rdata)	
+0060f188	0042d650	scalar_init	00667d20	ctor=timeGetTime args=	-	scalar: uint start time = timeGetTime()	00667d20 = timeGetTime(); no dtor; users 0042d670/0042d770 (misclassified, really scalar_init)
+0060f18c	0042d760	object_ctor	00667cf8	ctor= args=	-	Timing::Delta (Common.dll class)	init 0042d760 = mov ecx,00667cf8; jmp [005c60d4] ??0Delta@Timing@@QAE@XZ; no dtor; user 0042d770
+0060f190	0042d8c0	const_copy	00667e0c	= 0xbf19999a (-0.6, from .rdata 005ca85c)	-	float/dword constant copy (static const from .rdata)	
+0060f194	0042d8d0	const_copy	00667e08	= 0xbf19999a (-0.6, from .rdata 005ca85c)	-	float/dword constant copy (static const from .rdata)	
+0060f198	0042d8e0	const_copy	00667e04	= 0x3f19999a (0.6, from .rdata 005ca860)	-	float/dword constant copy (static const from .rdata)	
+0060f19c	0042d8f0	object_ctor	00667df0	ctor=FUN_0042ea30 args=	0042d920	std::map/set (MSVC6 _Tree, node 0x4c => value_type 0x3c bytes)	ctor FUN_0042ea30(this=00667df0): node=new(0x4c) {left,parent,right,value@0xc,color@0x48,isnil@0x49}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 0042d920 -> 0x42d930
+0060f1a0	0042dac0	object_ctor	-	ctor= args=	-	array[8] of 12-byte struct {float,float,float} each = (-1,-1,-1)	init 0042dac0 loop 8x writes 0xbf800000 x3 starting 00667d90 (stride 12) to 00667df0; no dtor; target_globals '00000008' is the loop count, not an address; guess: Vector array
+0060f1a4	0042e320	object_ctor	00667d78	ctor=FUN_0042ecb0 args=	0042e350	std::map/set (MSVC6 _Tree, node 0x94 => value_type 0x84 bytes)	ctor FUN_0042ecb0(this=00667d78): node=new(0x94) {left,parent,right,value@0xc,color@0x90,isnil@0x91}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 0042e350 -> 0x42e360
+0060f1a8	00430790	const_copy	00667e34	= 0xbf19999a (-0.6, from .rdata 005cab40)	-	float/dword constant copy (static const from .rdata)	
+0060f1ac	004307a0	const_copy	00667e30	= 0xbf19999a (-0.6, from .rdata 005cab40)	-	float/dword constant copy (static const from .rdata)	
+0060f1b0	004307b0	const_copy	00667e2c	= 0x3f19999a (0.6, from .rdata 005cab44)	-	float/dword constant copy (static const from .rdata)	
+0060f1b4	004307c0	object_ctor	00667e18	ctor=FUN_00431c60 args=	004307f0	std::map/set (MSVC6 _Tree, node 0x64 => value_type 0x54 bytes)	ctor FUN_00431c60(this=00667e18): node=new(0x64) {left,parent,right,value@0xc,color@0x60,isnil@0x61}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 004307f0 -> 0x430800
+0060f1b8	004346f0	const_copy	00667e44	= 0xbf19999a (-0.6, from .rdata 005cad94)	-	float/dword constant copy (static const from .rdata)	
+0060f1bc	00434700	const_copy	00667e40	= 0xbf19999a (-0.6, from .rdata 005cad94)	-	float/dword constant copy (static const from .rdata)	
+0060f1c0	00434710	const_copy	00667e3c	= 0x3f19999a (0.6, from .rdata 005cad98)	-	float/dword constant copy (static const from .rdata)	
+0060f1c4	00434880	const_copy	0066865c	= 0xbf19999a (-0.6, from .rdata 005cad9c)	-	float/dword constant copy (static const from .rdata)	
+0060f1c8	00434890	const_copy	00668658	= 0xbf19999a (-0.6, from .rdata 005cad9c)	-	float/dword constant copy (static const from .rdata)	
+0060f1cc	004348a0	const_copy	00668654	= 0x3f19999a (0.6, from .rdata 005cada0)	-	float/dword constant copy (static const from .rdata)	
+0060f1d0	00434920	scalar_init	00668650	imm= reads=	00434950		
+0060f1d4	004349c0	const_copy	00668698	= 0xbf19999a (-0.6, from .rdata 005cada4)	-	float/dword constant copy (static const from .rdata)	
+0060f1d8	004349d0	const_copy	00668694	= 0xbf19999a (-0.6, from .rdata 005cada4)	-	float/dword constant copy (static const from .rdata)	
+0060f1dc	004349e0	const_copy	00668690	= 0x3f19999a (0.6, from .rdata 005cada8)	-	float/dword constant copy (static const from .rdata)	
+0060f1e0	004354b0	object_ctor	00668660	ctor=FUN_004349f0 args=	004354d0	composite: std::list (node 0x18 => value 0x10) + std::map/set (node 0x30 => value 0x20) + std::list<4-byte> + int=-1	ctor FUN_004349f0: list head new(0x18) at +4, tree at +0xc (nil node 0x30, isnil@0x2d), list head new(0xc) at +0x24, +0x2c=-1; dtor 004354d0 -> 00434b90; user 004356c0
+0060f1e4	00437060	const_copy	006686c8	= 0xbf19999a (-0.6, from .rdata 005cae10)	-	float/dword constant copy (static const from .rdata)	
+0060f1e8	00437070	const_copy	006686c4	= 0xbf19999a (-0.6, from .rdata 005cae10)	-	float/dword constant copy (static const from .rdata)	
+0060f1ec	00437080	const_copy	006686c0	= 0x3f19999a (0.6, from .rdata 005cae14)	-	float/dword constant copy (static const from .rdata)	
+0060f1f0	00437090	scalar_init	006686bc,006686be	imm= reads=	-		
+0060f1f4	004370a0	scalar_init	006686b8,006686ba	imm=0,1 reads=	-		
+0060f1f8	004370c0	scalar_init	006686b4,006686b6	imm= reads=	-		
+0060f1fc	004370e0	scalar_init	006686b0,006686b2	imm=2,1 reads=	-		
+0060f200	00437100	scalar_init	006686ac,006686ae	imm=3,1 reads=	-		
+0060f204	00437120	scalar_init	006686a8,006686aa	imm=4,1 reads=	-		
+0060f208	00437140	scalar_init	006686a0	imm=5cae24 reads=	-		
+0060f20c	00437430	const_copy	006686f0	= 0xbf19999a (-0.6, from .rdata 005caed0)	-	float/dword constant copy (static const from .rdata)	
+0060f210	00437440	const_copy	006686ec	= 0xbf19999a (-0.6, from .rdata 005caed0)	-	float/dword constant copy (static const from .rdata)	
+0060f214	00437450	const_copy	006686e8	= 0x3f19999a (0.6, from .rdata 005caed4)	-	float/dword constant copy (static const from .rdata)	
+0060f218	00437460	scalar_init	006686e4,006686e6	imm= reads=	-		
+0060f21c	00437470	scalar_init	006686e0,006686e2	imm=0,1 reads=	-		
+0060f220	00437490	scalar_init	006686dc,006686de	imm= reads=	-		
+0060f224	004374b0	scalar_init	006686d8,006686da	imm=2,1 reads=	-		
+0060f228	004374d0	scalar_init	006686d4,006686d6	imm=3,1 reads=	-		
+0060f22c	004374f0	scalar_init	006686d0,006686d2	imm=4,1 reads=	-		
+0060f230	00437b40	const_copy	00668700	= 0xbf19999a (-0.6, from .rdata 005caedc)	-	float/dword constant copy (static const from .rdata)	
+0060f234	00437b50	const_copy	006686fc	= 0xbf19999a (-0.6, from .rdata 005caedc)	-	float/dword constant copy (static const from .rdata)	
+0060f238	00437b60	const_copy	006686f8	= 0x3f19999a (0.6, from .rdata 005caee0)	-	float/dword constant copy (static const from .rdata)	
+0060f23c	00438bd0	const_copy	0066876c	= 0xbf19999a (-0.6, from .rdata 005caef0)	-	float/dword constant copy (static const from .rdata)	
+0060f240	00438be0	const_copy	00668768	= 0xbf19999a (-0.6, from .rdata 005caef0)	-	float/dword constant copy (static const from .rdata)	
+0060f244	00438bf0	const_copy	00668764	= 0x3f19999a (0.6, from .rdata 005caef4)	-	float/dword constant copy (static const from .rdata)	
+0060f248	00438dc0	object_ctor	00668708	ctor=FUN_00438df0 args=	00438de0	composite: std::list (node 0x20 => value 0x18) + two std::map/set (node 0x18 => value 8) + POD fields	ctor FUN_00438df0: list new(0x20) +4, tree +0xc (node 0x18 via FUN_0040f110), tree +0x20 (node 0x18), zeroed fields to +0x5a; dtor 00438de0 -> 00438fd0
+0060f24c	0043d040	const_copy	006687ac	= 0xbf19999a (-0.6, from .rdata 005cb088)	-	float/dword constant copy (static const from .rdata)	
+0060f250	0043d050	const_copy	006687a8	= 0xbf19999a (-0.6, from .rdata 005cb088)	-	float/dword constant copy (static const from .rdata)	
+0060f254	0043d060	const_copy	006687a4	= 0x3f19999a (0.6, from .rdata 005cb08c)	-	float/dword constant copy (static const from .rdata)	
+0060f258	0043d070	scalar_init	006687a0,006687a2	imm= reads=	-		
+0060f25c	0043d080	scalar_init	0066879c,0066879e	imm=0,1 reads=	-		
+0060f260	0043d0a0	scalar_init	00668798,0066879a	imm= reads=	-		
+0060f264	0043d0c0	scalar_init	00668794,00668796	imm=2,1 reads=	-		
+0060f268	0043d0e0	scalar_init	00668790,00668792	imm=3,1 reads=	-		
+0060f26c	0043d100	scalar_init	0066878c,0066878e	imm=4,1 reads=	-		
+0060f270	0043d120	scalar_init	00668774	imm=5cb094 reads=	-		
+0060f274	0043d5a0	const_copy	00668824	= 0xbf19999a (-0.6, from .rdata 005cb4c4)	-	float/dword constant copy (static const from .rdata)	
+0060f278	0043d5b0	const_copy	00668820	= 0xbf19999a (-0.6, from .rdata 005cb4c4)	-	float/dword constant copy (static const from .rdata)	
+0060f27c	0043d5c0	const_copy	0066881c	= 0x3f19999a (0.6, from .rdata 005cb4c8)	-	float/dword constant copy (static const from .rdata)	
+0060f280	0043d5d0	create_id	00668818	= CreateID("must_have_mounted_engine_to_launch")	-	uint ID = CreateID(name)	
+0060f284	0043d5f0	create_id	00668814	= CreateID("must_have_mounted_power_plant_to_launch")	-	uint ID = CreateID(name)	
+0060f288	0043d610	create_id	00668810	= CreateID("must_have_mounted_scanner_to_launch")	-	uint ID = CreateID(name)	
+0060f28c	0043d630	scalar_init	00668804,00668808,0066880c	imm=0,beb33333,0 reads=	-		
+0060f290	0043d650	scalar_init	006687f8,006687fc,00668800	imm=0,beb33333,0 reads=	-		
+0060f294	0043d670	scalar_init	006687ec,006687f0,006687f4	imm=0,becccccd,0 reads=	-		
+0060f298	0043d690	scalar_init	006687e0,006687e4,006687e8	imm=0,becccccd,0 reads=	-		
+0060f29c	0043d6b0	object_ctor	006687b4	ctor=FUN_004429a0 args="NavBar"	0043d6d0	UI element factory registration 'NavBar' (vtable 005cb554 -> 005cb8c0)	ctor FUN_004429a0(this=006687b4,"NavBar"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0043d6d0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f2a0	00443740	const_copy	0066883c	= 0xbf19999a (-0.6, from .rdata 005cb8c4)	-	float/dword constant copy (static const from .rdata)	
+0060f2a4	00443750	const_copy	00668838	= 0xbf19999a (-0.6, from .rdata 005cb8c4)	-	float/dword constant copy (static const from .rdata)	
+0060f2a8	00443760	const_copy	00668834	= 0x3f19999a (0.6, from .rdata 005cb8c8)	-	float/dword constant copy (static const from .rdata)	
+0060f2ac	00443a60	const_copy	00668a74	= 0xbf19999a (-0.6, from .rdata 005cb90c)	-	float/dword constant copy (static const from .rdata)	
+0060f2b0	00443a70	const_copy	00668a70	= 0xbf19999a (-0.6, from .rdata 005cb90c)	-	float/dword constant copy (static const from .rdata)	
+0060f2b4	00443a80	const_copy	00668a6c	= 0x3f19999a (0.6, from .rdata 005cb910)	-	float/dword constant copy (static const from .rdata)	
+0060f2b8	00443e40	scalar_init	00668948	imm= reads=	00443e80		
+0060f2bc	00445df0	const_copy	00668a84	= 0xbf19999a (-0.6, from .rdata 005cbbfc)	-	float/dword constant copy (static const from .rdata)	
+0060f2c0	00445e00	const_copy	00668a80	= 0xbf19999a (-0.6, from .rdata 005cbbfc)	-	float/dword constant copy (static const from .rdata)	
+0060f2c4	00445e10	const_copy	00668a7c	= 0x3f19999a (0.6, from .rdata 005cbc00)	-	float/dword constant copy (static const from .rdata)	
+0060f2c8	00446bb0	const_copy	00668a94	= 0xbf19999a (-0.6, from .rdata 005cbd6c)	-	float/dword constant copy (static const from .rdata)	
+0060f2cc	00446bc0	const_copy	00668a90	= 0xbf19999a (-0.6, from .rdata 005cbd6c)	-	float/dword constant copy (static const from .rdata)	
+0060f2d0	00446bd0	const_copy	00668a8c	= 0x3f19999a (0.6, from .rdata 005cbd70)	-	float/dword constant copy (static const from .rdata)	
+0060f2d4	004486a0	const_copy	00668aa8	= 0xbf19999a (-0.6, from .rdata 005cbe70)	-	float/dword constant copy (static const from .rdata)	
+0060f2d8	004486b0	const_copy	00668aa4	= 0xbf19999a (-0.6, from .rdata 005cbe70)	-	float/dword constant copy (static const from .rdata)	
+0060f2dc	004486c0	const_copy	00668aa0	= 0x3f19999a (0.6, from .rdata 005cbe74)	-	float/dword constant copy (static const from .rdata)	
+0060f2e0	00449230	const_copy	00668abc	= 0xbf19999a (-0.6, from .rdata 005cbe88)	-	float/dword constant copy (static const from .rdata)	
+0060f2e4	00449240	const_copy	00668ab8	= 0xbf19999a (-0.6, from .rdata 005cbe88)	-	float/dword constant copy (static const from .rdata)	
+0060f2e8	00449250	const_copy	00668ab4	= 0x3f19999a (0.6, from .rdata 005cbe8c)	-	float/dword constant copy (static const from .rdata)	
+0060f2ec	0044ce80	const_copy	00668acc	= 0xbf19999a (-0.6, from .rdata 005cbfd8)	-	float/dword constant copy (static const from .rdata)	
+0060f2f0	0044ce90	const_copy	00668ac8	= 0xbf19999a (-0.6, from .rdata 005cbfd8)	-	float/dword constant copy (static const from .rdata)	
+0060f2f4	0044cea0	const_copy	00668ac4	= 0x3f19999a (0.6, from .rdata 005cbfdc)	-	float/dword constant copy (static const from .rdata)	
+0060f2f8	0044d290	const_copy	00668adc	= 0xbf19999a (-0.6, from .rdata 005cc074)	-	float/dword constant copy (static const from .rdata)	
+0060f2fc	0044d2a0	const_copy	00668ad8	= 0xbf19999a (-0.6, from .rdata 005cc074)	-	float/dword constant copy (static const from .rdata)	
+0060f300	0044d2b0	const_copy	00668ad4	= 0x3f19999a (0.6, from .rdata 005cc078)	-	float/dword constant copy (static const from .rdata)	
+0060f304	0044d600	const_copy	00668aec	= 0xbf19999a (-0.6, from .rdata 005cc0b0)	-	float/dword constant copy (static const from .rdata)	
+0060f308	0044d610	const_copy	00668ae8	= 0xbf19999a (-0.6, from .rdata 005cc0b0)	-	float/dword constant copy (static const from .rdata)	
+0060f30c	0044d620	const_copy	00668ae4	= 0x3f19999a (0.6, from .rdata 005cc0b4)	-	float/dword constant copy (static const from .rdata)	
+0060f310	0044fbb0	const_copy	00668afc	= 0xbf19999a (-0.6, from .rdata 005cc584)	-	float/dword constant copy (static const from .rdata)	
+0060f314	0044fbc0	const_copy	00668af8	= 0xbf19999a (-0.6, from .rdata 005cc584)	-	float/dword constant copy (static const from .rdata)	
+0060f318	0044fbd0	const_copy	00668af4	= 0x3f19999a (0.6, from .rdata 005cc588)	-	float/dword constant copy (static const from .rdata)	
+0060f31c	00450340	const_copy	0066d10c	= 0xbf19999a (-0.6, from .rdata 005cca70)	-	float/dword constant copy (static const from .rdata)	
+0060f320	00450350	const_copy	0066d108	= 0xbf19999a (-0.6, from .rdata 005cca70)	-	float/dword constant copy (static const from .rdata)	
+0060f324	00450360	const_copy	0066d104	= 0x3f19999a (0.6, from .rdata 005cca74)	-	float/dword constant copy (static const from .rdata)	
+0060f328	00450370	scalar_init	0066d100	imm=ffffffff reads=	00450440		
+0060f32c	004510c0	const_copy	0066d118	= 0xbf19999a (-0.6, from .rdata 005cce20)	-	float/dword constant copy (static const from .rdata)	
+0060f330	004510d0	const_copy	0066d114	= 0xbf19999a (-0.6, from .rdata 005cce20)	-	float/dword constant copy (static const from .rdata)	
+0060f334	004510e0	const_copy	0066d110	= 0x3f19999a (0.6, from .rdata 005cce24)	-	float/dword constant copy (static const from .rdata)	
+0060f338	00451f20	const_copy	0066d128	= 0xbf19999a (-0.6, from .rdata 005cd098)	-	float/dword constant copy (static const from .rdata)	
+0060f33c	00451f30	const_copy	0066d124	= 0xbf19999a (-0.6, from .rdata 005cd098)	-	float/dword constant copy (static const from .rdata)	
+0060f340	00451f40	const_copy	0066d120	= 0x3f19999a (0.6, from .rdata 005cd09c)	-	float/dword constant copy (static const from .rdata)	
+0060f344	00452f00	const_copy	0066d278	= 0xbf19999a (-0.6, from .rdata 005cd3d8)	-	float/dword constant copy (static const from .rdata)	
+0060f348	00452f10	const_copy	0066d274	= 0xbf19999a (-0.6, from .rdata 005cd3d8)	-	float/dword constant copy (static const from .rdata)	
+0060f34c	00452f20	const_copy	0066d270	= 0x3f19999a (0.6, from .rdata 005cd3dc)	-	float/dword constant copy (static const from .rdata)	
+0060f350	00452f30	object_ctor	0066d230	ctor= args=	00452f60	array[64] {uint32} at 0066d130 + parallel array[64] {uint8} at 0066d230	init 00452f30 loop i<0x100 step 4 zeroes 0066d130[i] and 0066d230[i/4]; atexit 00452f60 is bare 'ret' (empty dtor); users 00452f80/00452fa0
+0060f354	00453660	const_copy	0066d288	= 0xbf19999a (-0.6, from .rdata 005cd790)	-	float/dword constant copy (static const from .rdata)	
+0060f358	00453670	const_copy	0066d284	= 0xbf19999a (-0.6, from .rdata 005cd790)	-	float/dword constant copy (static const from .rdata)	
+0060f35c	00453680	const_copy	0066d280	= 0x3f19999a (0.6, from .rdata 005cd794)	-	float/dword constant copy (static const from .rdata)	
+0060f360	00453980	const_copy	0066d294	= 0xbf19999a (-0.6, from .rdata 005cdad8)	-	float/dword constant copy (static const from .rdata)	
+0060f364	00453990	const_copy	0066d290	= 0xbf19999a (-0.6, from .rdata 005cdad8)	-	float/dword constant copy (static const from .rdata)	
+0060f368	004539a0	const_copy	0066d28c	= 0x3f19999a (0.6, from .rdata 005cdadc)	-	float/dword constant copy (static const from .rdata)	
+0060f36c	00453d40	const_copy	0066d2a0	= 0xbf19999a (-0.6, from .rdata 005cdae0)	-	float/dword constant copy (static const from .rdata)	
+0060f370	00453d50	const_copy	0066d29c	= 0xbf19999a (-0.6, from .rdata 005cdae0)	-	float/dword constant copy (static const from .rdata)	
+0060f374	00453d60	const_copy	0066d298	= 0x3f19999a (0.6, from .rdata 005cdae4)	-	float/dword constant copy (static const from .rdata)	
+0060f378	004541f0	const_copy	0066d2cc	= 0xbf19999a (-0.6, from .rdata 005cde98)	-	float/dword constant copy (static const from .rdata)	
+0060f37c	00454200	const_copy	0066d2c8	= 0xbf19999a (-0.6, from .rdata 005cde98)	-	float/dword constant copy (static const from .rdata)	
+0060f380	00454210	const_copy	0066d2c4	= 0x3f19999a (0.6, from .rdata 005cde9c)	-	float/dword constant copy (static const from .rdata)	
+0060f384	00454220	scalar_init	0066d2a8,0066d2ac,0066d2b0,0066d2b4,0066d2b8,0066d2bc,0066d2c0	imm= reads=	-		
+0060f388	004547f0	const_copy	0066d2fc	= 0xbf19999a (-0.6, from .rdata 005ce050)	-	float/dword constant copy (static const from .rdata)	
+0060f38c	00454800	const_copy	0066d2f8	= 0xbf19999a (-0.6, from .rdata 005ce050)	-	float/dword constant copy (static const from .rdata)	
+0060f390	00454810	const_copy	0066d2f4	= 0x3f19999a (0.6, from .rdata 005ce054)	-	float/dword constant copy (static const from .rdata)	
+0060f394	00456330	object_ctor	0066d2d0	ctor=FUN_00456360 args=	00456350	guess: object w/ vtable 005ce114 (base 005cbed8) containing std::list<4-byte> + POD	ctor FUN_00456360: vtable 005cbed8 then 005ce114, list head new(0xc) at +8, zero +0xc..+0x20; dtor 00456350 -> 004563d0
+0060f398	00456d50	const_copy	0066d310	= 0xbf19999a (-0.6, from .rdata 005ce118)	-	float/dword constant copy (static const from .rdata)	
+0060f39c	00456d60	const_copy	0066d30c	= 0xbf19999a (-0.6, from .rdata 005ce118)	-	float/dword constant copy (static const from .rdata)	
+0060f3a0	00456d70	const_copy	0066d308	= 0x3f19999a (0.6, from .rdata 005ce11c)	-	float/dword constant copy (static const from .rdata)	
+0060f3a4	00457d30	const_copy	0066d31c	= 0xbf19999a (-0.6, from .rdata 005ce778)	-	float/dword constant copy (static const from .rdata)	
+0060f3a8	00457d40	const_copy	0066d318	= 0xbf19999a (-0.6, from .rdata 005ce778)	-	float/dword constant copy (static const from .rdata)	
+0060f3ac	00457d50	const_copy	0066d314	= 0x3f19999a (0.6, from .rdata 005ce77c)	-	float/dword constant copy (static const from .rdata)	
+0060f3b0	00458f70	const_copy	0066d32c	= 0xbf19999a (-0.6, from .rdata 005ce7b4)	-	float/dword constant copy (static const from .rdata)	
+0060f3b4	00458f80	const_copy	0066d328	= 0xbf19999a (-0.6, from .rdata 005ce7b4)	-	float/dword constant copy (static const from .rdata)	
+0060f3b8	00458f90	const_copy	0066d324	= 0x3f19999a (0.6, from .rdata 005ce7b8)	-	float/dword constant copy (static const from .rdata)	
+0060f3bc	0045a0b0	const_copy	0066d350	= 0xbf19999a (-0.6, from .rdata 005ce7ec)	-	float/dword constant copy (static const from .rdata)	
+0060f3c0	0045a0c0	const_copy	0066d34c	= 0xbf19999a (-0.6, from .rdata 005ce7ec)	-	float/dword constant copy (static const from .rdata)	
+0060f3c4	0045a0d0	const_copy	0066d348	= 0x3f19999a (0.6, from .rdata 005ce7f8)	-	float/dword constant copy (static const from .rdata)	
+0060f3c8	0045a0e0	create_id	0066d344	= CreateID("click_on_characters_and_buttons")	-	uint ID = CreateID(name)	
+0060f3cc	0045a7e0	object_ctor	0066d338,0066d33c,0066d340	ctor=FUN_005b7e84 args= ptrs=00000010	0045a820	std::list<T> (head node 0x10 => value 0x8 bytes)	init 0045a7e0: alloc byte 0066d338, head=new(0x10) self-linked at 0066d33c, size 0066d340=0; atexit 0045a820 walks/frees nodes; element dtor 005154f0 (BaseWatcher dtor) => list<BaseWatcher>
+0060f3d0	0045ab30	const_copy	0066d390	= 0xbf19999a (-0.6, from .rdata 005ce830)	-	float/dword constant copy (static const from .rdata)	
+0060f3d4	0045ab40	const_copy	0066d38c	= 0xbf19999a (-0.6, from .rdata 005ce830)	-	float/dword constant copy (static const from .rdata)	
+0060f3d8	0045ab50	const_copy	0066d388	= 0x3f19999a (0.6, from .rdata 005ce834)	-	float/dword constant copy (static const from .rdata)	
+0060f3dc	0045ab60	object_ctor	0066d35c	ctor=FUN_0045b4c0 args="NN_ArrivalText"	0045ab80	UI element factory registration 'NN_ArrivalText' (vtable 005cb554 -> 005ce930)	ctor FUN_0045b4c0(this=0066d35c,"NN_ArrivalText"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0045ab80 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f3e0	0045b5f0	const_copy	0066d3e8	= 0xbf19999a (-0.6, from .rdata 005cea04)	-	float/dword constant copy (static const from .rdata)	
+0060f3e4	0045b600	const_copy	0066d3e4	= 0xbf19999a (-0.6, from .rdata 005cea04)	-	float/dword constant copy (static const from .rdata)	
+0060f3e8	0045b610	const_copy	0066d3e0	= 0x3f19999a (0.6, from .rdata 005cea08)	-	float/dword constant copy (static const from .rdata)	
+0060f3ec	0045b620	scalar_init	0066d3dc,0066d3de	imm= reads=	-		
+0060f3f0	0045b630	scalar_init	0066d3d8,0066d3da	imm=0,1 reads=	-		
+0060f3f4	0045b650	scalar_init	0066d3d4,0066d3d6	imm= reads=	-		
+0060f3f8	0045b670	scalar_init	0066d3d0,0066d3d2	imm=2,1 reads=	-		
+0060f3fc	0045b690	scalar_init	0066d3cc,0066d3ce	imm=3,1 reads=	-		
+0060f400	0045b6b0	scalar_init	0066d3c8,0066d3ca	imm=4,1 reads=	-		
+0060f404	0045b6d0	object_ctor	0066d39c	ctor=FUN_0045dce0 args="NN_MainButton"	0045b6f0	UI element factory registration 'NN_MainButton' (vtable 005cb554 -> 005cee3c)	ctor FUN_0045dce0(this=0066d39c,"NN_MainButton"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0045b6f0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f408	0045ddf0	const_copy	0066da54	= 0xbf19999a (-0.6, from .rdata 005cee40)	-	float/dword constant copy (static const from .rdata)	
+0060f40c	0045de00	const_copy	0066da50	= 0xbf19999a (-0.6, from .rdata 005cee40)	-	float/dword constant copy (static const from .rdata)	
+0060f410	0045de10	const_copy	0066da4c	= 0x3f19999a (0.6, from .rdata 005cee44)	-	float/dword constant copy (static const from .rdata)	
+0060f414	0045de20	scalar_init	0066da48,0066da4a	imm= reads=	-		
+0060f418	0045de30	scalar_init	0066da44,0066da46	imm=0,1 reads=	-		
+0060f41c	0045de50	scalar_init	0066da40,0066da42	imm= reads=	-		
+0060f420	0045de70	scalar_init	0066da3c,0066da3e	imm=2,1 reads=	-		
+0060f424	0045de90	scalar_init	0066da38,0066da3a	imm=3,1 reads=	-		
+0060f428	0045deb0	scalar_init	0066da34,0066da36	imm=4,1 reads=	-		
+0060f42c	0045ded0	const_copy	0066da30	= 0x3eeb851f (0.46, from .rdata 005ceedc)	-	float/dword constant copy (static const from .rdata)	
+0060f430	0045def0	scalar_init	0066da2c	imm= reads=0066da30	-		
+0060f434	0045df00	scalar_init	0066da24,0066da25	imm=0 reads=0066da25	-		
+0060f438	0045df20	scalar_init	0066da1c	imm= reads=0066da24	-		
+0060f43c	0045df30	scalar_init	0066da14,0066da15	imm=10 reads=0066da15	-		
+0060f440	0045df50	scalar_init	0066da0c,0066da0d	imm=16 reads=0066da0d	-		
+0060f444	0045df70	scalar_init	0066da04,0066da05	imm=0 reads=0066da05	-		
+0060f448	0045df90	scalar_init	0066d9fc,0066d9fd	imm=0 reads=0066d9fd	-		
+0060f44c	0045dfb0	scalar_init	0066d9f4,0066d9f5	imm=0 reads=0066d9f5	-		
+0060f450	0045dfd0	scalar_init	0066d9ec,0066d9ed	imm=2 reads=0066d9ed	-		
+0060f454	0045dff0	scalar_init	0066d9e4,0066d9e5	imm=1 reads=0066d9e5	-		
+0060f458	0045e010	scalar_init	0066d9dc,0066d9dd	imm=1 reads=0066d9dd	-		
+0060f45c	0045e030	scalar_init	0066d9d4,0066d9d5	imm=0 reads=0066d9d5	-		
+0060f460	0045e050	scalar_init	0066d9cc,0066d9cd	imm=1 reads=0066d9cd	-		
+0060f464	0045e070	scalar_init	0066d9c4,0066d9c5	imm=6 reads=0066d9c5	-		
+0060f468	0045e090	scalar_init	0066d9bc,0066d9bd	imm=0 reads=0066d9bd	-		
+0060f46c	0045e0b0	scalar_init	0066d9b4,0066d9b5	imm=8 reads=0066d9b5	-		
+0060f470	0045e0d0	scalar_init	0066d9ac,0066d9ad	imm=18 reads=0066d9ad	-		
+0060f474	0045e0f0	scalar_init	0066d9a4,0066d9a5	imm=18 reads=0066d9a5	-		
+0060f478	0045e110	scalar_init	0066d99c,0066d99d	imm=8 reads=0066d99d	-		
+0060f47c	0045e130	scalar_init	0066d994,0066d995	imm=8 reads=0066d995	-		
+0060f480	0045e150	scalar_init	0066d98c,0066d98d	imm=0 reads=0066d98d	-		
+0060f484	0045e170	scalar_init	0066d984,0066d985	imm=0 reads=0066d985	-		
+0060f488	0045e190	scalar_init	0066d97c,0066d97d	imm=0 reads=0066d97d	-		
+0060f48c	0045e1b0	scalar_init	0066d974,0066d975	imm=8 reads=0066d975	-		
+0060f490	0045e1d0	scalar_init	0066d96c,0066d96d	imm=8 reads=0066d96d	-		
+0060f494	0045e1f0	scalar_init	0066d964,0066d965	imm=8 reads=0066d965	-		
+0060f498	0045e210	scalar_init	0066d95c,0066d95d	imm=0 reads=0066d95d	-		
+0060f49c	0045e230	scalar_init	0066d954,0066d955	imm=28 reads=0066d955	-		
+0060f4a0	0045e250	scalar_init	0066d94c,0066d94d	imm=1 reads=0066d94d	-		
+0060f4a4	0045e270	object_ctor	0066d920	ctor=FUN_0046bd90 args="ChatTextInputDisplay"	0045e290	UI element factory registration 'ChatTextInputDisplay' (vtable 005cb554 -> 005cfea8)	ctor FUN_0046bd90(this=0066d920,"ChatTextInputDisplay"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0045e290 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f4a8	0045e2a0	object_ctor	0066d8f4	ctor=FUN_0046bf90 args="NN_GroupControl"	0045e2c0	UI element factory registration 'NN_GroupControl' (vtable 005cb554 -> 005cffa8)	ctor FUN_0046bf90(this=0066d8f4,"NN_GroupControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0045e2c0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f4ac	0045e2d0	scalar_init	0066d8e4,0066d8e8,0066d8ec,0066d8f0	imm= reads=	0045e300		
+0060f4b0	0045fc50	const_copy	0066d4d8	= 0x3eeb851f (0.46, from .rdata 005ceefc)	-	float/dword constant copy (static const from .rdata)	
+0060f4b4	0045fc60	const_copy	0066d4d4	= 0x3f4ccccd (0.8, from .rdata 005ceef4)	-	float/dword constant copy (static const from .rdata)	
+0060f4b8	0045fc80	scalar_init	0066d4d0	imm= reads=0066d4d4	-		
+0060f4bc	0045fc90	const_copy	0066d4cc	= 0x3f19999a (0.6, from .rdata 005ceef8)	-	float/dword constant copy (static const from .rdata)	
+0060f4c0	0045fcb0	const_copy	0066d4c8	= 0xbee66666 (-0.45, from .rdata 005cef18)	-	float/dword constant copy (static const from .rdata)	
+0060f4c4	0045fcc0	const_copy	0066d4c4	= 0x3eeb851f (0.46, from .rdata 005ceefc)	-	float/dword constant copy (static const from .rdata)	
+0060f4c8	0045fce0	scalar_init	0066d4c0	imm= reads=0066d4c4	-		
+0060f4cc	0045fcf0	const_copy	0066d4bc	= 0x3f000000 (0.5, from .rdata 005c75e0)	-	float/dword constant copy (static const from .rdata)	
+0060f4d0	0045fd10	const_copy	0066d4b8	= 0x3eb33333 (0.35, from .rdata 005cef14)	-	float/dword constant copy (static const from .rdata)	
+0060f4d4	0045fd20	const_copy	0066d4b4	= 0xbee66666 (-0.45, from .rdata 005cef18)	-	float/dword constant copy (static const from .rdata)	
+0060f4d8	0045fd30	const_copy	0066d4b0	= 0x3eb33333 (0.35, from .rdata 005cef14)	-	float/dword constant copy (static const from .rdata)	
+0060f4dc	0045fd40	const_copy	0066d4ac	= 0xbee66666 (-0.45, from .rdata 005cef18)	-	float/dword constant copy (static const from .rdata)	
+0060f4e0	0045fd50	const_copy	0066d4a8	= 0x3e5c28f6 (0.215, from .rdata 005cef20)	-	float/dword constant copy (static const from .rdata)	
+0060f4e4	00464d60	object_ctor	0066d47c	ctor=FUN_0046c0a0 args="MsgWin"	00464d80	UI element factory registration 'MsgWin' (vtable 005cb554 -> 005cffb0)	ctor FUN_0046c0a0(this=0066d47c,"MsgWin"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00464d80 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f4e8	00464d90	object_ctor	0066d450	ctor=FUN_0046c4e0 args="ChatControl"	00464db0	UI element factory registration 'ChatControl' (vtable 005cb554 -> 005d0088)	ctor FUN_0046c4e0(this=0066d450,"ChatControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00464db0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f4ec	00468fb0	object_ctor	0066d430	ctor=??0RenderDisplayList@@QAE@XZ args=	00468fd0	RenderDisplayList (Common.dll class)	ctor ??0RenderDisplayList@@QAE@XZ on 0066d430; atexit 00468fd0 -> jmp [005c62c4] ??1RenderDisplayList@@QAE@XZ
+0060f4f0	00468fe0	object_ctor	0066d424	ctor=??0RenderDisplayList@@QAE@XZ args=	00469000	RenderDisplayList (Common.dll class)	ctor ??0RenderDisplayList@@QAE@XZ on 0066d424; atexit 00469000 -> jmp [005c62c4] ??1RenderDisplayList@@QAE@XZ
+0060f4f4	00469010	object_ctor	0066d418	ctor=??0RenderDisplayList@@QAE@XZ args=	00469030	RenderDisplayList (Common.dll class)	ctor ??0RenderDisplayList@@QAE@XZ on 0066d418; atexit 00469030 -> jmp [005c62c4] ??1RenderDisplayList@@QAE@XZ
+0060f4f8	00469040	object_ctor	0066d40c	ctor=??0RenderDisplayList@@QAE@XZ args=	00469060	RenderDisplayList (Common.dll class)	ctor ??0RenderDisplayList@@QAE@XZ on 0066d40c; atexit 00469060 -> jmp [005c62c4] ??1RenderDisplayList@@QAE@XZ
+0060f4fc	00469070	object_ctor	0066d400	ctor=??0RenderDisplayList@@QAE@XZ args=	00469090	RenderDisplayList (Common.dll class)	ctor ??0RenderDisplayList@@QAE@XZ on 0066d400; atexit 00469090 -> jmp [005c62c4] ??1RenderDisplayList@@QAE@XZ
+0060f500	004690a0	scalar_init	0066d3fc,0066d3fe,0066d3ff	imm= reads=	-		
+0060f504	0046a0a0	object_ctor	0066d3f8	ctor=FUN_0046a0c0 args=	0046a140	event-listener object vtable 005cfe7c subscribed to event id 0x5d	ctor FUN_0046a0c0: vtable 005cfe7c, FUN_005760d0(0x5d) -> FUN_00575e00 inserts (id,this) into lazily-created global multimap at DAT_0067c3a4 (node 0x18, _Multi=1); dtor 0046a140 -> 005b2560 (shared listener dtor)
+0060f508	0046ed40	const_copy	0066db00	= 0xbf19999a (-0.6, from .rdata 005d008c)	-	float/dword constant copy (static const from .rdata)	
+0060f50c	0046ed50	const_copy	0066dafc	= 0xbf19999a (-0.6, from .rdata 005d008c)	-	float/dword constant copy (static const from .rdata)	
+0060f510	0046ed60	const_copy	0066daf8	= 0x3f19999a (0.6, from .rdata 005d0090)	-	float/dword constant copy (static const from .rdata)	
+0060f514	0046ed70	object_ctor	0066dacc	ctor=FUN_00470720 args="NN_CommodityByBase"	0046ed90	UI element factory registration 'NN_CommodityByBase' (vtable 005cb554 -> 005d025c)	ctor FUN_00470720(this=0066dacc,"NN_CommodityByBase"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0046ed90 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f518	0046eda0	scalar_init	0066dabc,0066dac0,0066dac4,0066dac8	imm= reads=	0046edd0		
+0060f51c	0046ee10	object_ctor	0066daa4	ctor=FUN_004706b0 args=	0046ee40	std::map/set (MSVC6 _Tree, node 0x1c => value_type 0xc bytes)	ctor FUN_004706b0(this=0066daa4): node=new(0x1c) {left,parent,right,value@0xc,color@0x18,isnil@0x19}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 0046ee40 -> 0x46ee60
+0060f520	0046ef30	object_ctor	0066da90	ctor=FUN_004706b0 args=	0046ef60	std::map/set (MSVC6 _Tree, node 0x1c => value_type 0xc bytes)	ctor FUN_004706b0(this=0066da90): node=new(0x1c) {left,parent,right,value@0xc,color@0x18,isnil@0x19}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 0046ef60 -> 0x46ee60
+0060f524	00471710	const_copy	0066db3c	= 0xbf19999a (-0.6, from .rdata 005d0330)	-	float/dword constant copy (static const from .rdata)	
+0060f528	00471720	const_copy	0066db38	= 0xbf19999a (-0.6, from .rdata 005d0330)	-	float/dword constant copy (static const from .rdata)	
+0060f52c	00471730	const_copy	0066db34	= 0x3f19999a (0.6, from .rdata 005d0334)	-	float/dword constant copy (static const from .rdata)	
+0060f530	00471740	object_ctor	0066db08	ctor=FUN_00471fb0 args="NN_Exit"	00471760	UI element factory registration 'NN_Exit' (vtable 005cb554 -> 005d04e4)	ctor FUN_00471fb0(this=0066db08,"NN_Exit"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00471760 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f534	004720f0	const_copy	0066dbfc	= 0xbf19999a (-0.6, from .rdata 005d04e8)	-	float/dword constant copy (static const from .rdata)	
+0060f538	00472100	const_copy	0066dbf8	= 0xbf19999a (-0.6, from .rdata 005d04e8)	-	float/dword constant copy (static const from .rdata)	
+0060f53c	00472110	const_copy	0066dbf4	= 0x3f19999a (0.6, from .rdata 005d04ec)	-	float/dword constant copy (static const from .rdata)	
+0060f540	00472120	object_ctor	0066dbc8	ctor=FUN_00474600 args="NN_NetworkOperation"	00472140	UI element factory registration 'NN_NetworkOperation' (vtable 005cb554 -> 005d099c)	ctor FUN_00474600(this=0066dbc8,"NN_NetworkOperation"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00472140 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f544	00472150	object_ctor	0066db9c	ctor=FUN_00474750 args="BlockingDialog"	00472170	UI element factory registration 'BlockingDialog' (vtable 005cb554 -> 005d09a4)	ctor FUN_00474750(this=0066db9c,"BlockingDialog"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00472170 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f548	004724d0	object_ctor	0066db70	ctor=FUN_00474880 args="NN_Error"	004724f0	UI element factory registration 'NN_Error' (vtable 005cb554 -> 005d09ac)	ctor FUN_00474880(this=0066db70,"NN_Error"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004724f0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f54c	004729d0	object_ctor	0066db44	ctor=FUN_004749c0 args="NN_Prompt"	004729f0	UI element factory registration 'NN_Prompt' (vtable 005cb554 -> 005d09b4)	ctor FUN_004749c0(this=0066db44,"NN_Prompt"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004729f0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f550	00474b30	const_copy	0066dc4c	= 0xbf19999a (-0.6, from .rdata 005d09b8)	-	float/dword constant copy (static const from .rdata)	
+0060f554	00474b40	const_copy	0066dc48	= 0xbf19999a (-0.6, from .rdata 005d09b8)	-	float/dword constant copy (static const from .rdata)	
+0060f558	00474b50	const_copy	0066dc44	= 0x3f19999a (0.6, from .rdata 005d09bc)	-	float/dword constant copy (static const from .rdata)	
+0060f55c	00474b60	object_ctor	0066dc18	ctor=FUN_00477070 args="NN_Help"	00474b80	UI element factory registration 'NN_Help' (vtable 005cb554 -> 005d0ab4)	ctor FUN_00477070(this=0066dc18,"NN_Help"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00474b80 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f560	00476bf0	scalar_init	0066dc08,0066dc0c,0066dc10,0066dc14	imm= reads=	00476c20		
+0060f564	00477830	const_copy	00671cdc	= 0xbf19999a (-0.6, from .rdata 005d0e20)	-	float/dword constant copy (static const from .rdata)	
+0060f568	00477840	const_copy	00671cd8	= 0xbf19999a (-0.6, from .rdata 005d0e20)	-	float/dword constant copy (static const from .rdata)	
+0060f56c	00477850	const_copy	00671cd4	= 0x3f19999a (0.6, from .rdata 005d0e24)	-	float/dword constant copy (static const from .rdata)	
+0060f570	00477860	object_ctor	00671ca8	ctor=FUN_00485670 args="NN_Inventory"	00477880	UI element factory registration 'NN_Inventory' (vtable 005cb554 -> 005d1d20)	ctor FUN_00485670(this=00671ca8,"NN_Inventory"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00477880 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f574	00477890	object_ctor	00671c7c	ctor=FUN_004857f0 args="NN_Dealer"	004778b0	UI element factory registration 'NN_Dealer' (vtable 005cb554 -> 005d1d28)	ctor FUN_004857f0(this=00671c7c,"NN_Dealer"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004778b0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f578	004778c0	create_id	00671c78	= CreateID("insufficient_cargo_space")	-	uint ID = CreateID(name)	
+0060f57c	004778e0	create_id	00671c74	= CreateID("not_enough_money")	-	uint ID = CreateID(name)	
+0060f580	00477900	create_id	00671c70	= CreateID("mounted")	-	uint ID = CreateID(name)	
+0060f584	00477920	create_id	00671c6c	= CreateID("loaded_into_cargo_hold")	-	uint ID = CreateID(name)	
+0060f588	00477940	create_id	00671c68	= CreateID("no_place_to_mount")	-	uint ID = CreateID(name)	
+0060f58c	00477960	create_id	00671c64	= CreateID("cargo_jettisoned")	-	uint ID = CreateID(name)	
+0060f590	00477980	create_id	00671c60	= CreateID("ship_purchase_complete")	-	uint ID = CreateID(name)	
+0060f594	00485900	const_copy	00671f48	= 0xbf19999a (-0.6, from .rdata 005d1d2c)	-	float/dword constant copy (static const from .rdata)	
+0060f598	00485910	const_copy	00671f44	= 0xbf19999a (-0.6, from .rdata 005d1d2c)	-	float/dword constant copy (static const from .rdata)	
+0060f59c	00485920	const_copy	00671f40	= 0x3f19999a (0.6, from .rdata 005d1d30)	-	float/dword constant copy (static const from .rdata)	
+0060f5a0	00485930	object_ctor	00671f14	ctor=FUN_00488ca0 args="NN_LoadSave"	00485950	UI element factory registration 'NN_LoadSave' (vtable 005cb554 -> 005d2440)	ctor FUN_00488ca0(this=00671f14,"NN_LoadSave"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00485950 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f5a4	004882d0	object_ctor	00671ee8	ctor=FUN_00488db0 args="NN_Confirm"	004882f0	UI element factory registration 'NN_Confirm' (vtable 005cb554 -> 005d2448)	ctor FUN_00488db0(this=00671ee8,"NN_Confirm"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004882f0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f5a8	00489a20	const_copy	00671f68	= 0xbf19999a (-0.6, from .rdata 005d244c)	-	float/dword constant copy (static const from .rdata)	
+0060f5ac	00489a30	const_copy	00671f64	= 0xbf19999a (-0.6, from .rdata 005d244c)	-	float/dword constant copy (static const from .rdata)	
+0060f5b0	00489a40	const_copy	00671f60	= 0x3f19999a (0.6, from .rdata 005d2450)	-	float/dword constant copy (static const from .rdata)	
+0060f5b4	00489c70	object_ctor	00671f50	ctor=FUN_00489c90 args=	00489cc0	std::list<T> (head node 0x14 => value 0xc bytes)	ctor FUN_00489c90: new(0x14) self-linked head at +4, size +8; dtor 00489cc0 -> 00489cd0
+0060f5b8	00489fb0	const_copy	00671fec	= 0xbf19999a (-0.6, from .rdata 005d24b0)	-	float/dword constant copy (static const from .rdata)	
+0060f5bc	00489fc0	const_copy	00671fe8	= 0xbf19999a (-0.6, from .rdata 005d24b0)	-	float/dword constant copy (static const from .rdata)	
+0060f5c0	00489fd0	const_copy	00671fe4	= 0x3f19999a (0.6, from .rdata 005d24b4)	-	float/dword constant copy (static const from .rdata)	
+0060f5c4	00489fe0	object_ctor	00671fb8	ctor=FUN_0048b150 args="NeuroNetMissionMessage"	0048a000	UI element factory registration 'NeuroNetMissionMessage' (vtable 005cb554 -> 005d2690)	ctor FUN_0048b150(this=00671fb8,"NeuroNetMissionMessage"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0048a000 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f5c8	0048a010	create_id	00671fb4	= CreateID("mission_failed")	-	uint ID = CreateID(name)	
+0060f5cc	0048a030	create_id	00671fb0	= CreateID("mission_complete")	-	uint ID = CreateID(name)	
+0060f5d0	0048a050	scalar_init	00671f98,00671f9c,00671fa0,00671fa1,00671fa2,00671fa3,00671fa4,00671fa5,00671fa6,00671fa7,00671fa8,00671fa9,00671faa,00671fab,00671fac,00671fad	imm= reads=	0048a0b0		
+0060f5d4	0048a0c0	scalar_init	00671f80,00671f84,00671f88,00671f89,00671f8a,00671f8b,00671f8c,00671f8d,00671f8e,00671f8f,00671f90,00671f91,00671f92,00671f93,00671f94,00671f95	imm= reads=	0048a120		
+0060f5d8	0048b280	const_copy	00672030	= 0xbf19999a (-0.6, from .rdata 005d2694)	-	float/dword constant copy (static const from .rdata)	
+0060f5dc	0048b290	const_copy	0067202c	= 0xbf19999a (-0.6, from .rdata 005d2694)	-	float/dword constant copy (static const from .rdata)	
+0060f5e0	0048b2a0	const_copy	00672028	= 0x3f19999a (0.6, from .rdata 005d2698)	-	float/dword constant copy (static const from .rdata)	
+0060f5e4	0048b2b0	object_ctor	00671ffc	ctor=FUN_0048d5b0 args="NN_MissionVendor"	0048b2d0	UI element factory registration 'NN_MissionVendor' (vtable 005cb554 -> 005d2d90)	ctor FUN_0048d5b0(this=00671ffc,"NN_MissionVendor"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0048b2d0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f5e8	0048d6c0	const_copy	00672098	= 0xbf19999a (-0.6, from .rdata 005d2e2c)	-	float/dword constant copy (static const from .rdata)	
+0060f5ec	0048d6d0	const_copy	00672094	= 0xbf19999a (-0.6, from .rdata 005d2e2c)	-	float/dword constant copy (static const from .rdata)	
+0060f5f0	0048d6e0	const_copy	00672090	= 0x3f19999a (0.6, from .rdata 005d2e30)	-	float/dword constant copy (static const from .rdata)	
+0060f5f4	0048d6f0	empty	-		-		
+0060f5f8	0048d700	object_ctor	00672058	ctor=FUN_004a2dd0 args="NeuroNetNavMap"	0048d720	UI element factory registration 'NeuroNetNavMap' (vtable 005cb554 -> 005d3fa0)	ctor FUN_004a2dd0(this=00672058,"NeuroNetNavMap"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0048d720 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f5fc	0048d730	scalar_init	00672048,0067204c,00672050,00672054	imm= reads=	0048d760		
+0060f600	00494900	scalar_init	0067203c,00672040,00672044	imm=3ba3d70a,3d449ba6,0 reads=	-		
+0060f604	004a3f90	const_copy	00672100	= 0xbf19999a (-0.6, from .rdata 005d3fa4)	-	float/dword constant copy (static const from .rdata)	
+0060f608	004a3fa0	const_copy	006720fc	= 0xbf19999a (-0.6, from .rdata 005d3fa4)	-	float/dword constant copy (static const from .rdata)	
+0060f60c	004a3fb0	const_copy	006720f8	= 0x3f19999a (0.6, from .rdata 005d3fa8)	-	float/dword constant copy (static const from .rdata)	
+0060f610	004a3fc0	object_ctor	006720cc	ctor=FUN_004a5fb0 args="NN_News"	004a3fe0	UI element factory registration 'NN_News' (vtable 005cb554 -> 005d4414)	ctor FUN_004a5fb0(this=006720cc,"NN_News"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004a3fe0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f614	004a60c0	const_copy	0067213c	= 0xbf19999a (-0.6, from .rdata 005d4418)	-	float/dword constant copy (static const from .rdata)	
+0060f618	004a60d0	const_copy	00672138	= 0xbf19999a (-0.6, from .rdata 005d4418)	-	float/dword constant copy (static const from .rdata)	
+0060f61c	004a60e0	const_copy	00672134	= 0x3f19999a (0.6, from .rdata 005d441c)	-	float/dword constant copy (static const from .rdata)	
+0060f620	004a60f0	object_ctor	00672108	ctor=FUN_004a6960 args="NN_OfferDialog"	004a6110	UI element factory registration 'NN_OfferDialog' (vtable 005cb554 -> 005d4600)	ctor FUN_004a6960(this=00672108,"NN_OfferDialog"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004a6110 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f624	004a6aa0	const_copy	00672178	= 0xbf19999a (-0.6, from .rdata 005d4604)	-	float/dword constant copy (static const from .rdata)	
+0060f628	004a6ab0	const_copy	00672174	= 0xbf19999a (-0.6, from .rdata 005d4604)	-	float/dword constant copy (static const from .rdata)	
+0060f62c	004a6ac0	const_copy	00672170	= 0x3f19999a (0.6, from .rdata 005d4608)	-	float/dword constant copy (static const from .rdata)	
+0060f630	004a6ad0	object_ctor	00672144	ctor=FUN_004a76b0 args="NN_Pause"	004a6af0	UI element factory registration 'NN_Pause' (vtable 005cb554 -> 005d4778)	ctor FUN_004a76b0(this=00672144,"NN_Pause"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004a6af0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f634	004a77f0	const_copy	006721b4	= 0xbf19999a (-0.6, from .rdata 005d477c)	-	float/dword constant copy (static const from .rdata)	
+0060f638	004a7800	const_copy	006721b0	= 0xbf19999a (-0.6, from .rdata 005d477c)	-	float/dword constant copy (static const from .rdata)	
+0060f63c	004a7810	const_copy	006721ac	= 0x3f19999a (0.6, from .rdata 005d4780)	-	float/dword constant copy (static const from .rdata)	
+0060f640	004a7820	object_ctor	00672180	ctor=FUN_004a9090 args="NN_PlayerInfo"	004a7840	UI element factory registration 'NN_PlayerInfo' (vtable 005cb554 -> 005d49dc)	ctor FUN_004a9090(this=00672180,"NN_PlayerInfo"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004a7840 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f644	004a9240	const_copy	00672204	= 0xbf19999a (-0.6, from .rdata 005d49e0)	-	float/dword constant copy (static const from .rdata)	
+0060f648	004a9250	const_copy	00672200	= 0xbf19999a (-0.6, from .rdata 005d49e0)	-	float/dword constant copy (static const from .rdata)	
+0060f64c	004a9260	const_copy	006721fc	= 0x3f19999a (0.6, from .rdata 005d49e4)	-	float/dword constant copy (static const from .rdata)	
+0060f650	004a9270	object_ctor	006721d0	ctor=FUN_004b28e0 args="NN_Preferences"	004a9290	UI element factory registration 'NN_Preferences' (vtable 005cb554 -> 005d51a4)	ctor FUN_004b28e0(this=006721d0,"NN_Preferences"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004a9290 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f654	004addb0	scalar_init	006721c0,006721c4,006721c8,006721cc	imm= reads=	004adde0		
+0060f658	004b2b70	const_copy	00672244	= 0xbf19999a (-0.6, from .rdata 005d51a8)	-	float/dword constant copy (static const from .rdata)	
+0060f65c	004b2b80	const_copy	00672240	= 0xbf19999a (-0.6, from .rdata 005d51a8)	-	float/dword constant copy (static const from .rdata)	
+0060f660	004b2b90	const_copy	0067223c	= 0x3f19999a (0.6, from .rdata 005d51ac)	-	float/dword constant copy (static const from .rdata)	
+0060f664	004b2ba0	object_ctor	00672210	ctor=FUN_004b4830 args="NN_Repair"	004b2bc0	UI element factory registration 'NN_Repair' (vtable 005cb554 -> 005d5434)	ctor FUN_004b4830(this=00672210,"NN_Repair"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004b2bc0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f668	004b2bd0	create_id	0067220c	= CreateID("repair_complete")	-	uint ID = CreateID(name)	
+0060f66c	004b4ee0	const_copy	00672280	= 0xbf19999a (-0.6, from .rdata 005d5438)	-	float/dword constant copy (static const from .rdata)	
+0060f670	004b4ef0	const_copy	0067227c	= 0xbf19999a (-0.6, from .rdata 005d5438)	-	float/dword constant copy (static const from .rdata)	
+0060f674	004b4f00	const_copy	00672278	= 0x3f19999a (0.6, from .rdata 005d543c)	-	float/dword constant copy (static const from .rdata)	
+0060f678	004b6260	object_ctor	0067224c	ctor=FUN_004b65c0 args="Rollover"	004b6280	UI element factory registration 'Rollover' (vtable 005cb554 -> 005d55f4)	ctor FUN_004b65c0(this=0067224c,"Rollover"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004b6280 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f67c	004b6b00	const_copy	006722c8	= 0xbf19999a (-0.6, from .rdata 005d55f8)	-	float/dword constant copy (static const from .rdata)	
+0060f680	004b6b10	const_copy	006722c4	= 0xbf19999a (-0.6, from .rdata 005d55f8)	-	float/dword constant copy (static const from .rdata)	
+0060f684	004b6b20	const_copy	006722c0	= 0x3f19999a (0.6, from .rdata 005d55fc)	-	float/dword constant copy (static const from .rdata)	
+0060f688	004b6b30	object_ctor	00672294	ctor=FUN_004b7200 args="NN_Scanner"	004b6b50	UI element factory registration 'NN_Scanner' (vtable 005cb554 -> 005d56dc)	ctor FUN_004b7200(this=00672294,"NN_Scanner"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004b6b50 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f68c	004b73e0	const_copy	00672304	= 0xbf19999a (-0.6, from .rdata 005d56e0)	-	float/dword constant copy (static const from .rdata)	
+0060f690	004b73f0	const_copy	00672300	= 0xbf19999a (-0.6, from .rdata 005d56e0)	-	float/dword constant copy (static const from .rdata)	
+0060f694	004b7400	const_copy	006722fc	= 0x3f19999a (0.6, from .rdata 005d56e4)	-	float/dword constant copy (static const from .rdata)	
+0060f698	004b7410	object_ctor	006722d0	ctor=FUN_004b96b0 args="NN_ShipTrader"	004b7430	UI element factory registration 'NN_ShipTrader' (vtable 005cb554 -> 005d5920)	ctor FUN_004b96b0(this=006722d0,"NN_ShipTrader"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004b7430 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f69c	004b9860	const_copy	006723f4	= 0xbf19999a (-0.6, from .rdata 005d59f0)	-	float/dword constant copy (static const from .rdata)	
+0060f6a0	004b9870	const_copy	006723f0	= 0xbf19999a (-0.6, from .rdata 005d59f0)	-	float/dword constant copy (static const from .rdata)	
+0060f6a4	004b9880	const_copy	006723ec	= 0x3f19999a (0.6, from .rdata 005d59f4)	-	float/dword constant copy (static const from .rdata)	
+0060f6a8	004b9890	object_ctor	006723c0	ctor=FUN_004bcfc0 args="NeuroNetStoryStar"	004b98b0	UI element factory registration 'NeuroNetStoryStar' (vtable 005cb554 -> 005d5dac)	ctor FUN_004bcfc0(this=006723c0,"NeuroNetStoryStar"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004b98b0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f6ac	004b98c0	object_ctor	00672394	ctor=FUN_004bd100 args="MissionObjectiveWindow"	004b98e0	UI element factory registration 'MissionObjectiveWindow' (vtable 005cb554 -> 005d5db4)	ctor FUN_004bd100(this=00672394,"MissionObjectiveWindow"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004b98e0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f6b0	004b98f0	object_ctor	00672368	ctor=FUN_004bd250 args="MissionLogMoveToNNWindow"	004b9910	UI element factory registration 'MissionLogMoveToNNWindow' (vtable 005cb554 -> 005d5dbc)	ctor FUN_004bd250(this=00672368,"MissionLogMoveToNNWindow"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004b9910 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f6b4	004b9920	object_ctor	0067233c	ctor=FUN_004bd380 args="MissionLogMoveFromNNWindow"	004b9940	UI element factory registration 'MissionLogMoveFromNNWindow' (vtable 005cb554 -> 005d5e98)	ctor FUN_004bd380(this=0067233c,"MissionLogMoveFromNNWindow"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004b9940 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f6b8	004b9950	object_ctor	00672330,00672334,00672338	ctor=FUN_005b7e84 args= ptrs=00000020	004b9990	std::list<T> (head node 0x20 => value 0x18 bytes)	init 004b9950: alloc byte 00672330, head=new(0x20) self-linked at 00672334, size 00672338=0; atexit 004b9990 walks/frees nodes; element dtor via import 005c6098 ??1FmtStr@@QAE@XZ => list<FmtStr-containing value>
+0060f6bc	004b9a00	object_ctor	00672324,00672328,0067232c	ctor=FUN_005b7e84 args= ptrs=00000020	004b9a40	std::list<T> (head node 0x20 => value 0x18 bytes)	init 004b9a00: alloc byte 00672324, head=new(0x20) self-linked at 00672328, size 0067232c=0; atexit 004b9a40 walks/frees nodes; element dtor via import 005c6098 ??1FmtStr@@QAE@XZ => list<FmtStr-containing value>
+0060f6c0	004b9ab0	scalar_init	0067230c,00672310,00672314,00672315,00672316,00672317,00672318,00672319,0067231a,0067231b,0067231c,0067231d,0067231e,0067231f,00672320,00672321	imm= reads=	004b9b10		
+0060f6c4	004bd640	const_copy	00672444	= 0xbf19999a (-0.6, from .rdata 005d5f6c)	-	float/dword constant copy (static const from .rdata)	
+0060f6c8	004bd650	const_copy	00672440	= 0xbf19999a (-0.6, from .rdata 005d5f6c)	-	float/dword constant copy (static const from .rdata)	
+0060f6cc	004bd660	const_copy	0067243c	= 0x3f19999a (0.6, from .rdata 005d5f70)	-	float/dword constant copy (static const from .rdata)	
+0060f6d0	004be280	object_ctor	00672410	ctor=FUN_004be3b0 args="ToolTip"	004be2a0	UI element factory registration 'ToolTip' (vtable 005cb554 -> 005d6010)	ctor FUN_004be3b0(this=00672410,"ToolTip"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004be2a0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f6d4	004be590	const_copy	006724a8	= 0xbf19999a (-0.6, from .rdata 005d6014)	-	float/dword constant copy (static const from .rdata)	
+0060f6d8	004be5a0	const_copy	006724a4	= 0xbf19999a (-0.6, from .rdata 005d6014)	-	float/dword constant copy (static const from .rdata)	
+0060f6dc	004be5b0	const_copy	006724a0	= 0x3f19999a (0.6, from .rdata 005d6018)	-	float/dword constant copy (static const from .rdata)	
+0060f6e0	004be5c0	scalar_init	0067249c,0067249e	imm= reads=	-		
+0060f6e4	004be5d0	scalar_init	00672498,0067249a	imm=0,1 reads=	-		
+0060f6e8	004be5f0	scalar_init	00672494,00672496	imm= reads=	-		
+0060f6ec	004be610	scalar_init	00672490,00672492	imm=2,1 reads=	-		
+0060f6f0	004be630	scalar_init	0067248c,0067248e	imm=3,1 reads=	-		
+0060f6f4	004be650	scalar_init	00672488,0067248a	imm=4,1 reads=	-		
+0060f6f8	004be670	object_ctor	0067245c	ctor=FUN_004c37a0 args="NN_Trade"	004be690	UI element factory registration 'NN_Trade' (vtable 005cb554 -> 005d6ca0)	ctor FUN_004c37a0(this=0067245c,"NN_Trade"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 004be690 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060f6fc	004be6a0	create_id	00672458	= CreateID("insufficient_cargo_space")	-	uint ID = CreateID(name)	
+0060f700	004c39a0	const_copy	0067333c	= 0xbf19999a (-0.6, from .rdata 005d6cc0)	-	float/dword constant copy (static const from .rdata)	
+0060f704	004c39b0	const_copy	00673338	= 0xbf19999a (-0.6, from .rdata 005d6cc0)	-	float/dword constant copy (static const from .rdata)	
+0060f708	004c39c0	const_copy	00673334	= 0x3f19999a (0.6, from .rdata 005d6cc4)	-	float/dword constant copy (static const from .rdata)	
+0060f70c	004c39d0	object_ctor	00673320	ctor=FUN_004c5a10 args=	004c3a00	std::map/set (MSVC6 _Tree, node 0x18 => value_type 0x8 bytes)	ctor FUN_004c5a10(this=00673320): node=new(0x18) {left,parent,right,value@0xc,color@0x14,isnil@0x15}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 004c3a00 -> 0x4c3a10
+0060f710	004c3ad0	empty	-		-		
+0060f714	004c3ae0	empty	-		-		
+0060f718	004c3af0	empty	-		-		
+0060f71c	004c3b00	object_ctor	0067296c,00672970,00672974	ctor=FUN_005b7e84 args= ptrs=00000010	004c3b40	std::list<T> (head node 0x10 => value 0x8 bytes)	init 004c3b00: alloc byte 0067296c, head=new(0x10) self-linked at 00672970, size 00672974=0; atexit 004c3b40 walks/frees nodes; dtor frees nodes only (POD elements)
+0060f720	004c3ba0	object_ctor	00672960	ctor=??0EquipDescList@@QAE@XZ args=	004c3bc0	EquipDescList (Common.dll class)	EquipDescList::EquipDescList(00672960) via import; atexit 004c3bc0 -> jmp [005c60fc] ??1EquipDescList@@QAE@XZ; 12 users 004c3e20..004c4bc0
+0060f724	004c3bd0	object_ctor	0067294c	ctor=FUN_004c59a0 args=	004c3c00	std::map/set (MSVC6 _Tree, node 0x58 => value_type 0x48 bytes)	ctor FUN_004c59a0(this=0067294c): node=new(0x58) {left,parent,right,value@0xc,color@0x54,isnil@0x55}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 004c3c00 -> 0x4c3c10
+0060f728	004c3ce0	scalar_init	00672918,0067291c,00672920,00672924,00672948	imm= reads=	-		
+0060f72c	004c3d00	scalar_init	006728e4,006728e8,006728ec,006728f0,00672914	imm= reads=	-		
+0060f730	004c5060	object_ctor	006728d8	ctor=FUN_004c5940 args= ptrs=00000000	004c5080	BaseWatcher (Watchable smart-pointer, null)	ctor FUN_004c5940(this=006728d8, 0): zero 2 dwords, BaseWatcher::set_pointer if arg!=0; dtor 004c5080 -> 005154f0 (BaseWatcher dtor, calls import 005c62a8 if ptr!=0); users 004c5090/004c5110/004c52d0
+0060f734	004c5630	scalar_init	006728c8,006728cc,006728d0,006728d4	imm= reads=	004c5660		
+0060f738	004c60f0	const_copy	006733a8	= 0xbf19999a (-0.6, from .rdata 005d6d2c)	-	float/dword constant copy (static const from .rdata)	
+0060f73c	004c6100	const_copy	006733a4	= 0xbf19999a (-0.6, from .rdata 005d6d2c)	-	float/dword constant copy (static const from .rdata)	
+0060f740	004c6110	const_copy	006733a0	= 0x3f19999a (0.6, from .rdata 005d6d30)	-	float/dword constant copy (static const from .rdata)	
+0060f744	004c6120	create_id	0067339c	= CreateID("insufficient_cargo_space")	-	uint ID = CreateID(name)	
+0060f748	004c7080	const_copy	00673544	= 0xbf19999a (-0.6, from .rdata 005d6d40)	-	float/dword constant copy (static const from .rdata)	
+0060f74c	004c7090	const_copy	00673540	= 0xbf19999a (-0.6, from .rdata 005d6d40)	-	float/dword constant copy (static const from .rdata)	
+0060f750	004c70a0	const_copy	0067353c	= 0x3f19999a (0.6, from .rdata 005d6d44)	-	float/dword constant copy (static const from .rdata)	
+0060f754	004c70f0	object_ctor	00673538	ctor= args=	-	PerfOption registration 'TurnSensitivity' (heap obj 0x1c bytes, vtable 005d6d50)	init 004c70f0: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 00673538 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060f758	004c7180	object_ctor	00673520	ctor=FUN_0041dd20 args=	004c71a0	std::map/set (MSVC6 _Tree, node 0x5c => value_type 0x4c bytes)	ctor FUN_0041dd20(this=00673520): node=new(0x5c) {left,parent,right,value@0xc,color@0x58,isnil@0x59}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10 (+0x14 cached head/begin); atexit 004c71a0 -> 0x41dc50
+0060f75c	004c7260	scalar_init	00673518,0067351c	imm= reads=	-		
+0060f760	004c72a0	scalar_init	00673510,00673514	imm= reads=	-		
+0060f764	004c7360	scalar_init	00673408,0067340c	imm= reads=	-		
+0060f768	004c82f0	object_ctor	006733dc	ctor=FUN_004c8400 args="Steer"	004c8310	HUD component factory registration 'Steer' (vtable 005d6e30 -> 005d6e44)	ctor FUN_004c8400(this=006733dc,"Steer"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004c8310 -> 0x4c8350 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f76c	004c8320	object_ctor	006733b0	ctor=FUN_004c8ca0 args="Button"	004c8340	HUD component factory registration 'Button' (vtable 005d6e30 -> 005d6ee8)	ctor FUN_004c8ca0(this=006733b0,"Button"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004c8340 -> 0x4c8350 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f770	004c9690	const_copy	006748f0	= 0xbf19999a (-0.6, from .rdata 005d710c)	-	float/dword constant copy (static const from .rdata)	
+0060f774	004c96a0	const_copy	006748ec	= 0xbf19999a (-0.6, from .rdata 005d710c)	-	float/dword constant copy (static const from .rdata)	
+0060f778	004c96b0	const_copy	006748e8	= 0x3f19999a (0.6, from .rdata 005d7110)	-	float/dword constant copy (static const from .rdata)	
+0060f77c	004c96c0	scalar_init	006748e4,006748e6	imm= reads=	-		
+0060f780	004c96d0	scalar_init	006748e0,006748e2	imm=0,1 reads=	-		
+0060f784	004c96f0	scalar_init	006748dc,006748de	imm= reads=	-		
+0060f788	004c9710	scalar_init	006748d8,006748da	imm=2,1 reads=	-		
+0060f78c	004c9730	scalar_init	006748d4,006748d6	imm=3,1 reads=	-		
+0060f790	004c9750	scalar_init	006748d0,006748d2	imm=4,1 reads=	-		
+0060f794	004c9800	create_id	006748cc	= CreateID("hud_comm_window")	-	uint ID = CreateID(name)	
+0060f798	004c9820	scalar_init	00673f48	imm= reads=	-		
+0060f79c	004c9860	scalar_init	006735c0	imm= reads=	-		
+0060f7a0	004c98a0	object_ctor	006735b4	ctor=FUN_004c98c0 args=	004c98f0	std::list<T> (head node 0x44 => value 0x3c bytes)	ctor FUN_004c98c0: new(0x44) self-linked head at +4, size +8; dtor 004c98f0 -> 004c9900
+0060f7a4	004ca640	scalar_init	006735a4,006735a8,006735ac,006735b0	imm=0,0,bf800000,0 reads=	-		
+0060f7a8	004cc850	object_ctor	00673578	ctor=FUN_004cd270 args="Receiver"	004cc870	HUD component factory registration 'Receiver' (vtable 005d6e30 -> 005d74d0)	ctor FUN_004cd270(this=00673578,"Receiver"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004cc870 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f7ac	004cc950	scalar_init	00673574,00673570	imm=ffffffff,0 reads=	004cc970		
+0060f7b0	004cee80	const_copy	00674944	= 0xbf19999a (-0.6, from .rdata 005d7954)	-	float/dword constant copy (static const from .rdata)	
+0060f7b4	004cee90	const_copy	00674940	= 0xbf19999a (-0.6, from .rdata 005d7954)	-	float/dword constant copy (static const from .rdata)	
+0060f7b8	004ceea0	const_copy	0067493c	= 0x3f19999a (0.6, from .rdata 005d7958)	-	float/dword constant copy (static const from .rdata)	
+0060f7bc	004cefe0	object_ctor	00674910	ctor=FUN_004d4630 args="ContactList"	004cf000	HUD component factory registration 'ContactList' (vtable 005d6e30 -> 005d7c0c)	ctor FUN_004d4630(this=00674910,"ContactList"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004cf000 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f7c0	004cf020	empty	-		-		
+0060f7c4	004d4ab0	const_copy	00674990	= 0xbf19999a (-0.6, from .rdata 005d7c14)	-	float/dword constant copy (static const from .rdata)	
+0060f7c8	004d4ac0	const_copy	0067498c	= 0xbf19999a (-0.6, from .rdata 005d7c14)	-	float/dword constant copy (static const from .rdata)	
+0060f7cc	004d4ad0	const_copy	00674988	= 0x3f19999a (0.6, from .rdata 005d7c18)	-	float/dword constant copy (static const from .rdata)	
+0060f7d0	004d4ae0	scalar_init	00674984	imm=0 reads=	-		
+0060f7d4	004d4af0	scalar_init	00674980	imm=ffffffff reads=	-		
+0060f7d8	004d4b00	object_ctor	00674954	ctor=FUN_004d5a80 args="Core"	004d4b20	HUD component factory registration 'Core' (vtable 005d6e30 -> 005d7e8c)	ctor FUN_004d5a80(this=00674954,"Core"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004d4b20 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f7dc	004d4b30	create_id	00674950	= CreateID("Ku07_02")	-	uint ID = CreateID(name)	
+0060f7e0	004d5b70	const_copy	006749cc	= 0xbf19999a (-0.6, from .rdata 005d7e94)	-	float/dword constant copy (static const from .rdata)	
+0060f7e4	004d5b80	const_copy	006749c8	= 0xbf19999a (-0.6, from .rdata 005d7e94)	-	float/dword constant copy (static const from .rdata)	
+0060f7e8	004d5b90	const_copy	006749c4	= 0x3f19999a (0.6, from .rdata 005d7e98)	-	float/dword constant copy (static const from .rdata)	
+0060f7ec	004d5ba0	object_ctor	00674998	ctor=FUN_004d6180 args="CruiseProgress"	004d5bc0	HUD component factory registration 'CruiseProgress' (vtable 005d6e30 -> 005d7ff4)	ctor FUN_004d6180(this=00674998,"CruiseProgress"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004d5bc0 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f7f0	004d6270	const_copy	00674a08	= 0xbf19999a (-0.6, from .rdata 005d7ffc)	-	float/dword constant copy (static const from .rdata)	
+0060f7f4	004d6280	const_copy	00674a04	= 0xbf19999a (-0.6, from .rdata 005d7ffc)	-	float/dword constant copy (static const from .rdata)	
+0060f7f8	004d6290	const_copy	00674a00	= 0x3f19999a (0.6, from .rdata 005d8000)	-	float/dword constant copy (static const from .rdata)	
+0060f7fc	004d62a0	object_ctor	006749d4	ctor=FUN_004d7450 args="DamageIndicator"	004d62c0	HUD component factory registration 'DamageIndicator' (vtable 005d6e30 -> 005d81d8)	ctor FUN_004d7450(this=006749d4,"DamageIndicator"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004d62c0 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f800	004d7540	const_copy	00674a50	= 0xbf19999a (-0.6, from .rdata 005d8278)	-	float/dword constant copy (static const from .rdata)	
+0060f804	004d7550	const_copy	00674a4c	= 0xbf19999a (-0.6, from .rdata 005d8278)	-	float/dword constant copy (static const from .rdata)	
+0060f808	004d7560	const_copy	00674a48	= 0x3f19999a (0.6, from .rdata 005d827c)	-	float/dword constant copy (static const from .rdata)	
+0060f80c	004d7570	object_ctor	00674a1c	ctor=FUN_004d9990 args="Maneuvers"	004d7590	HUD component factory registration 'Maneuvers' (vtable 005d6e30 -> 005d8470)	ctor FUN_004d9990(this=00674a1c,"Maneuvers"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004d7590 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f810	004d75a0	create_id	00674a18	= CreateID("cancelled")	-	uint ID = CreateID(name)	
+0060f814	004d75c0	create_id	00674a14	= CreateID("nnvoice_trade_lane_disrupted")	-	uint ID = CreateID(name)	
+0060f818	004da0d0	const_copy	00674a98	= 0xbf19999a (-0.6, from .rdata 005d8478)	-	float/dword constant copy (static const from .rdata)	
+0060f81c	004da0e0	const_copy	00674a94	= 0xbf19999a (-0.6, from .rdata 005d8478)	-	float/dword constant copy (static const from .rdata)	
+0060f820	004da0f0	const_copy	00674a90	= 0x3f19999a (0.6, from .rdata 005d847c)	-	float/dword constant copy (static const from .rdata)	
+0060f824	004da100	create_id	00674a8c	= CreateID("ge_s_repair_01")	-	uint ID = CreateID(name)	
+0060f828	004da120	create_id	00674a88	= CreateID("ge_s_battery_01")	-	uint ID = CreateID(name)	
+0060f82c	004da140	object_ctor	00674a5c	ctor=FUN_004de7d0 args="Status"	004da160	HUD component factory registration 'Status' (vtable 005d6e30 -> 005d883c)	ctor FUN_004de7d0(this=00674a5c,"Status"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004da160 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f830	004e0780	const_copy	00674af8	= 0xbf19999a (-0.6, from .rdata 005d8854)	-	float/dword constant copy (static const from .rdata)	
+0060f834	004e0790	const_copy	00674af4	= 0xbf19999a (-0.6, from .rdata 005d8854)	-	float/dword constant copy (static const from .rdata)	
+0060f838	004e07a0	const_copy	00674af0	= 0x3f19999a (0.6, from .rdata 005d8858)	-	float/dword constant copy (static const from .rdata)	
+0060f83c	004e07b0	scalar_init	00674aec,00674aee	imm= reads=	-		
+0060f840	004e07c0	scalar_init	00674ae8,00674aea	imm=0,1 reads=	-		
+0060f844	004e07e0	scalar_init	00674ae4,00674ae6	imm= reads=	-		
+0060f848	004e0800	scalar_init	00674ae0,00674ae2	imm=2,1 reads=	-		
+0060f84c	004e0820	scalar_init	00674adc,00674ade	imm=3,1 reads=	-		
+0060f850	004e0840	scalar_init	00674ad8,00674ada	imm=4,1 reads=	-		
+0060f854	004e0860	create_id	00674ad4	= CreateID("scanning_cargo")	-	uint ID = CreateID(name)	
+0060f858	004e0880	object_ctor	00674aa8	ctor=FUN_004e5680 args="Target"	004e08a0	HUD component factory registration 'Target' (vtable 005d6e30 -> 005d8d4c)	ctor FUN_004e5680(this=00674aa8,"Target"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004e08a0 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f85c	004e5ff0	const_copy	00674b18	= 0xbf19999a (-0.6, from .rdata 005d8d54)	-	float/dword constant copy (static const from .rdata)	
+0060f860	004e6000	const_copy	00674b14	= 0xbf19999a (-0.6, from .rdata 005d8d54)	-	float/dword constant copy (static const from .rdata)	
+0060f864	004e6010	const_copy	00674b10	= 0x3f19999a (0.6, from .rdata 005d8d58)	-	float/dword constant copy (static const from .rdata)	
+0060f868	004e7fd0	const_copy	00674b68	= 0xbf19999a (-0.6, from .rdata 005d8ed8)	-	float/dword constant copy (static const from .rdata)	
+0060f86c	004e7fe0	const_copy	00674b64	= 0xbf19999a (-0.6, from .rdata 005d8ed8)	-	float/dword constant copy (static const from .rdata)	
+0060f870	004e7ff0	const_copy	00674b60	= 0x3f19999a (0.6, from .rdata 005d8edc)	-	float/dword constant copy (static const from .rdata)	
+0060f874	004e8000	scalar_init	00674b54,00674b58,00674b5c	imm=0,0,0 reads=	-		
+0060f878	004e8020	create_id	00674b50	= CreateID("incoming_torpedo")	-	uint ID = CreateID(name)	
+0060f87c	004e8040	create_id	00674b4c	= CreateID("incoming_missile")	-	uint ID = CreateID(name)	
+0060f880	004f27a0	object_ctor	00674b20	ctor=FUN_004f2830 args="Targetable_Objects"	004f27c0	HUD component factory registration 'Targetable_Objects' (vtable 005d6e30 -> 005d9678)	ctor FUN_004f2830(this=00674b20,"Targetable_Objects"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004f27c0 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f884	004f3a70	const_copy	00674bc0	= 0xbf19999a (-0.6, from .rdata 005d9680)	-	float/dword constant copy (static const from .rdata)	
+0060f888	004f3a80	const_copy	00674bbc	= 0xbf19999a (-0.6, from .rdata 005d9680)	-	float/dword constant copy (static const from .rdata)	
+0060f88c	004f3a90	const_copy	00674bb8	= 0x3f19999a (0.6, from .rdata 005d9684)	-	float/dword constant copy (static const from .rdata)	
+0060f890	004f3aa0	create_id	00674bb4	= CreateID("objective_reached")	-	uint ID = CreateID(name)	
+0060f894	004f3ac0	object_ctor	00674b88	ctor=FUN_004f4d30 args="Waypoint"	004f3ae0	HUD component factory registration 'Waypoint' (vtable 005d6e30 -> 005d97e0)	ctor FUN_004f4d30(this=00674b88,"Waypoint"): name[32] at +0xc, appended to tail of list DAT_00673510/DAT_00673514 (FUN_004c72b0 or inline); atexit 004f3ae0 -> 0x4cf010 (unlink); consumed by 004c73d0 HUD ini loader (is_header(name) -> vtbl[0] create)
+0060f898	004f4e20	const_copy	00674c00	= 0xbf19999a (-0.6, from .rdata 005d97e8)	-	float/dword constant copy (static const from .rdata)	
+0060f89c	004f4e30	const_copy	00674bfc	= 0xbf19999a (-0.6, from .rdata 005d97e8)	-	float/dword constant copy (static const from .rdata)	
+0060f8a0	004f4e40	const_copy	00674bf8	= 0x3f19999a (0.6, from .rdata 005d97ec)	-	float/dword constant copy (static const from .rdata)	
+0060f8a4	004f4e50	create_id	00674bf4	= CreateID("anomaly_detected")	-	uint ID = CreateID(name)	
+0060f8a8	004f4e70	create_id	00674bf0	= CreateID("danger")	-	uint ID = CreateID(name)	
+0060f8ac	004f4e90	create_id	00674bec	= CreateID("radiation_damage_detected")	-	uint ID = CreateID(name)	
+0060f8b0	004f4eb0	create_id	00674be8	= CreateID("mines_detected")	-	uint ID = CreateID(name)	
+0060f8b4	004f4ed0	create_id	00674be4	= CreateID("volatile_gases_detected")	-	uint ID = CreateID(name)	
+0060f8b8	004f4ef0	create_id	00674be0	= CreateID("warning")	-	uint ID = CreateID(name)	
+0060f8bc	004f4f10	create_id	00674bdc	= CreateID("sensor_efficiency_reduced")	-	uint ID = CreateID(name)	
+0060f8c0	004f4f30	create_id	00674bd8	= CreateID("increased_drag_detected")	-	uint ID = CreateID(name)	
+0060f8c4	004f5310	other	00674bcc,00674bd0,00674bd4	consts=[['005d97f0', '00000040', 2.0, 1073741824]]	-	Vector {0.0, 0.0, 2.0} at 00674bcc	init 004f5310: 00674bcc=0, 00674bd0=0, 00674bd4=[005d97f0]=0x40000000 (2.0f); no dtor; used by 004f5330 (mov ecx,00674bcc; call 004f4f50)
+0060f8c8	004f5350	const_copy	00674c40	= 0xbf19999a (-0.6, from .rdata 005d9898)	-	float/dword constant copy (static const from .rdata)	
+0060f8cc	004f5360	const_copy	00674c3c	= 0xbf19999a (-0.6, from .rdata 005d9898)	-	float/dword constant copy (static const from .rdata)	
+0060f8d0	004f5370	const_copy	00674c38	= 0x3f19999a (0.6, from .rdata 005d989c)	-	float/dword constant copy (static const from .rdata)	
+0060f8d4	004f5380	object_ctor	00674c0c	ctor=FUN_004f53b0 args=	004f53a0	guess: small container object (0x2c bytes: two {ptr,ptr/alloc-byte} groups, all zero)	ctor FUN_004f53b0 zeroes +0..+0x28 with alloc bytes at +8,+0x18; dtor 004f53a0 -> 004f5410
+0060f8d8	004f67b0	const_copy	00674c50	= 0xbf19999a (-0.6, from .rdata 005d98b0)	-	float/dword constant copy (static const from .rdata)	
+0060f8dc	004f67c0	const_copy	00674c4c	= 0xbf19999a (-0.6, from .rdata 005d98b0)	-	float/dword constant copy (static const from .rdata)	
+0060f8e0	004f67d0	const_copy	00674c48	= 0x3f19999a (0.6, from .rdata 005d98b4)	-	float/dword constant copy (static const from .rdata)	
+0060f8e4	004f6df0	const_copy	00674c6c	= 0xbf19999a (-0.6, from .rdata 005d999c)	-	float/dword constant copy (static const from .rdata)	
+0060f8e8	004f6e00	const_copy	00674c68	= 0xbf19999a (-0.6, from .rdata 005d999c)	-	float/dword constant copy (static const from .rdata)	
+0060f8ec	004f6e10	const_copy	00674c64	= 0x3f19999a (0.6, from .rdata 005d99a0)	-	float/dword constant copy (static const from .rdata)	
+0060f8f0	004f6e20	scalar_init	00674c60	imm=5d99a8 reads=	-		
+0060f8f4	004f6e30	scalar_init	00674c5c	imm=5d99b8 reads=	-		
+0060f8f8	004f6e60	scalar_init	00674c58	imm=5d99c8 reads=	-		
+0060f8fc	004f6e90	const_copy	00674f4c	= 0xbf19999a (-0.6, from .rdata 005d99d4)	-	float/dword constant copy (static const from .rdata)	
+0060f900	004f6ea0	const_copy	00674f48	= 0xbf19999a (-0.6, from .rdata 005d99d4)	-	float/dword constant copy (static const from .rdata)	
+0060f904	004f6eb0	const_copy	00674f44	= 0x3f19999a (0.6, from .rdata 005d99d8)	-	float/dword constant copy (static const from .rdata)	
+0060f908	004f6ec0	scalar_init	00674f40	imm=0 reads=	-		
+0060f90c	004f6ed0	scalar_init	00674f3c	imm=ffffffff reads=	-		
+0060f910	004f6ee0	object_ctor	00674f24	ctor=FUN_0041dd20 args=	004f6f00	std::map/set (MSVC6 _Tree, node 0x5c => value_type 0x4c bytes)	ctor FUN_0041dd20(this=00674f24): node=new(0x5c) {left,parent,right,value@0xc,color@0x58,isnil@0x59}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10 (+0x14 cached head/begin); atexit 004f6f00 -> 0x41dc50
+0060f914	004f6f10	scalar_init	00674f14,00674f18,00674f1c,00674f20	imm= reads=	004f6f40		
+0060f918	004f6f60	object_ctor	-	ctor= args=	-	array[47] of 12-byte struct zeroed (00674ce0..)	init 004f6f60 loop 0x2f x {0,0,0} from 00674ce0 stride 12; no dtor; target '0000002f' is loop count; guess: Vector array
+0060f91c	004f6f80	scalar_init	00674cdc	imm=0 reads=	004f6fa0		
+0060f920	004f6fc0	scalar_init	00674ccc,00674cd0,00674cd4,00674cd8	imm=84,ffffffff reads=	-		
+0060f924	004f6ff0	scalar_init	00674cbc,00674cc0,00674cc4,00674cc8	imm=84,ffffffff reads=	-		
+0060f928	004f7020	object_ctor	00674cb8	ctor= args=	-	PerfOption registration 'generic_effect_perf' (heap obj 0x1c bytes, vtable 005d9a84)	init 004f7020: new(0x1c){vtbl,name,id=0x5cb,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 00674cb8 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060f92c	004f9360	scalar_init	00674c80,00674c84,00674c8c,00674c90,00674c94,00674c9c,00674ca0,00674ca4,00674ca5,00674ca8,00674c7c,00674c88,00674c98,00674caf,00674cae,00674cad,00674cac,00674cb4,00674cb0	imm=1,142,80,0,0 reads=	004f93f0		
+0060f930	004fcbb0	const_copy	00674f64	= 0xbf19999a (-0.6, from .rdata 005d9e10)	-	float/dword constant copy (static const from .rdata)	
+0060f934	004fcbc0	const_copy	00674f60	= 0xbf19999a (-0.6, from .rdata 005d9e10)	-	float/dword constant copy (static const from .rdata)	
+0060f938	004fcbd0	const_copy	00674f5c	= 0x3f19999a (0.6, from .rdata 005d9e14)	-	float/dword constant copy (static const from .rdata)	
+0060f93c	004fce70	const_copy	00674f74	= 0xbf19999a (-0.6, from .rdata 005d9e18)	-	float/dword constant copy (static const from .rdata)	
+0060f940	004fce80	const_copy	00674f70	= 0xbf19999a (-0.6, from .rdata 005d9e18)	-	float/dword constant copy (static const from .rdata)	
+0060f944	004fce90	const_copy	00674f6c	= 0x3f19999a (0.6, from .rdata 005d9e1c)	-	float/dword constant copy (static const from .rdata)	
+0060f948	004fd8d0	const_copy	00674f8c	= 0xbf19999a (-0.6, from .rdata 005da3ec)	-	float/dword constant copy (static const from .rdata)	
+0060f94c	004fd8e0	const_copy	00674f88	= 0xbf19999a (-0.6, from .rdata 005da3ec)	-	float/dword constant copy (static const from .rdata)	
+0060f950	004fd8f0	const_copy	00674f84	= 0x3f19999a (0.6, from .rdata 005da3f0)	-	float/dword constant copy (static const from .rdata)	
+0060f954	004fd900	scalar_init	00674f80	imm=0 reads=	-		
+0060f958	004fd910	scalar_init	00674f7c	imm=ffffffff reads=	-		
+0060f95c	004fe090	const_copy	00674fb0	= 0xbf19999a (-0.6, from .rdata 005da4c8)	-	float/dword constant copy (static const from .rdata)	
+0060f960	004fe0a0	const_copy	00674fac	= 0xbf19999a (-0.6, from .rdata 005da4c8)	-	float/dword constant copy (static const from .rdata)	
+0060f964	004fe0b0	const_copy	00674fa8	= 0x3f19999a (0.6, from .rdata 005da4cc)	-	float/dword constant copy (static const from .rdata)	
+0060f968	004fe0c0	object_ctor	00674f98	ctor=FUN_0059ec40 args=	004fe0e0	std::vector<T> (non-POD elements)	ctor FUN_0059ec40(this=00674f98): alloc byte, first/last/end=0; atexit 004fe0e0 -> 0x4fe0f0 (element-destroying vector dtor)
+0060f96c	00501fd0	const_copy	00674fe8	= 0xbf19999a (-0.6, from .rdata 005da77c)	-	float/dword constant copy (static const from .rdata)	
+0060f970	00501fe0	const_copy	00674fe4	= 0xbf19999a (-0.6, from .rdata 005da77c)	-	float/dword constant copy (static const from .rdata)	
+0060f974	00501ff0	const_copy	00674fe0	= 0x3f19999a (0.6, from .rdata 005da780)	-	float/dword constant copy (static const from .rdata)	
+0060f978	00502000	object_ctor	00674fd4,00674fd8,00674fdc	ctor=FUN_005b7e84 args= ptrs=00000070	00502040	std::list<T> (head node 0x70 => value 0x68 bytes)	init 00502000: alloc byte 00674fd4, head=new(0x70) self-linked at 00674fd8, size 00674fdc=0; atexit 00502040 walks/frees nodes; dtor frees nodes only (POD elements)
+0060f97c	00503390	scalar_init	00674fcc	imm=5daab4 reads=	-		
+0060f980	00504940	const_copy	00674ffc	= 0xbf19999a (-0.6, from .rdata 005dacb0)	-	float/dword constant copy (static const from .rdata)	
+0060f984	00504950	const_copy	00674ff8	= 0xbf19999a (-0.6, from .rdata 005dacb0)	-	float/dword constant copy (static const from .rdata)	
+0060f988	00504960	const_copy	00674ff4	= 0x3f19999a (0.6, from .rdata 005dacb4)	-	float/dword constant copy (static const from .rdata)	
+0060f98c	00509bc0	object_ctor	00674ff0	ctor= args=	-	PerfOption registration 'Nebula' (heap obj 0x1c bytes, vtable 005d6d50)	init 00509bc0: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 00674ff0 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060f990	00509e50	const_copy	00675070	= 0xbf19999a (-0.6, from .rdata 005db0d0)	-	float/dword constant copy (static const from .rdata)	
+0060f994	00509e60	const_copy	0067506c	= 0xbf19999a (-0.6, from .rdata 005db0d0)	-	float/dword constant copy (static const from .rdata)	
+0060f998	00509e70	const_copy	00675068	= 0x3f19999a (0.6, from .rdata 005db0d4)	-	float/dword constant copy (static const from .rdata)	
+0060f99c	00509e80	object_ctor	0067505c,00675060,00675064	ctor=FUN_005b7e84 args= ptrs=0000000c	00509ec0	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 00509e80: alloc byte 0067505c, head=new(0xc) self-linked at 00675060, size 00675064=0; atexit 00509ec0 walks/frees nodes; dtor frees nodes only (POD elements)
+0060f9a0	00509f90	object_ctor	00675018	ctor=FUN_00509fb0 args= ptrs=00000080,00000000	0050a020	guess: render resource/material descriptor (fields 1,0,0,0x242,...; 0x242 maybe D3D FVF XYZ|DIFFUSE|TEX2), ctor args (NULL refcounted ptr, 0x80)	ctor FUN_00509fb0(this=00675018, 0, 0x80): [0]=1,[3]=0x242, [6]=ptr with AddRef via vtbl+4, color bytes 0xff..; dtor 0050a020 guarded by bit1 of 00675010 -> 0046e9c0
+0060f9a4	0050c220	const_copy	00675090	= 0xbf19999a (-0.6, from .rdata 005db350)	-	float/dword constant copy (static const from .rdata)	
+0060f9a8	0050c230	const_copy	0067508c	= 0xbf19999a (-0.6, from .rdata 005db350)	-	float/dword constant copy (static const from .rdata)	
+0060f9ac	0050c240	const_copy	00675088	= 0x3f19999a (0.6, from .rdata 005db354)	-	float/dword constant copy (static const from .rdata)	
+0060f9b0	0050c250	scalar_init	00675084	imm=5db35c reads=	-		
+0060f9b4	0050c3f0	scalar_init	00675080	imm=5db448 reads=	-		
+0060f9b8	0050c550	const_copy	00675190	= 0xbf19999a (-0.6, from .rdata 005db530)	-	float/dword constant copy (static const from .rdata)	
+0060f9bc	0050c560	const_copy	0067518c	= 0xbf19999a (-0.6, from .rdata 005db530)	-	float/dword constant copy (static const from .rdata)	
+0060f9c0	0050c570	const_copy	00675188	= 0x3f19999a (0.6, from .rdata 005db534)	-	float/dword constant copy (static const from .rdata)	
+0060f9c4	0050c580	object_ctor	0067517c,00675180,00675184	ctor=FUN_005b7e84 args= ptrs=0000000c	0050c5c0	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 0050c580: alloc byte 0067517c, head=new(0xc) self-linked at 00675180, size 00675184=0; atexit 0050c5c0 walks/frees nodes; dtor frees nodes only (POD elements)
+0060f9c8	00510c60	object_ctor	00675099	ctor= args=	-	PerfOption registration 'SunEffect' (heap obj 0x1c bytes, vtable 005d6d50)	init 00510c60: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 00675099 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060f9cc	00510cd0	object_ctor	006750a0	ctor=FUN_0041dd20 args=	00510cf0	std::map/set (MSVC6 _Tree, node 0x5c => value_type 0x4c bytes)	ctor FUN_0041dd20(this=006750a0): node=new(0x5c) {left,parent,right,value@0xc,color@0x58,isnil@0x59}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10 (+0x14 cached head/begin); atexit 00510cf0 -> 0x41dc50
+0060f9d0	00512bb0	const_copy	006751ac	= 0xbf19999a (-0.6, from .rdata 005db6ec)	-	float/dword constant copy (static const from .rdata)	
+0060f9d4	00512bc0	const_copy	006751a8	= 0xbf19999a (-0.6, from .rdata 005db6ec)	-	float/dword constant copy (static const from .rdata)	
+0060f9d8	00512bd0	const_copy	006751a4	= 0x3f19999a (0.6, from .rdata 005db6f0)	-	float/dword constant copy (static const from .rdata)	
+0060f9dc	00513400	const_copy	006751f4	= 0xbf19999a (-0.6, from .rdata 005db750)	-	float/dword constant copy (static const from .rdata)	
+0060f9e0	00513410	const_copy	006751f0	= 0xbf19999a (-0.6, from .rdata 005db750)	-	float/dword constant copy (static const from .rdata)	
+0060f9e4	00513420	const_copy	006751ec	= 0x3f19999a (0.6, from .rdata 005db754)	-	float/dword constant copy (static const from .rdata)	
+0060f9e8	00513430	scalar_init	006751cc	imm=5db760 reads=	-		
+0060f9ec	00513580	scalar_init	006751c0,006751c4,006751c8,006751b4,006751b8,006751bc	imm= reads=	-		
+0060f9f0	00516fb0	const_copy	0067521c	= 0xbf19999a (-0.6, from .rdata 005db928)	-	float/dword constant copy (static const from .rdata)	
+0060f9f4	00516fc0	const_copy	00675218	= 0xbf19999a (-0.6, from .rdata 005db928)	-	float/dword constant copy (static const from .rdata)	
+0060f9f8	00516fd0	const_copy	00675214	= 0x3f19999a (0.6, from .rdata 005db92c)	-	float/dword constant copy (static const from .rdata)	
+0060f9fc	0051b2a0	const_copy	0067523c	= 0xbf19999a (-0.6, from .rdata 005dbf50)	-	float/dword constant copy (static const from .rdata)	
+0060fa00	0051b2b0	const_copy	00675238	= 0xbf19999a (-0.6, from .rdata 005dbf50)	-	float/dword constant copy (static const from .rdata)	
+0060fa04	0051b2c0	const_copy	00675234	= 0x3f19999a (0.6, from .rdata 005dbf54)	-	float/dword constant copy (static const from .rdata)	
+0060fa08	0051b2d0	scalar_init	00675230	imm= reads=006164d0,006164d0	-		
+0060fa0c	0051ca50	const_copy	0067528c	= 0xbf19999a (-0.6, from .rdata 005dc074)	-	float/dword constant copy (static const from .rdata)	
+0060fa10	0051ca60	const_copy	00675288	= 0xbf19999a (-0.6, from .rdata 005dc074)	-	float/dword constant copy (static const from .rdata)	
+0060fa14	0051ca70	const_copy	00675284	= 0x3f19999a (0.6, from .rdata 005dc078)	-	float/dword constant copy (static const from .rdata)	
+0060fa18	0051d030	scalar_init	00675278,0067527c,00675280	imm=0,0,0 reads=	-		
+0060fa1c	0051d050	scalar_init	0067526c,00675270,00675274	imm=0,0,0 reads=	-		
+0060fa20	0051dcf0	const_copy	006752b4	= 0xbf19999a (-0.6, from .rdata 005dc128)	-	float/dword constant copy (static const from .rdata)	
+0060fa24	0051dd00	const_copy	006752b0	= 0xbf19999a (-0.6, from .rdata 005dc128)	-	float/dword constant copy (static const from .rdata)	
+0060fa28	0051dd10	const_copy	006752ac	= 0x3f19999a (0.6, from .rdata 005dc12c)	-	float/dword constant copy (static const from .rdata)	
+0060fa2c	0051df90	const_copy	006752c4	= 0xbf19999a (-0.6, from .rdata 005dc134)	-	float/dword constant copy (static const from .rdata)	
+0060fa30	0051dfa0	const_copy	006752c0	= 0xbf19999a (-0.6, from .rdata 005dc134)	-	float/dword constant copy (static const from .rdata)	
+0060fa34	0051dfb0	const_copy	006752bc	= 0x3f19999a (0.6, from .rdata 005dc138)	-	float/dword constant copy (static const from .rdata)	
+0060fa38	0051e8f0	const_copy	006752d4	= 0xbf19999a (-0.6, from .rdata 005dc2b8)	-	float/dword constant copy (static const from .rdata)	
+0060fa3c	0051e900	const_copy	006752d0	= 0xbf19999a (-0.6, from .rdata 005dc2b8)	-	float/dword constant copy (static const from .rdata)	
+0060fa40	0051e910	const_copy	006752cc	= 0x3f19999a (0.6, from .rdata 005dc2bc)	-	float/dword constant copy (static const from .rdata)	
+0060fa44	0051e9f0	const_copy	006752e4	= 0xbf19999a (-0.6, from .rdata 005dc2c0)	-	float/dword constant copy (static const from .rdata)	
+0060fa48	0051ea00	const_copy	006752e0	= 0xbf19999a (-0.6, from .rdata 005dc2c0)	-	float/dword constant copy (static const from .rdata)	
+0060fa4c	0051ea10	const_copy	006752dc	= 0x3f19999a (0.6, from .rdata 005dc2c4)	-	float/dword constant copy (static const from .rdata)	
+0060fa50	0051ebf0	const_copy	00675374	= 0xbf19999a (-0.6, from .rdata 005dc354)	-	float/dword constant copy (static const from .rdata)	
+0060fa54	0051ec00	const_copy	00675370	= 0xbf19999a (-0.6, from .rdata 005dc354)	-	float/dword constant copy (static const from .rdata)	
+0060fa58	0051ec10	const_copy	0067536c	= 0x3f19999a (0.6, from .rdata 005dc358)	-	float/dword constant copy (static const from .rdata)	
+0060fa5c	0051ec20	scalar_init	00675350,00675354,00675358,0067535c	imm=10,ffffffff reads=	-		
+0060fa60	0051ec50	scalar_init	00675340,00675344,00675348,0067534c	imm=c,ffffffff reads=	-		
+0060fa64	0051ecb0	object_ctor	-	ctor=FUN_005b7fba args= ptrs=004de730,0051ed00,00000005,00000010,006752f0	0051ece0	array[5] of std::vector<POD> (16 bytes each, eh vector ctor iterator)	FUN_005b7fba(006752f0, 0x10, 5, ctor LAB_0051ed00 = {alloc byte, first/last/end=0}, dtor 004de730 = std::vector dtor); atexit 0051ece0 -> 005b7ec6 (eh vector destructor iterator) with same args
+0060fa68	0051fde0	const_copy	006753d4	= 0xbf19999a (-0.6, from .rdata 005dc36c)	-	float/dword constant copy (static const from .rdata)	
+0060fa6c	0051fdf0	const_copy	006753d0	= 0xbf19999a (-0.6, from .rdata 005dc36c)	-	float/dword constant copy (static const from .rdata)	
+0060fa70	0051fe00	const_copy	006753cc	= 0x3f19999a (0.6, from .rdata 005dc370)	-	float/dword constant copy (static const from .rdata)	
+0060fa74	0051fe10	object_ctor	006753c0,006753c4,006753c8	ctor=FUN_005b7e84 args= ptrs=0000000c	0051fe50	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 0051fe10: alloc byte 006753c0, head=new(0xc) self-linked at 006753c4, size 006753c8=0; atexit 0051fe50 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fa78	00526830	object_ctor	0067537c	ctor= args=	-	PerfOption registration 'Asteroids' (heap obj 0x1c bytes, vtable 005d6d50)	init 00526830: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067537c is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060fa7c	00527a40	const_copy	006753f4	= 0xbf19999a (-0.6, from .rdata 005dd074)	-	float/dword constant copy (static const from .rdata)	
+0060fa80	00527a50	const_copy	006753f0	= 0xbf19999a (-0.6, from .rdata 005dd074)	-	float/dword constant copy (static const from .rdata)	
+0060fa84	00527a60	const_copy	006753ec	= 0x3f19999a (0.6, from .rdata 005dd078)	-	float/dword constant copy (static const from .rdata)	
+0060fa88	005298a0	create_id	006753e8	= CreateID("engine_destroyed")	-	uint ID = CreateID(name)	
+0060fa8c	00529de0	const_copy	0067541c	= 0xbf19999a (-0.6, from .rdata 005dd180)	-	float/dword constant copy (static const from .rdata)	
+0060fa90	00529df0	const_copy	00675418	= 0xbf19999a (-0.6, from .rdata 005dd180)	-	float/dword constant copy (static const from .rdata)	
+0060fa94	00529e00	const_copy	00675414	= 0x3f19999a (0.6, from .rdata 005dd184)	-	float/dword constant copy (static const from .rdata)	
+0060fa98	0052a510	object_ctor	00675400	ctor=FUN_0052a610 args=	0052a530	std::map/set (MSVC6 _Tree, node 0x18 => value_type 0x8 bytes)	ctor FUN_0052a610(this=00675400): node=new(0x18) {left,parent,right,value@0xc,color@0x14,isnil@0x15}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 0052a530 -> 0x52a550
+0060fa9c	0052aff0	const_copy	0067542c	= 0xbf19999a (-0.6, from .rdata 005dd330)	-	float/dword constant copy (static const from .rdata)	
+0060faa0	0052b000	const_copy	00675428	= 0xbf19999a (-0.6, from .rdata 005dd330)	-	float/dword constant copy (static const from .rdata)	
+0060faa4	0052b010	const_copy	00675424	= 0x3f19999a (0.6, from .rdata 005dd334)	-	float/dword constant copy (static const from .rdata)	
+0060faa8	0052b4f0	scalar_init	00675420	ctor=?StringAlloc@@YAPADPBD_N@Z args="ROOT" ptrs=00000000	-	scalar: char* = StringAlloc("ROOT", false)	00675420 = StringAlloc("ROOT",false) (Common.dll ?StringAlloc@@YAPADPBD_N@Z); no dtor (leaked)
+0060faac	0052c800	const_copy	00675454	= 0xbf19999a (-0.6, from .rdata 005dd424)	-	float/dword constant copy (static const from .rdata)	
+0060fab0	0052c810	const_copy	00675450	= 0xbf19999a (-0.6, from .rdata 005dd424)	-	float/dword constant copy (static const from .rdata)	
+0060fab4	0052c820	const_copy	0067544c	= 0x3f19999a (0.6, from .rdata 005dd428)	-	float/dword constant copy (static const from .rdata)	
+0060fab8	0052d550	create_id	00675448	= CreateID("multi_sparks02")	-	uint ID = CreateID(name)	
+0060fabc	0052d6c0	create_id	00675444	= CreateID("mine_dropper_destroyed")	-	uint ID = CreateID(name)	
+0060fac0	0052d860	create_id	00675440	= CreateID("countermeasure_dropper_destroyed")	-	uint ID = CreateID(name)	
+0060fac4	0052e170	create_id	00675434	= CreateID("gun_destroyed")	-	uint ID = CreateID(name)	
+0060fac8	0052e190	create_id	00675438	= CreateID("launcher_destroyed")	-	uint ID = CreateID(name)	
+0060facc	0052e1b0	create_id	0067543c	= CreateID("turret_destroyed")	-	uint ID = CreateID(name)	
+0060fad0	0052e1d0	const_copy	00675478	= 0xbf19999a (-0.6, from .rdata 005ddac8)	-	float/dword constant copy (static const from .rdata)	
+0060fad4	0052e1e0	const_copy	00675474	= 0xbf19999a (-0.6, from .rdata 005ddac8)	-	float/dword constant copy (static const from .rdata)	
+0060fad8	0052e1f0	const_copy	00675470	= 0x3f19999a (0.6, from .rdata 005ddacc)	-	float/dword constant copy (static const from .rdata)	
+0060fadc	0052ea90	create_id	00675468	= CreateID("shield_deactivated")	-	uint ID = CreateID(name)	
+0060fae0	0052eab0	create_id	0067546c	= CreateID("shield_activated")	-	uint ID = CreateID(name)	
+0060fae4	0052ead0	create_id	00675464	= CreateID("nnv_shield_failed")	-	uint ID = CreateID(name)	
+0060fae8	0052eaf0	create_id	00675460	= CreateID("shield_restored")	-	uint ID = CreateID(name)	
+0060faec	0052ebf0	create_id	0067545c	= CreateID("shield_destroyed")	-	uint ID = CreateID(name)	
+0060faf0	0052ec10	const_copy	0067548c	= 0xbf19999a (-0.6, from .rdata 005ddb60)	-	float/dword constant copy (static const from .rdata)	
+0060faf4	0052ec20	const_copy	00675488	= 0xbf19999a (-0.6, from .rdata 005ddb60)	-	float/dword constant copy (static const from .rdata)	
+0060faf8	0052ec30	const_copy	00675484	= 0x3f19999a (0.6, from .rdata 005ddb64)	-	float/dword constant copy (static const from .rdata)	
+0060fafc	0052ef90	create_id	00675480	= CreateID()	-	uint ID = CreateID(name)	
+0060fb00	0052f4d0	const_copy	006754a4	= 0xbf19999a (-0.6, from .rdata 005ddca8)	-	float/dword constant copy (static const from .rdata)	
+0060fb04	0052f4e0	const_copy	006754a0	= 0xbf19999a (-0.6, from .rdata 005ddca8)	-	float/dword constant copy (static const from .rdata)	
+0060fb08	0052f4f0	const_copy	0067549c	= 0x3f19999a (0.6, from .rdata 005ddcac)	-	float/dword constant copy (static const from .rdata)	
+0060fb0c	0052f500	create_id	00675498	= CreateID("nnv_tractor_failure")	-	uint ID = CreateID(name)	
+0060fb10	0052f520	create_id	00675494	= CreateID("target_out_of_range")	-	uint ID = CreateID(name)	
+0060fb14	0052fbf0	const_copy	006754b4	= 0xbf19999a (-0.6, from .rdata 005ddd10)	-	float/dword constant copy (static const from .rdata)	
+0060fb18	0052fc00	const_copy	006754b0	= 0xbf19999a (-0.6, from .rdata 005ddd10)	-	float/dword constant copy (static const from .rdata)	
+0060fb1c	0052fc10	const_copy	006754ac	= 0x3f19999a (0.6, from .rdata 005ddd14)	-	float/dword constant copy (static const from .rdata)	
+0060fb20	0052ff60	const_copy	006754c8	= 0xbf19999a (-0.6, from .rdata 005ddd38)	-	float/dword constant copy (static const from .rdata)	
+0060fb24	0052ff70	const_copy	006754c4	= 0xbf19999a (-0.6, from .rdata 005ddd38)	-	float/dword constant copy (static const from .rdata)	
+0060fb28	0052ff80	const_copy	006754c0	= 0x3f19999a (0.6, from .rdata 005ddd3c)	-	float/dword constant copy (static const from .rdata)	
+0060fb2c	005300c0	const_copy	00675510	= 0xbf19999a (-0.6, from .rdata 005ddd40)	-	float/dword constant copy (static const from .rdata)	
+0060fb30	005300d0	const_copy	0067550c	= 0xbf19999a (-0.6, from .rdata 005ddd40)	-	float/dword constant copy (static const from .rdata)	
+0060fb34	005300e0	const_copy	00675508	= 0x3f19999a (0.6, from .rdata 005ddd44)	-	float/dword constant copy (static const from .rdata)	
+0060fb38	00530860	object_ctor	006754f4	ctor=FUN_00531050 args=	00530890	std::map/set (MSVC6 _Tree, node 0x38 => value_type 0x28 bytes)	ctor FUN_00531050(this=006754f4): node=new(0x38) {left,parent,right,value@0xc,color@0x34,isnil@0x35}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 00530890 -> 0x5308a0
+0060fb3c	00530960	object_ctor	006754dc,006754e0,006754d0,006754d4,006754d8,006754e4,006754e8,006754ec,006754f0	ctor= args=	-	guess: struct with ID_String members (2x ID_String at 006754dc/e0, float 0, float FLT_MAX, int 1, zeros)	init 00530960: 006754d0=0, 006754d4=0x7f7fffff (FLT_MAX), 006754d8=1, ID_String::clear(006754dc), ID_String::clear(006754e0), 006754e4..f0=0; no dtor
+0060fb40	005319a0	const_copy	0067552c	= 0xbf19999a (-0.6, from .rdata 005de0e4)	-	float/dword constant copy (static const from .rdata)	
+0060fb44	005319b0	const_copy	00675528	= 0xbf19999a (-0.6, from .rdata 005de0e4)	-	float/dword constant copy (static const from .rdata)	
+0060fb48	005319c0	const_copy	00675524	= 0x3f19999a (0.6, from .rdata 005de0e8)	-	float/dword constant copy (static const from .rdata)	
+0060fb4c	005319d0	create_id	00675520	= CreateID("repair_droid_activated")	-	uint ID = CreateID(name)	
+0060fb50	005319f0	create_id	0067551c	= CreateID("repair_droid_deactivated")	-	uint ID = CreateID(name)	
+0060fb54	00531a10	create_id	00675518	= CreateID("repair_droid_exhausted")	-	uint ID = CreateID(name)	
+0060fb58	00532b90	const_copy	0067553c	= 0xbf19999a (-0.6, from .rdata 005de198)	-	float/dword constant copy (static const from .rdata)	
+0060fb5c	00532ba0	const_copy	00675538	= 0xbf19999a (-0.6, from .rdata 005de198)	-	float/dword constant copy (static const from .rdata)	
+0060fb60	00532bb0	const_copy	00675534	= 0x3f19999a (0.6, from .rdata 005de19c)	-	float/dword constant copy (static const from .rdata)	
+0060fb64	005360d0	const_copy	0067554c	= 0xbf19999a (-0.6, from .rdata 005de578)	-	float/dword constant copy (static const from .rdata)	
+0060fb68	005360e0	const_copy	00675548	= 0xbf19999a (-0.6, from .rdata 005de578)	-	float/dword constant copy (static const from .rdata)	
+0060fb6c	005360f0	const_copy	00675544	= 0x3f19999a (0.6, from .rdata 005de57c)	-	float/dword constant copy (static const from .rdata)	
+0060fb70	00537480	const_copy	006789bc	= 0xbf19999a (-0.6, from .rdata 005de690)	-	float/dword constant copy (static const from .rdata)	
+0060fb74	00537490	const_copy	006789b8	= 0xbf19999a (-0.6, from .rdata 005de690)	-	float/dword constant copy (static const from .rdata)	
+0060fb78	005374a0	const_copy	006789b4	= 0x3f19999a (0.6, from .rdata 005de694)	-	float/dword constant copy (static const from .rdata)	
+0060fb7c	005374b0	scalar_init	006789a4,006789a8,006789ac,006789b0	imm=12c,ffffffff reads=	-		
+0060fb80	00537ba0	scalar_init	006789a0,00678980,00678984,00678988,0067898c,00678990,00678994,00678998,0067899c,00676978,0067897c	imm=8ca0,4650 reads=	-		
+0060fb84	00538370	scalar_init	0067556c,00675574,00675570	imm= reads=	-		
+0060fb88	00538a40	object_ctor	00675558	ctor=FUN_00538a70 args=	00538a60	small polymorphic object vtable 005de738 (0x14 bytes)	ctor FUN_00538a70: [1],[2],[4]=0, byte[3]=0, vtable 005de738; dtor 00538a60 -> 00539000
+0060fb8c	005392a0	const_copy	006789cc	= 0xbf19999a (-0.6, from .rdata 005de758)	-	float/dword constant copy (static const from .rdata)	
+0060fb90	005392b0	const_copy	006789c8	= 0xbf19999a (-0.6, from .rdata 005de758)	-	float/dword constant copy (static const from .rdata)	
+0060fb94	005392c0	const_copy	006789c4	= 0x3f19999a (0.6, from .rdata 005de75c)	-	float/dword constant copy (static const from .rdata)	
+0060fb98	0053ab30	const_copy	006789f4	= 0xbf19999a (-0.6, from .rdata 005dec18)	-	float/dword constant copy (static const from .rdata)	
+0060fb9c	0053ab40	const_copy	006789f0	= 0xbf19999a (-0.6, from .rdata 005dec18)	-	float/dword constant copy (static const from .rdata)	
+0060fba0	0053ab50	const_copy	006789ec	= 0x3f19999a (0.6, from .rdata 005dec1c)	-	float/dword constant copy (static const from .rdata)	
+0060fba4	0053ab60	scalar_init	006789e8,006789ea	imm= reads=	-		
+0060fba8	0053ab70	scalar_init	006789e4,006789e6	imm=0,1 reads=	-		
+0060fbac	0053ab90	scalar_init	006789e0,006789e2	imm= reads=	-		
+0060fbb0	0053abb0	scalar_init	006789dc,006789de	imm=2,1 reads=	-		
+0060fbb4	0053abd0	scalar_init	006789d8,006789da	imm=3,1 reads=	-		
+0060fbb8	0053abf0	scalar_init	006789d4,006789d6	imm=4,1 reads=	-		
+0060fbbc	0053e440	const_copy	00678a04	= 0xbf19999a (-0.6, from .rdata 005df53c)	-	float/dword constant copy (static const from .rdata)	
+0060fbc0	0053e450	const_copy	00678a00	= 0xbf19999a (-0.6, from .rdata 005df53c)	-	float/dword constant copy (static const from .rdata)	
+0060fbc4	0053e460	const_copy	006789fc	= 0x3f19999a (0.6, from .rdata 005df540)	-	float/dword constant copy (static const from .rdata)	
+0060fbc8	0053e900	const_copy	00678a14	= 0xbf19999a (-0.6, from .rdata 005df80c)	-	float/dword constant copy (static const from .rdata)	
+0060fbcc	0053e910	const_copy	00678a10	= 0xbf19999a (-0.6, from .rdata 005df80c)	-	float/dword constant copy (static const from .rdata)	
+0060fbd0	0053e920	const_copy	00678a0c	= 0x3f19999a (0.6, from .rdata 005df810)	-	float/dword constant copy (static const from .rdata)	
+0060fbd4	0053ec00	const_copy	00678a24	= 0xbf19999a (-0.6, from .rdata 005df818)	-	float/dword constant copy (static const from .rdata)	
+0060fbd8	0053ec10	const_copy	00678a20	= 0xbf19999a (-0.6, from .rdata 005df818)	-	float/dword constant copy (static const from .rdata)	
+0060fbdc	0053ec20	const_copy	00678a1c	= 0x3f19999a (0.6, from .rdata 005df81c)	-	float/dword constant copy (static const from .rdata)	
+0060fbe0	0053f860	const_copy	00678ad8	= 0xbf19999a (-0.6, from .rdata 005df888)	-	float/dword constant copy (static const from .rdata)	
+0060fbe4	0053f870	const_copy	00678ad4	= 0xbf19999a (-0.6, from .rdata 005df888)	-	float/dword constant copy (static const from .rdata)	
+0060fbe8	0053f880	const_copy	00678ad0	= 0x3f19999a (0.6, from .rdata 005df88c)	-	float/dword constant copy (static const from .rdata)	
+0060fbec	005409d0	object_ctor	00678ac0	ctor=FUN_0059ec40 args=	005409f0	std::vector<T> (POD elements)	ctor FUN_0059ec40(this=00678ac0): alloc byte, first/last/end=0; atexit 005409f0 -> 004de730 (operator delete(first); zero first/last/end)
+0060fbf0	00540a80	object_ctor	00678ab4	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678ab4; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fbf4	00540a90	object_ctor	00678aa8	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678aa8; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fbf8	00540aa0	object_ctor	00678a9c	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a9c; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fbfc	00540ab0	object_ctor	00678a90	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a90; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fc00	00540ac0	object_ctor	00678a84	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a84; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fc04	00540ad0	object_ctor	00678a78	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a78; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fc08	00540ae0	object_ctor	00678a6c	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a6c; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fc0c	00540af0	object_ctor	00678a60	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a60; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fc10	00540b00	object_ctor	00678a54	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a54; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fc14	00540b10	object_ctor	00678a48	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a48; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fc18	00540b20	object_ctor	00678a3c	ctor=FUN_00542320 args=	-	POD 3-dword header {0,0,0} (guess: intrusive list {count,head,tail})	ctor FUN_00542320 zeroes [0],[4],[8] of 00678a3c; no atexit dtor; 11 consecutive objects 00678a3c..00678ab4 stride 0xc
+0060fc1c	00540b30	object_ctor	00678a30,00678a34,00678a38	ctor=FUN_005b7e84 args= ptrs=0000000c	00540b70	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 00540b30: alloc byte 00678a30, head=new(0xc) self-linked at 00678a34, size 00678a38=0; atexit 00540b70 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fc20	00541d50	scalar_init	00678a2c	imm=5df8ac reads=	-		
+0060fc24	005422f0	const_copy	00678af0	= 0xbf19999a (-0.6, from .rdata 005df8bc)	-	float/dword constant copy (static const from .rdata)	
+0060fc28	00542300	const_copy	00678aec	= 0xbf19999a (-0.6, from .rdata 005df8bc)	-	float/dword constant copy (static const from .rdata)	
+0060fc2c	00542310	const_copy	00678ae8	= 0x3f19999a (0.6, from .rdata 005df8c0)	-	float/dword constant copy (static const from .rdata)	
+0060fc30	00542520	const_copy	00678b00	= 0xbf19999a (-0.6, from .rdata 005df8c4)	-	float/dword constant copy (static const from .rdata)	
+0060fc34	00542530	const_copy	00678afc	= 0xbf19999a (-0.6, from .rdata 005df8c4)	-	float/dword constant copy (static const from .rdata)	
+0060fc38	00542540	const_copy	00678af8	= 0x3f19999a (0.6, from .rdata 005df8c8)	-	float/dword constant copy (static const from .rdata)	
+0060fc3c	005428e0	const_copy	00678b64	= 0xbf19999a (-0.6, from .rdata 005dfb20)	-	float/dword constant copy (static const from .rdata)	
+0060fc40	005428f0	const_copy	00678b60	= 0xbf19999a (-0.6, from .rdata 005dfb20)	-	float/dword constant copy (static const from .rdata)	
+0060fc44	00542900	const_copy	00678b5c	= 0x3f19999a (0.6, from .rdata 005dfb24)	-	float/dword constant copy (static const from .rdata)	
+0060fc48	00542910	create_id	00678b58	= CreateID("cargo_expired")	-	uint ID = CreateID(name)	
+0060fc4c	00542930	create_id	00678b54	= CreateID("weapon_expired")	-	uint ID = CreateID(name)	
+0060fc50	00542950	create_id	00678b50	= CreateID("hull_breach_imminent")	-	uint ID = CreateID(name)	
+0060fc54	00542970	create_id	00678b4c	= CreateID("engine_critical")	-	uint ID = CreateID(name)	
+0060fc58	00542990	create_id	00678b48	= CreateID("danger")	-	uint ID = CreateID(name)	
+0060fc5c	005429b0	create_id	00678b44	= CreateID("entering_sun_corona")	-	uint ID = CreateID(name)	
+0060fc60	005429d0	create_id	00678b40	= CreateID("entering_atmosphere")	-	uint ID = CreateID(name)	
+0060fc64	005429f0	create_id	00678b3c	= CreateID("target_reached")	-	uint ID = CreateID(name)	
+0060fc68	00542a10	create_id	00678b38	= CreateID("trail_lost")	-	uint ID = CreateID(name)	
+0060fc6c	00542a30	create_id	00678b34	= CreateID("nnvoice_trade_lane_disrupted")	-	uint ID = CreateID(name)	
+0060fc70	00542a50	create_id	00678b30	= CreateID("dock_granted")	-	uint ID = CreateID(name)	
+0060fc74	00542a70	create_id	00678b2c	= CreateID("dock_denied_hostile")	-	uint ID = CreateID(name)	
+0060fc78	00542a90	create_id	00678b28	= CreateID("dock_denied_locked")	-	uint ID = CreateID(name)	
+0060fc7c	00542ab0	create_id	00678b24	= CreateID("cannot_dock")	-	uint ID = CreateID(name)	
+0060fc80	00542ad0	create_id	00678b20	= CreateID("waiting_to_dock")	-	uint ID = CreateID(name)	
+0060fc84	00542af0	create_id	00678b1c	= CreateID("nnv_dock_too_far")	-	uint ID = CreateID(name)	
+0060fc88	00542b10	create_id	00678b18	= CreateID("entering_formation")	-	uint ID = CreateID(name)	
+0060fc8c	00542b30	create_id	00678b14	= CreateID("formation_denied")	-	uint ID = CreateID(name)	
+0060fc90	00542b50	create_id	00678b10	= CreateID("nnv_formation_lost")	-	uint ID = CreateID(name)	
+0060fc94	00547410	const_copy	00678b74	= 0xbf19999a (-0.6, from .rdata 005e000c)	-	float/dword constant copy (static const from .rdata)	
+0060fc98	00547420	const_copy	00678b70	= 0xbf19999a (-0.6, from .rdata 005e000c)	-	float/dword constant copy (static const from .rdata)	
+0060fc9c	00547430	const_copy	00678b6c	= 0x3f19999a (0.6, from .rdata 005e0010)	-	float/dword constant copy (static const from .rdata)	
+0060fca0	00547580	const_copy	00678b84	= 0xbf19999a (-0.6, from .rdata 005e0264)	-	float/dword constant copy (static const from .rdata)	
+0060fca4	00547590	const_copy	00678b80	= 0xbf19999a (-0.6, from .rdata 005e0264)	-	float/dword constant copy (static const from .rdata)	
+0060fca8	005475a0	const_copy	00678b7c	= 0x3f19999a (0.6, from .rdata 005e0268)	-	float/dword constant copy (static const from .rdata)	
+0060fcac	00548da0	const_copy	0067976c	= 0xbf19999a (-0.6, from .rdata 005e0534)	-	float/dword constant copy (static const from .rdata)	
+0060fcb0	00548db0	const_copy	00679768	= 0xbf19999a (-0.6, from .rdata 005e0534)	-	float/dword constant copy (static const from .rdata)	
+0060fcb4	00548dc0	const_copy	00679764	= 0x3f19999a (0.6, from .rdata 005e0538)	-	float/dword constant copy (static const from .rdata)	
+0060fcb8	00548dd0	scalar_init	00679760,00679762	imm= reads=	-		
+0060fcbc	00548de0	scalar_init	0067975c,0067975e	imm=0,1 reads=	-		
+0060fcc0	00548e00	scalar_init	00679758,0067975a	imm= reads=	-		
+0060fcc4	00548e20	scalar_init	00679754,00679756	imm=2,1 reads=	-		
+0060fcc8	00548e40	scalar_init	00679750,00679752	imm=3,1 reads=	-		
+0060fccc	00548e60	scalar_init	0067974c,0067974e	imm=4,1 reads=	-		
+0060fcd0	00548e80	object_ctor	00679744	ctor=FUN_004c95b0 args= ptrs=00000000	00548ea0	BaseWatcher (Watchable smart-pointer, null)	ctor FUN_004c95b0(this=00679744, 0); dtor 00548ea0 -> 005154f0 (BaseWatcher dtor); 8 users 00549300,0054a940..0054baf0
+0060fcd4	00548f00	object_ctor	00678b98	ctor=FUN_00549300 args=	00548f20	large composite object (base vtable 005cbed8 at +4, sub-objects ctor'd by 00517180/00518600/0051a210/0051ad30/0051b2f0/0051e100, vtables 005e0548/005e0554/005e0594/005e061c)	ctor FUN_00549300 (this=00678b98); floats 1.0,1.5,0.85,100.0; dtor 00548f20 -> 00548f30; user 0054bd30; guess: game-world/system singleton
+0060fcd8	0054b510	const_copy	00678b90	= 0x44fa0000 (2000, from .rdata 005e0540)	-	float/dword constant copy (static const from .rdata)	
+0060fcdc	0054bd70	const_copy	006797a0	= 0xbf19999a (-0.6, from .rdata 005e086c)	-	float/dword constant copy (static const from .rdata)	
+0060fce0	0054bd80	const_copy	0067979c	= 0xbf19999a (-0.6, from .rdata 005e086c)	-	float/dword constant copy (static const from .rdata)	
+0060fce4	0054bd90	const_copy	00679798	= 0x3f19999a (0.6, from .rdata 005e0870)	-	float/dword constant copy (static const from .rdata)	
+0060fce8	0054bda0	object_ctor	00679794	ctor= args=	-	CacheString (Common.dll)	init 0054bda0: mov ecx,00679794; jmp [005c69a0] CacheString::clear (inline default ctor); no dtor registered; users 0054bde0/0054be20/0054beb0
+0060fcec	0054bdb0	object_ctor	00679790	ctor= args=	-	CacheString (Common.dll)	init 0054bdb0: mov ecx,00679790; jmp [005c69a0] CacheString::clear; no dtor registered
+0060fcf0	0054c370	object_ctor	0067978c	ctor= args=	-	PerfOption registration 'space_dust_detail' (heap obj 0x1c bytes, vtable 005e0934)	init 0054c370: new(0x1c){vtbl,name,id=0x57a,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067978c is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060fcf4	0054c3f0	const_copy	0067985c	= 0xbf19999a (-0.6, from .rdata 005e0950)	-	float/dword constant copy (static const from .rdata)	
+0060fcf8	0054c400	const_copy	00679858	= 0xbf19999a (-0.6, from .rdata 005e0950)	-	float/dword constant copy (static const from .rdata)	
+0060fcfc	0054c410	const_copy	00679854	= 0x3f19999a (0.6, from .rdata 005e0954)	-	float/dword constant copy (static const from .rdata)	
+0060fd00	0054dad0	object_ctor	006797d0	ctor=FUN_0054daf0 args= ptrs=00000142	0054db50	guess: D3D dynamic vertex-buffer wrapper, FVF 0x142 (XYZ|DIFFUSE|TEX1)	ctor FUN_0054daf0(this=006797d0, 0x142): [2]=0x142, [0x1c]=0xc,[0x1e]=4,[0x20]=8 (element offsets?), [0]=0x7fffffff,[0x1a]=-1; dtor 0054db50 guarded by bit1 of 006797c8 -> 0054db70 which Release()s COM ptrs at +0xc,+0x10 via vtbl+8; user 0054e900
+0060fd04	00552b30	const_copy	0067994c	= 0xbf19999a (-0.6, from .rdata 005e0e14)	-	float/dword constant copy (static const from .rdata)	
+0060fd08	00552b40	const_copy	00679948	= 0xbf19999a (-0.6, from .rdata 005e0e14)	-	float/dword constant copy (static const from .rdata)	
+0060fd0c	00552b50	const_copy	00679944	= 0x3f19999a (0.6, from .rdata 005e0e18)	-	float/dword constant copy (static const from .rdata)	
+0060fd10	00552b60	object_ctor	00679900	ctor=FUN_00552b80 args=	00552c60	object with 3 sub-objects {vtable 005e0e20, CacheString} + int 0 + int 3	ctor FUN_00552b80: 3x (FUN_00420d40 base ctor, CacheString::clear, vtable 005e0e20) at +0,+0x14,+0x28; +0x3c=0,+0x40=3; dtor 00552c60 -> 00552c70
+0060fd14	00552d30	object_ctor	006798fb	ctor= args=	-	PerfOption registration 'star_sphere' (heap obj 0x1c bytes, vtable 005d6d50)	init 00552d30: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 006798fb is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0060fd18	00552da0	object_ctor	006798c4,006798c8,006798cc	ctor=FUN_005b7e84 args= ptrs=0000000c	00552de0	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 00552da0: alloc byte 006798c4, head=new(0xc) self-linked at 006798c8, size 006798cc=0; atexit 00552de0 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fd1c	00552e40	object_ctor	006798ac	ctor=FUN_0041dd20 args=	00552e60	std::map/set (MSVC6 _Tree, node 0x5c => value_type 0x4c bytes)	ctor FUN_0041dd20(this=006798ac): node=new(0x5c) {left,parent,right,value@0xc,color@0x58,isnil@0x59}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10 (+0x14 cached head/begin); atexit 00552e60 -> 0x41dc50
+0060fd20	00553060	object_ctor	006798a0,006798a4,006798a8	ctor=FUN_005b7e84 args= ptrs=0000000c	005530a0	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 00553060: alloc byte 006798a0, head=new(0xc) self-linked at 006798a4, size 006798a8=0; atexit 005530a0 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fd24	005533b0	object_ctor	00679894,00679898,0067989c	ctor=FUN_005b7e84 args= ptrs=0000000c	005533f0	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 005533b0: alloc byte 00679894, head=new(0xc) self-linked at 00679898, size 0067989c=0; atexit 005533f0 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fd28	00553450	object_ctor	00679888,0067988c,00679890	ctor=FUN_005b7e84 args= ptrs=0000000c	00553490	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 00553450: alloc byte 00679888, head=new(0xc) self-linked at 0067988c, size 00679890=0; atexit 00553490 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fd2c	005534f0	object_ctor	0067987c,00679880,00679884	ctor=FUN_005b7e84 args= ptrs=00000010	00553530	std::list<T> (head node 0x10 => value 0x8 bytes)	init 005534f0: alloc byte 0067987c, head=new(0x10) self-linked at 00679880, size 00679884=0; atexit 00553530 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fd30	005536a0	object_ctor	00679870,00679874,00679878	ctor=FUN_005b7e84 args= ptrs=0000000c	005536e0	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 005536a0: alloc byte 00679870, head=new(0xc) self-linked at 00679874, size 00679878=0; atexit 005536e0 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fd34	005557e0	const_copy	00679988	= 0xbf19999a (-0.6, from .rdata 005e11fc)	-	float/dword constant copy (static const from .rdata)	
+0060fd38	005557f0	const_copy	00679984	= 0xbf19999a (-0.6, from .rdata 005e11fc)	-	float/dword constant copy (static const from .rdata)	
+0060fd3c	00555800	const_copy	00679980	= 0x3f19999a (0.6, from .rdata 005e1200)	-	float/dword constant copy (static const from .rdata)	
+0060fd40	00555a10	const_copy	00679994	= 0xbf19999a (-0.6, from .rdata 005e1204)	-	float/dword constant copy (static const from .rdata)	
+0060fd44	00555a20	const_copy	00679990	= 0xbf19999a (-0.6, from .rdata 005e1204)	-	float/dword constant copy (static const from .rdata)	
+0060fd48	00555a30	const_copy	0067998c	= 0x3f19999a (0.6, from .rdata 005e1208)	-	float/dword constant copy (static const from .rdata)	
+0060fd4c	00555ce0	const_copy	006799ac	= 0xbf19999a (-0.6, from .rdata 005e120c)	-	float/dword constant copy (static const from .rdata)	
+0060fd50	00555cf0	const_copy	006799a8	= 0xbf19999a (-0.6, from .rdata 005e120c)	-	float/dword constant copy (static const from .rdata)	
+0060fd54	00555d00	const_copy	006799a4	= 0x3f19999a (0.6, from .rdata 005e1210)	-	float/dword constant copy (static const from .rdata)	
+0060fd58	00555d10	object_ctor	00679998,0067999c,006799a0	ctor=FUN_005b7e84 args= ptrs=0000000c	00555d50	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 00555d10: alloc byte 00679998, head=new(0xc) self-linked at 0067999c, size 006799a0=0; atexit 00555d50 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fd5c	00556250	const_copy	006799b8	= 0xbf19999a (-0.6, from .rdata 005e1290)	-	float/dword constant copy (static const from .rdata)	
+0060fd60	00556260	const_copy	006799b4	= 0xbf19999a (-0.6, from .rdata 005e1290)	-	float/dword constant copy (static const from .rdata)	
+0060fd64	00556270	const_copy	006799b0	= 0x3f19999a (0.6, from .rdata 005e1294)	-	float/dword constant copy (static const from .rdata)	
+0060fd68	00558820	const_copy	006799d4	= 0xbf19999a (-0.6, from .rdata 005e144c)	-	float/dword constant copy (static const from .rdata)	
+0060fd6c	00558830	const_copy	006799d0	= 0xbf19999a (-0.6, from .rdata 005e144c)	-	float/dword constant copy (static const from .rdata)	
+0060fd70	00558840	const_copy	006799cc	= 0x3f19999a (0.6, from .rdata 005e1450)	-	float/dword constant copy (static const from .rdata)	
+0060fd74	00558da0	scalar_init	006799fc,00679a00	imm= reads=	-		
+0060fd78	00559000	const_copy	006799f8	= 0xbf19999a (-0.6, from .rdata 005e1488)	-	float/dword constant copy (static const from .rdata)	
+0060fd7c	00559010	const_copy	006799f4	= 0xbf19999a (-0.6, from .rdata 005e1488)	-	float/dword constant copy (static const from .rdata)	
+0060fd80	00559020	const_copy	006799f0	= 0x3f19999a (0.6, from .rdata 005e148c)	-	float/dword constant copy (static const from .rdata)	
+0060fd84	00559030	object_ctor	006799ec	ctor=FUN_00559050 args=	00559280	event-listener object vtable 005e1494 subscribed to event ids 5,6	ctor FUN_00559050: vtable 005e1494, FUN_005760d0(5),(6) -> global event multimap DAT_0067c3a4; dtor 00559280 -> 005b2560
+0060fd88	005592b0	const_copy	00679a24	= 0xbf19999a (-0.6, from .rdata 005e1498)	-	float/dword constant copy (static const from .rdata)	
+0060fd8c	005592c0	const_copy	00679a20	= 0xbf19999a (-0.6, from .rdata 005e1498)	-	float/dword constant copy (static const from .rdata)	
+0060fd90	005592d0	const_copy	00679a1c	= 0x3f19999a (0.6, from .rdata 005e149c)	-	float/dword constant copy (static const from .rdata)	
+0060fd94	005592e0	object_ctor	00679a10,00679a14,00679a18	ctor=FUN_005b7e84 args= ptrs=0000000c	00559320	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 005592e0: alloc byte 00679a10, head=new(0xc) self-linked at 00679a14, size 00679a18=0; atexit 00559320 walks/frees nodes; dtor frees nodes only (POD elements)
+0060fd98	00559750	const_copy	00679ae8	= 0xbf19999a (-0.6, from .rdata 005e14d8)	-	float/dword constant copy (static const from .rdata)	
+0060fd9c	00559760	const_copy	00679ae4	= 0xbf19999a (-0.6, from .rdata 005e14d8)	-	float/dword constant copy (static const from .rdata)	
+0060fda0	00559770	const_copy	00679ae0	= 0x3f19999a (0.6, from .rdata 005e14dc)	-	float/dword constant copy (static const from .rdata)	
+0060fda4	00559780	scalar_init	00679adc	imm=0 reads=	-		
+0060fda8	00559790	scalar_init	00679ad8	imm=ffffffff reads=	-		
+0060fdac	005597a0	object_ctor	00679aac	ctor=FUN_0055d240 args="ButtonControl"	005597c0	UI element factory registration 'ButtonControl' (vtable 005cb554 -> 005e1744)	ctor FUN_0055d240(this=00679aac,"ButtonControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 005597c0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060fdb0	005597d0	object_ctor	00679a80	ctor=FUN_0055d350 args="ToggleButtonControl"	005597f0	UI element factory registration 'ToggleButtonControl' (vtable 005cb554 -> 005e174c)	ctor FUN_0055d350(this=00679a80,"ToggleButtonControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 005597f0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060fdb4	00559800	object_ctor	00679a54	ctor=FUN_0055d4e0 args="RichTextButtonControl"	00559820	UI element factory registration 'RichTextButtonControl' (vtable 005cb554 -> 005e1820)	ctor FUN_0055d4e0(this=00679a54,"RichTextButtonControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00559820 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060fdb8	00559830	scalar_init	00679a44,00679a48,00679a4c,00679a50	imm= reads=	00559860		
+0060fdbc	005598b0	object_ctor	00679a2c	ctor=FUN_0041dd20 args=	005598d0	std::map/set (MSVC6 _Tree, node 0x5c => value_type 0x4c bytes)	ctor FUN_0041dd20(this=00679a2c): node=new(0x5c) {left,parent,right,value@0xc,color@0x58,isnil@0x59}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10 (+0x14 cached head/begin); atexit 005598d0 -> 0x41dc50
+0060fdc0	005598e0	crc32_id	00679a28	= DACOM_CRC::GetCRC32("buttons")	-	uint = GetCRC32(name)	
+0060fdc4	0055de90	const_copy	00679b0c	= 0xbf19999a (-0.6, from .rdata 005e18ec)	-	float/dword constant copy (static const from .rdata)	
+0060fdc8	0055dea0	const_copy	00679b08	= 0xbf19999a (-0.6, from .rdata 005e18ec)	-	float/dword constant copy (static const from .rdata)	
+0060fdcc	0055deb0	const_copy	00679b04	= 0x3f19999a (0.6, from .rdata 005e18f0)	-	float/dword constant copy (static const from .rdata)	
+0060fdd0	0055e8d0	const_copy	00679b48	= 0xbf19999a (-0.6, from .rdata 005e190c)	-	float/dword constant copy (static const from .rdata)	
+0060fdd4	0055e8e0	const_copy	00679b44	= 0xbf19999a (-0.6, from .rdata 005e190c)	-	float/dword constant copy (static const from .rdata)	
+0060fdd8	0055e8f0	const_copy	00679b40	= 0x3f19999a (0.6, from .rdata 005e1910)	-	float/dword constant copy (static const from .rdata)	
+0060fddc	0055e900	object_ctor	00679b14	ctor=FUN_0055fcb0 args="CargoBarControl"	0055e920	UI element factory registration 'CargoBarControl' (vtable 005cb554 -> 005e1a18)	ctor FUN_0055fcb0(this=00679b14,"CargoBarControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0055e920 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060fde0	0055fdc0	const_copy	00679b70	= 0xbf19999a (-0.6, from .rdata 005e1a1c)	-	float/dword constant copy (static const from .rdata)	
+0060fde4	0055fdd0	const_copy	00679b6c	= 0xbf19999a (-0.6, from .rdata 005e1a1c)	-	float/dword constant copy (static const from .rdata)	
+0060fde8	0055fde0	const_copy	00679b68	= 0x3f19999a (0.6, from .rdata 005e1a20)	-	float/dword constant copy (static const from .rdata)	
+0060fdec	0055fdf0	scalar_init	00679b64,00679b66	imm= reads=	-		
+0060fdf0	0055fe00	scalar_init	00679b60,00679b62	imm=0,1 reads=	-		
+0060fdf4	0055fe20	scalar_init	00679b5c,00679b5e	imm= reads=	-		
+0060fdf8	0055fe40	scalar_init	00679b58,00679b5a	imm=2,1 reads=	-		
+0060fdfc	0055fe60	scalar_init	00679b54,00679b56	imm=3,1 reads=	-		
+0060fe00	0055fe80	scalar_init	00679b50,00679b52	imm=4,1 reads=	-		
+0060fe04	00561be0	scalar_init	00679bb4,00679bb5,00679bb6,00679bb7	imm=87,c3,e0,c0 reads=	-		
+0060fe08	00561c00	scalar_init	00679bb0,00679bb1,00679bb2,00679bb3	imm=87,c3,e0,ff reads=	-		
+0060fe0c	00561c20	scalar_init	00679bac,00679bad,00679bae,00679baf	imm=3b,bf,1d,ff reads=	-		
+0060fe10	00561c40	scalar_init	00679ba8,00679ba9,00679baa,00679bab	imm=bf,ff reads=	-		
+0060fe14	00561c60	scalar_init	00679ba4,00679ba5,00679ba6,00679ba7	imm=f5,ea,52,ff reads=	-		
+0060fe18	00561c80	scalar_init	00679ba0,00679ba1,00679ba2,00679ba3	imm=a6,26 reads=	-		
+0060fe1c	00561ca0	scalar_init	00679b9c,00679b9d,00679b9e,00679b9f	imm=88,0,c2,ff reads=	-		
+0060fe20	00561cc0	scalar_init	00679b98,00679b99,00679b9a,00679b9b	imm=e0,ff reads=	-		
+0060fe24	00561ce0	scalar_init	00679b94,00679b95,00679b96,00679b97	imm=ff reads=	-		
+0060fe28	00561d00	scalar_init	00679b90,00679b91,00679b92,00679b93	imm=a8,fb,c5,ff reads=	-		
+0060fe2c	00561d20	scalar_init	00679b8c,00679b8d,00679b8e,00679b8f	imm=87,c3,e0,ff reads=	-		
+0060fe30	00561d40	scalar_init	00679b88,00679b89,00679b8a,00679b8b	imm=7e,fd reads=	-		
+0060fe34	00561d60	scalar_init	00679b84,00679b85,00679b86,00679b87	imm= reads=	-		
+0060fe38	00561d80	scalar_init	00679b80,00679b81,00679b82,00679b83	imm=ce,5a reads=	-		
+0060fe3c	00562100	scalar_init	00679bd0,00679bd4,00679bdc,00679be4,00679bc0,00679bd8,00679be0,00679be5,00679bc4,00679bcc,00679bc8,00679d00,00679d04,00679e08,00679e0c,0067a228,0067a22c,0067a330,0067a334	imm=2,3c reads=	-		
+0060fe40	005626b0	const_copy	0067a478	= 0xbf19999a (-0.6, from .rdata 005e2070)	-	float/dword constant copy (static const from .rdata)	
+0060fe44	005626c0	const_copy	0067a474	= 0xbf19999a (-0.6, from .rdata 005e2070)	-	float/dword constant copy (static const from .rdata)	
+0060fe48	005626d0	const_copy	0067a470	= 0x3f19999a (0.6, from .rdata 005e2074)	-	float/dword constant copy (static const from .rdata)	
+0060fe4c	005626e0	object_ctor	0067a444	ctor=FUN_00563890 args="ServerFilterDialog"	00562700	UI element factory registration 'ServerFilterDialog' (vtable 005cb554 -> 005e21d8)	ctor FUN_00563890(this=0067a444,"ServerFilterDialog"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00562700 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060fe50	00562710	const_copy	0067a440	= 0xbe4ccccd (-0.2, from .rdata 005e2098)	-	float/dword constant copy (static const from .rdata)	
+0060fe54	00562730	const_copy	0067a43c	= 0x3e8f5c29 (0.28, from .rdata 005e2080)	-	float/dword constant copy (static const from .rdata)	
+0060fe58	00562750	other	00614830,00614834,00614850,00614854,0061486c,00614870,00614874,00614878,0061488c,00614890,0061482c,0061484c,00614894,00614898,00614858,006148ac,006148b0,00614838,0061483c,00614840,00614844,00614848,0061485c,00614860,00614864,00614868,0061487c,00614880,00614884,00614888,0061489c,006148a0,006148a4,006148a8,006148b4,006148b8,006148bc,006148c0,006148c4	consts=[['005e2098', 'cdcc4cbe', -0.20000000298023224, 3192704205], ['005e209c', '00000000', 0.0, 0], ['005e209c', '00000000', 0.0, 0], ['005e2098', 'cdcc4cbe', -0.20000000298023224, 3192704205], ['005e209c', '00000000', 0.0, 0], ['005e2098', 'cdcc4cbe', -0.20000000298023224, 3192704205], ['005e209c', '00000000', 0.0, 0], ['005e2098', 'cdcc4cbe', -0.20000000298023224, 3192704205]]	-	static table: 5 records x 0x20 bytes at 0061482c..006148cb (floats copied from 0067a440=-0.2 and 0067a43c=0.28 plus consts 0/-0.2/+-0.06/+-0.12, ids 0x60073..0x60078 and 7000..7005)	init 00562750 copies DAT_005e2098 (-0.2), DAT_005e209c (0.0), DAT_0067a440, DAT_0067a43c (both set by const_copy slots 0060fe50/0060fe54 immediately before: ORDER DEPENDENT), writes 0x6007x and 0x1b58..0x1b5d per record; no dtor; same TU as ServerFilterDialog (slot 0060fe4c); guess: dialog button/layout table
+0060fe5c	00563a60	const_copy	0067a498	= 0xbf19999a (-0.6, from .rdata 005e21dc)	-	float/dword constant copy (static const from .rdata)	
+0060fe60	00563a70	const_copy	0067a494	= 0xbf19999a (-0.6, from .rdata 005e21dc)	-	float/dword constant copy (static const from .rdata)	
+0060fe64	00563a80	const_copy	0067a490	= 0x3f19999a (0.6, from .rdata 005e21e0)	-	float/dword constant copy (static const from .rdata)	
+0060fe68	00563a90	scalar_init	0067a48c	imm=0 reads=	-		
+0060fe6c	00563aa0	scalar_init	0067a488	imm=ffffffff reads=	-		
+0060fe70	00563ab0	crc32_id	0067a484	= DACOM_CRC::GetCRC32("IMEtext")	-	uint = GetCRC32(name)	
+0060fe74	00563ad0	crc32_id	0067a480	= DACOM_CRC::GetCRC32("IMEbkground")	-	uint = GetCRC32(name)	
+0060fe78	005644f0	const_copy	0067a564	= 0xbf19999a (-0.6, from .rdata 005e250c)	-	float/dword constant copy (static const from .rdata)	
+0060fe7c	00564500	const_copy	0067a560	= 0xbf19999a (-0.6, from .rdata 005e250c)	-	float/dword constant copy (static const from .rdata)	
+0060fe80	00564510	const_copy	0067a55c	= 0x3f19999a (0.6, from .rdata 005e2510)	-	float/dword constant copy (static const from .rdata)	
+0060fe84	00564790	const_copy	0067a580	= 0xbf19999a (-0.6, from .rdata 005e2514)	-	float/dword constant copy (static const from .rdata)	
+0060fe88	005647a0	const_copy	0067a57c	= 0xbf19999a (-0.6, from .rdata 005e2514)	-	float/dword constant copy (static const from .rdata)	
+0060fe8c	005647b0	const_copy	0067a578	= 0x3f19999a (0.6, from .rdata 005e2518)	-	float/dword constant copy (static const from .rdata)	
+0060fe90	005647c0	scalar_init	0067a570,0067a568,0067a56c	imm= reads=	005647e0		
+0060fe94	00564830	const_copy	0067c1f4	= 0xbf19999a (-0.6, from .rdata 005e2548)	-	float/dword constant copy (static const from .rdata)	
+0060fe98	00564840	const_copy	0067c1f0	= 0xbf19999a (-0.6, from .rdata 005e2548)	-	float/dword constant copy (static const from .rdata)	
+0060fe9c	00564850	const_copy	0067c1ec	= 0x3f19999a (0.6, from .rdata 005e254c)	-	float/dword constant copy (static const from .rdata)	
+0060fea0	00564860	scalar_init	0067c1e8,0067c1ea	imm= reads=	-		
+0060fea4	00564870	scalar_init	0067c1e4,0067c1e6	imm=0,1 reads=	-		
+0060fea8	00564890	scalar_init	0067c1e0,0067c1e2	imm= reads=	-		
+0060feac	005648b0	scalar_init	0067c1dc,0067c1de	imm=2,1 reads=	-		
+0060feb0	005648d0	scalar_init	0067c1d8,0067c1da	imm=3,1 reads=	-		
+0060feb4	005648f0	scalar_init	0067c1d4,0067c1d6	imm=4,1 reads=	-		
+0060feb8	00564a40	scalar_init	0067c1d0	imm=0 reads=	-		
+0060febc	00564a50	scalar_init	0067c1cc	imm=ffffffff reads=	-		
+0060fec0	00564a60	scalar_init	0067c188,0067c18c	imm= reads=	-		
+0060fec4	00564a70	scalar_init	0067c140,0067c144	imm= reads=	-		
+0060fec8	00564a80	scalar_init	0067c0f8,0067c0fc	imm= reads=	-		
+0060fecc	00564a90	scalar_init	0067c0b0,0067c0b4	imm= reads=	-		
+0060fed0	00564aa0	scalar_init	0067c068,0067c06c	imm= reads=	-		
+0060fed4	00564ab0	scalar_init	0067c020,0067c024	imm= reads=	-		
+0060fed8	00564ac0	scalar_init	0067bfd8,0067bfdc	imm= reads=	-		
+0060fedc	00564ad0	scalar_init	0067bf90,0067bf94	imm= reads=	-		
+0060fee0	00564ae0	scalar_init	0067bf48,0067bf4c	imm= reads=	-		
+0060fee4	00564af0	scalar_init	0067bd40	imm=0 reads=	-		
+0060fee8	00566180	object_ctor	0067b780	ctor=FUN_005662a0 args=	005661a0	UI window/element object (base FUN_00591ae0-style init, vtable 005d5544 / 005e27cc)	ctor FUN_005662a0: same field init as UI element base FUN_00591ae0 (floats 1.0 at +0x3c/+0x4c/+0x5c), eh vector ctor inside; dtor 005661a0 -> 005661b0; guess: global UI window instance
+0060feec	00567000	object_ctor	0067b180	ctor=FUN_00567020 args=	0056b020	UI window singleton (UI element base FUN_00591ae0/FUN_00591e30, vtables 005e2914/005e291c/005e2934)	ctor FUN_00567020 (this=0067b180); contains CHARACTER_ID field; dtor 0056b020 -> 0056aeb0
+0060fef0	0056b030	object_ctor	0067ae10	ctor=FUN_0056b050 args=	0056d4e0	UI window singleton (UI element base, vtables 005e2a64/005e2a6c/005e2a84)	ctor FUN_0056b050 (this=0067ae10); dtor 0056d4e0 -> 0056d360
+0060fef4	0056d4f0	object_ctor	0067ab20	ctor=FUN_0056d510 args=	00572690	UI window singleton (UI element base, vtables 005e2bbc/005e2bc4/005e2bdc)	ctor FUN_0056d510 (this=0067ab20); dtor 00572690 -> 005723b0
+0060fef8	005726a0	object_ctor	0067aa10	ctor=FUN_005726c0 args=	00573570	UI window singleton (UI element base, vtables 005e2ed0/005e2ed8/005e2ef4) with 2 std::list<4-byte>	ctor FUN_005726c0 (this=0067aa10); dtor 00573570 -> 00573470
+0060fefc	00573580	object_ctor	0067a890	ctor=FUN_0055fea0 args= ptrs=0067bcf8	005735a0	UI window singleton (UI element base, vtables 005e1a2c/005e1a34/005e1a4c), ctor arg &0067bcf8	ctor FUN_0055fea0(this=0067a890, &DAT_0067bcf8); stores arg and arg+0x40; dtor 005735a0 -> 005600c0
+0060ff00	005735b0	object_ctor	0067a7d0	ctor=FUN_005735d0 args=	00573780	UI element object (base FUN_00591ae0(0), vtables 005e2fbc/005e2fa4/005e2f9c)	ctor FUN_005735d0 (this=0067a7d0); dtor 00573780 -> 00573710
+0060ff04	00573790	object_ctor	0067a598	ctor=FUN_00573840 args=	005737b0	small polymorphic object vtable 005e3034 with sub-object vtable 005e2718 at +0x210	ctor FUN_00573840 (this=0067a598): byte[3]=0,[0x89]=0; dtor 005737b0 -> 005737c0; user 00575430
+0060ff08	00575d30	const_copy	0067c29c	= 0xbf19999a (-0.6, from .rdata 005e4268)	-	float/dword constant copy (static const from .rdata)	
+0060ff0c	00575d40	const_copy	0067c298	= 0xbf19999a (-0.6, from .rdata 005e4268)	-	float/dword constant copy (static const from .rdata)	
+0060ff10	00575d50	const_copy	0067c294	= 0x3f19999a (0.6, from .rdata 005e426c)	-	float/dword constant copy (static const from .rdata)	
+0060ff14	00576250	object_ctor	0067c26c,0067c270,0067c274	ctor=FUN_005b7e84 args= ptrs=0000000c	00576290	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 00576250: alloc byte 0067c26c, head=new(0xc) self-linked at 0067c270, size 0067c274=0; atexit 00576290 walks/frees nodes; dtor frees nodes only (POD elements)
+0060ff18	005768b0	object_ctor	0067c260,0067c264,0067c268	ctor=FUN_005b7e84 args= ptrs=00000010	005768f0	std::list<T> (head node 0x10 => value 0x8 bytes)	init 005768b0: alloc byte 0067c260, head=new(0x10) self-linked at 0067c264, size 0067c268=0; atexit 005768f0 walks/frees nodes; dtor frees nodes only (POD elements)
+0060ff1c	00576950	object_ctor	0067c254,0067c258,0067c25c	ctor=FUN_005b7e84 args= ptrs=00000028	00576990	std::list<T> (head node 0x28 => value 0x20 bytes)	init 00576950: alloc byte 0067c254, head=new(0x28) self-linked at 0067c258, size 0067c25c=0; atexit 00576990 walks/frees nodes; element dtor 0x52d3f0 called per node
+0060ff20	00576a10	object_ctor	0067c224,0067c228,0067c22c	ctor=FUN_005b7e84 args= ptrs=00000024	00576a50	std::list<T> (head node 0x24 => value 0x1c bytes)	init 00576a10: alloc byte 0067c224, head=new(0x24) self-linked at 0067c228, size 0067c22c=0; atexit 00576a50 walks/frees nodes; element dtor 0x576ac0 called per node
+0060ff24	005773f0	object_ctor	0067c218,0067c21c,0067c220	ctor=FUN_005b7e84 args= ptrs=0000000c	00577430	std::list<T> (head node 0xc => value 0x4 bytes) (likely list<T*>/4-byte)	init 005773f0: alloc byte 0067c218, head=new(0xc) self-linked at 0067c21c, size 0067c220=0; atexit 00577430 walks/frees nodes; dtor frees nodes only (POD elements)
+0060ff28	00578b40	const_copy	0067c3ec	= 0xbf19999a (-0.6, from .rdata 005e4428)	-	float/dword constant copy (static const from .rdata)	
+0060ff2c	00578b50	const_copy	0067c3e8	= 0xbf19999a (-0.6, from .rdata 005e4428)	-	float/dword constant copy (static const from .rdata)	
+0060ff30	00578b60	const_copy	0067c3e4	= 0x3f19999a (0.6, from .rdata 005e442c)	-	float/dword constant copy (static const from .rdata)	
+0060ff34	00579110	scalar_init	0067c3b8,0067c3bc,0067c3d8,0067c3e0,0067c3d9,0067c3da,0067c3db,0067c3c0	imm=5e448c reads=	00579150		
+0060ff38	005792d0	const_copy	0067c47c	= 0xbf19999a (-0.6, from .rdata 005e4558)	-	float/dword constant copy (static const from .rdata)	
+0060ff3c	005792e0	const_copy	0067c478	= 0xbf19999a (-0.6, from .rdata 005e4558)	-	float/dword constant copy (static const from .rdata)	
+0060ff40	005792f0	const_copy	0067c474	= 0x3f19999a (0.6, from .rdata 005e455c)	-	float/dword constant copy (static const from .rdata)	
+0060ff44	00579300	scalar_init	0067c470	imm=0 reads=	-		
+0060ff48	00579310	scalar_init	0067c46c	imm=ffffffff reads=	-		
+0060ff4c	00579320	object_ctor	0067c440	ctor=FUN_0057ec50 args="RichTextWin"	00579340	UI element factory registration 'RichTextWin' (vtable 005cb554 -> 005e4960)	ctor FUN_0057ec50(this=0067c440,"RichTextWin"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00579340 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ff50	00579350	object_ctor	0067c414	ctor=FUN_0057edb0 args="RichTextEditWin"	00579370	UI element factory registration 'RichTextEditWin' (vtable 005cb554 -> 005e4968)	ctor FUN_0057edb0(this=0067c414,"RichTextEditWin"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00579370 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ff54	0057b8b0	scalar_init	0067c40c,0067c40d	imm=0 reads=0067c40d	-		
+0060ff58	0057d7b0	scalar_init	0067c3fc,0067c400,0067c404,0067c408	imm= reads=	0057d7e0		
+0060ff5c	0057fcf0	const_copy	0067c4bc	= 0xbf19999a (-0.6, from .rdata 005e496c)	-	float/dword constant copy (static const from .rdata)	
+0060ff60	0057fd00	const_copy	0067c4b8	= 0xbf19999a (-0.6, from .rdata 005e496c)	-	float/dword constant copy (static const from .rdata)	
+0060ff64	0057fd10	const_copy	0067c4b4	= 0x3f19999a (0.6, from .rdata 005e4970)	-	float/dword constant copy (static const from .rdata)	
+0060ff68	0057fd20	object_ctor	0067c488	ctor=FUN_00583480 args="ScrollControl"	0057fd40	UI element factory registration 'ScrollControl' (vtable 005cb554 -> 005e4bb0)	ctor FUN_00583480(this=0067c488,"ScrollControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0057fd40 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ff6c	00583590	const_copy	0067c4fc	= 0xbf19999a (-0.6, from .rdata 005e4bb4)	-	float/dword constant copy (static const from .rdata)	
+0060ff70	005835a0	const_copy	0067c4f8	= 0xbf19999a (-0.6, from .rdata 005e4bb4)	-	float/dword constant copy (static const from .rdata)	
+0060ff74	005835b0	const_copy	0067c4f4	= 0x3f19999a (0.6, from .rdata 005e4bb8)	-	float/dword constant copy (static const from .rdata)	
+0060ff78	005835c0	object_ctor	0067c4c8	ctor=FUN_005870f0 args="ShipViewControl"	005835e0	UI element factory registration 'ShipViewControl' (vtable 005cb554 -> 005e4d60)	ctor FUN_005870f0(this=0067c4c8,"ShipViewControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 005835e0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ff7c	00587de0	const_copy	0067c538	= 0xbf19999a (-0.6, from .rdata 005e4d64)	-	float/dword constant copy (static const from .rdata)	
+0060ff80	00587df0	const_copy	0067c534	= 0xbf19999a (-0.6, from .rdata 005e4d64)	-	float/dword constant copy (static const from .rdata)	
+0060ff84	00587e00	const_copy	0067c530	= 0x3f19999a (0.6, from .rdata 005e4d68)	-	float/dword constant copy (static const from .rdata)	
+0060ff88	00587e10	object_ctor	0067c504	ctor=FUN_005899b0 args="StaticControl"	00587e30	UI element factory registration 'StaticControl' (vtable 005cb554 -> 005e4efc)	ctor FUN_005899b0(this=0067c504,"StaticControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00587e30 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ff8c	00589ac0	const_copy	0067d8c0	= 0xbf19999a (-0.6, from .rdata 005e4f00)	-	float/dword constant copy (static const from .rdata)	
+0060ff90	00589ad0	const_copy	0067d8bc	= 0xbf19999a (-0.6, from .rdata 005e4f00)	-	float/dword constant copy (static const from .rdata)	
+0060ff94	00589ae0	const_copy	0067d8b8	= 0x3f19999a (0.6, from .rdata 005e4f04)	-	float/dword constant copy (static const from .rdata)	
+0060ff98	00589af0	object_ctor	0067d88c	ctor=FUN_0058c0b0 args="TextControl"	00589b10	UI element factory registration 'TextControl' (vtable 005cb554 -> 005e50d8)	ctor FUN_0058c0b0(this=0067d88c,"TextControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00589b10 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ff9c	00589b20	object_ctor	0067d860	ctor=FUN_0058c1c0 args="EditControl"	00589b40	UI element factory registration 'EditControl' (vtable 005cb554 -> 005e50e0)	ctor FUN_0058c1c0(this=0067d860,"EditControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00589b40 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ffa0	00589b50	object_ctor	-	ctor=FUN_005b7fba args= ptrs=00444e20,00415850,00000064,00000008,0067d540	00589b80	array[100] of 8-byte {void* buf; uint n} (eh vector ctor iterator)	FUN_005b7fba(0067d540, 8, 100, FUN_00415850 (zero 2 dwords), FUN_00444e20 (free(buf))); atexit 00589b80 -> 005b7ec6 eh vector destructor iterator
+0060ffa4	0058c300	const_copy	0067d8d8	= 0xbf19999a (-0.6, from .rdata 005e50e4)	-	float/dword constant copy (static const from .rdata)	
+0060ffa8	0058c310	const_copy	0067d8d4	= 0xbf19999a (-0.6, from .rdata 005e50e4)	-	float/dword constant copy (static const from .rdata)	
+0060ffac	0058c320	const_copy	0067d8d0	= 0x3f19999a (0.6, from .rdata 005e50e8)	-	float/dword constant copy (static const from .rdata)	
+0060ffb0	0058c330	scalar_init	0067d8cc	ctor=FUN_005b7010 args= ptrs=00000000	-	scalar: int = index of 0 in 22-entry table 00615e70	init 0058c330: 0067d8cc = FUN_005b7010(0) (linear search of 0x16 dwords at 00615e70 returned by FUN_005b7000); not an object (misclassified)
+0060ffb4	0058c340	const_copy	0067d958	= 0xbf19999a (-0.6, from .rdata 005e50ec)	-	float/dword constant copy (static const from .rdata)	
+0060ffb8	0058c350	const_copy	0067d954	= 0xbf19999a (-0.6, from .rdata 005e50ec)	-	float/dword constant copy (static const from .rdata)	
+0060ffbc	0058c360	const_copy	0067d950	= 0x3f19999a (0.6, from .rdata 005e50f0)	-	float/dword constant copy (static const from .rdata)	
+0060ffc0	0058f940	object_ctor	0067d924	ctor=FUN_0058fac0 args="UIFastTable"	0058f960	UI element factory registration 'UIFastTable' (vtable 005cb554 -> 005e5318)	ctor FUN_0058fac0(this=0067d924,"UIFastTable"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0058f960 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ffc4	0058f970	object_ctor	0067d8f8	ctor=FUN_0058fbd0 args="UIScrollTable"	0058f990	UI element factory registration 'UIScrollTable' (vtable 005cb554 -> 005e5320)	ctor FUN_0058fbd0(this=0067d8f8,"UIScrollTable"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0058f990 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ffc8	00591490	const_copy	0067d968	= 0xbf19999a (-0.6, from .rdata 005e5324)	-	float/dword constant copy (static const from .rdata)	
+0060ffcc	005914a0	const_copy	0067d964	= 0xbf19999a (-0.6, from .rdata 005e5324)	-	float/dword constant copy (static const from .rdata)	
+0060ffd0	005914b0	const_copy	0067d960	= 0x3f19999a (0.6, from .rdata 005e5328)	-	float/dword constant copy (static const from .rdata)	
+0060ffd4	00595330	const_copy	0067d9f8	= 0xbf19999a (-0.6, from .rdata 005e5538)	-	float/dword constant copy (static const from .rdata)	
+0060ffd8	00595340	const_copy	0067d9f4	= 0xbf19999a (-0.6, from .rdata 005e5538)	-	float/dword constant copy (static const from .rdata)	
+0060ffdc	00595350	const_copy	0067d9f0	= 0x3f19999a (0.6, from .rdata 005e553c)	-	float/dword constant copy (static const from .rdata)	
+0060ffe0	005953d0	object_ctor	0067d9c8	ctor=FUN_00595360 args=	005953f0	std::map/set (MSVC6 _Tree, node 0x5c => value_type 0x4c bytes)	ctor FUN_00595360(this=0067d9c8): node=new(0x5c) {left,parent,right,value@0xc,color@0x58,isnil@0x59}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10 (+0x14 cached head/begin); atexit 005953f0 -> 0x41dc50
+0060ffe4	005979e0	object_ctor	0067d99c	ctor=FUN_00597a40 args="UIScroll"	00597a00	UI element factory registration 'UIScroll' (vtable 005cb554 -> 005e5664)	ctor FUN_00597a40(this=0067d99c,"UIScroll"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00597a00 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ffe8	00597a10	object_ctor	0067d970	ctor=FUN_00597b50 args="UICycle"	00597a30	UI element factory registration 'UICycle' (vtable 005cb554 -> 005e566c)	ctor FUN_00597b50(this=0067d970,"UICycle"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00597a30 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060ffec	00597ca0	const_copy	0067da34	= 0xbf19999a (-0.6, from .rdata 005e5738)	-	float/dword constant copy (static const from .rdata)	
+0060fff0	00597cb0	const_copy	0067da30	= 0xbf19999a (-0.6, from .rdata 005e5738)	-	float/dword constant copy (static const from .rdata)	
+0060fff4	00597cc0	const_copy	0067da2c	= 0x3f19999a (0.6, from .rdata 005e573c)	-	float/dword constant copy (static const from .rdata)	
+0060fff8	00599220	object_ctor	0067da00	ctor=FUN_00599250 args="UITable"	00599240	UI element factory registration 'UITable' (vtable 005cb554 -> 005e57b8)	ctor FUN_00599250(this=0067da00,"UITable"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 00599240 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0060fffc	00599a90	const_copy	0067dbbc	= 0xbf19999a (-0.6, from .rdata 005e57bc)	-	float/dword constant copy (static const from .rdata)	
+00610000	00599aa0	const_copy	0067dbb8	= 0xbf19999a (-0.6, from .rdata 005e57bc)	-	float/dword constant copy (static const from .rdata)	
+00610004	00599ab0	const_copy	0067dbb4	= 0x3f19999a (0.6, from .rdata 005e57c0)	-	float/dword constant copy (static const from .rdata)	
+00610008	00599da0	scalar_init	0067dbac,0067dbad	imm=8 reads=0067dbad	-		
+0061000c	00599dc0	scalar_init	0067dba4,0067dba5	imm=8 reads=0067dba5	-		
+00610010	00599de0	scalar_init	0067db9c,0067db9d	imm=8 reads=0067db9d	-		
+00610014	0059c1e0	object_ctor	0067db70	ctor=FUN_0059c360 args="UIStaticText"	0059c200	UI element factory registration 'UIStaticText' (vtable 005cb554 -> 005e5a5c)	ctor FUN_0059c360(this=0067db70,"UIStaticText"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059c200 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+00610018	0059c210	object_ctor	0067db44	ctor=FUN_0059c510 args="UITextMsgButton"	0059c230	UI element factory registration 'UITextMsgButton' (vtable 005cb554 -> 005e5adc)	ctor FUN_0059c510(this=0067db44,"UITextMsgButton"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059c230 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0061001c	0059c240	object_ctor	0067db18	ctor=FUN_0059c680 args="UITextEdit"	0059c260	UI element factory registration 'UITextEdit' (vtable 005cb554 -> 005e5bb8)	ctor FUN_0059c680(this=0067db18,"UITextEdit"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059c260 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+00610020	0059c270	object_ctor	0067daec	ctor=FUN_0059c7a0 args="UIListBox"	0059c290	UI element factory registration 'UIListBox' (vtable 005cb554 -> 005e5cac)	ctor FUN_0059c7a0(this=0067daec,"UIListBox"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059c290 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+00610024	0059c2a0	object_ctor	0067dac0	ctor=FUN_0059c8d0 args="UIWinObject"	0059c2c0	UI element factory registration 'UIWinObject' (vtable 005cb554 -> 005e5d28)	ctor FUN_0059c8d0(this=0067dac0,"UIWinObject"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059c2c0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+00610028	0059c2d0	object_ctor	0067da94	ctor=FUN_0059ca50 args="UIWinDeform"	0059c2f0	UI element factory registration 'UIWinDeform' (vtable 005cb554 -> 005e5da8)	ctor FUN_0059ca50(this=0067da94,"UIWinDeform"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059c2f0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0061002c	0059c300	object_ctor	0067da68	ctor=FUN_0059cb60 args="UIRichTextWin"	0059c320	UI element factory registration 'UIRichTextWin' (vtable 005cb554 -> 005e5db0)	ctor FUN_0059cb60(this=0067da68,"UIRichTextWin"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059c320 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+00610030	0059c330	object_ctor	0067da3c	ctor=FUN_0059cc80 args="UIShipViewControl"	0059c350	UI element factory registration 'UIShipViewControl' (vtable 005cb554 -> 005e5db8)	ctor FUN_0059cc80(this=0067da3c,"UIShipViewControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059c350 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+00610034	0059cff0	const_copy	0067dcc0	= 0xbf19999a (-0.6, from .rdata 005e5dbc)	-	float/dword constant copy (static const from .rdata)	
+00610038	0059d000	const_copy	0067dcbc	= 0xbf19999a (-0.6, from .rdata 005e5dbc)	-	float/dword constant copy (static const from .rdata)	
+0061003c	0059d010	const_copy	0067dcb8	= 0x3f19999a (0.6, from .rdata 005e5dc0)	-	float/dword constant copy (static const from .rdata)	
+00610040	0059d020	object_ctor	0067dbf8	ctor=FUN_0040f150 args=	0059d040	guess: Camera object (vtable 005c8944): 320x240 viewport, fov 35, aspect 4/3	ctor FUN_0040f150 (this=0067dbf8): identity matrices, 0x43a00000=320, 0x43700000=240, 0x420c0000=35, 0x3faaaaab=1.333, fptan/fpatan of fov (x87 precision-sensitive); atexit 0059d040 resets vtable 005c8944 then jmp 00401e90; 27 users
+00610044	0059d060	object_ctor	0067dbf0	ctor=FUN_0059d080 args=	0059d400	event-listener object vtable 005e5dcc subscribed to 12 event ids (5,4,6..0xd,1,2)	ctor FUN_0059d080: FUN_005760d0 per id -> global event multimap DAT_0067c3a4; dtor 0059d400 -> 0059d410
+00610048	0059d460	scalar_init	0067dbe4,0067dbec,0067dbe8	imm= reads=	0059d480		
+0061004c	0059d4d0	scalar_init	0067dbd8,0067dbe0,0067dbdc	imm= reads=	0059d4f0		
+00610050	0059d540	scalar_init	0067dbcc,0067dbd0,0067dbd4	imm=0,0,bf800000 reads=	-		
+00610054	0059e8a0	const_copy	0067dd0c	= 0xbf19999a (-0.6, from .rdata 005e5e20)	-	float/dword constant copy (static const from .rdata)	
+00610058	0059e8b0	const_copy	0067dd08	= 0xbf19999a (-0.6, from .rdata 005e5e20)	-	float/dword constant copy (static const from .rdata)	
+0061005c	0059e8c0	const_copy	0067dd04	= 0x3f19999a (0.6, from .rdata 005e5e24)	-	float/dword constant copy (static const from .rdata)	
+00610060	0059ec10	object_ctor	0067dcf4	ctor=FUN_0059ec40 args=	0059ec30	std::vector<T> (POD elements)	ctor FUN_0059ec40(this=0067dcf4): alloc byte, first/last/end=0; atexit 0059ec30 -> 004de730 (operator delete(first); zero first/last/end)
+00610064	0059f800	const_copy	0067dd48	= 0xbf19999a (-0.6, from .rdata 005e5e28)	-	float/dword constant copy (static const from .rdata)	
+00610068	0059f810	const_copy	0067dd44	= 0xbf19999a (-0.6, from .rdata 005e5e28)	-	float/dword constant copy (static const from .rdata)	
+0061006c	0059f820	const_copy	0067dd40	= 0x3f19999a (0.6, from .rdata 005e5e2c)	-	float/dword constant copy (static const from .rdata)	
+00610070	0059f830	object_ctor	0067dd14	ctor=FUN_005a19b0 args="WinControl"	0059f850	UI element factory registration 'WinControl' (vtable 005cb554 -> 005e5f84)	ctor FUN_005a19b0(this=0067dd14,"WinControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 0059f850 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+00610074	005a1ac0	const_copy	0067dd60	= 0xbf19999a (-0.6, from .rdata 005e5f8c)	-	float/dword constant copy (static const from .rdata)	
+00610078	005a1ad0	const_copy	0067dd5c	= 0xbf19999a (-0.6, from .rdata 005e5f8c)	-	float/dword constant copy (static const from .rdata)	
+0061007c	005a1ae0	const_copy	0067dd58	= 0x3f19999a (0.6, from .rdata 005e5f90)	-	float/dword constant copy (static const from .rdata)	
+00610080	005a1e70	scalar_init	0067dd54,0067dd55,0067dd56,0067dd57	imm=37,49,5a,ff reads=	-		
+00610084	005a1e90	scalar_init	0067dd50,0067dd51,0067dd52,0067dd53	imm=9b,cd reads=	-		
+00610088	005a2800	const_copy	0067de44	= 0xbf19999a (-0.6, from .rdata 005e600c)	-	float/dword constant copy (static const from .rdata)	
+0061008c	005a2810	const_copy	0067de40	= 0xbf19999a (-0.6, from .rdata 005e600c)	-	float/dword constant copy (static const from .rdata)	
+00610090	005a2820	const_copy	0067de3c	= 0x3f19999a (0.6, from .rdata 005e6010)	-	float/dword constant copy (static const from .rdata)	
+00610094	005a2830	object_ctor	0067de10	ctor=FUN_005a4c90 args="WireStaticControl"	005a2850	UI element factory registration 'WireStaticControl' (vtable 005cb554 -> 005e6208)	ctor FUN_005a4c90(this=0067de10,"WireStaticControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 005a2850 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+00610098	005a2860	object_ctor	0067dde4	ctor=FUN_005a4da0 args="WireButtonControl"	005a2880	UI element factory registration 'WireButtonControl' (vtable 005cb554 -> 005e6210)	ctor FUN_005a4da0(this=0067dde4,"WireButtonControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 005a2880 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+0061009c	005a2890	object_ctor	0067ddb8	ctor=FUN_005a4ed0 args="RichTextWireButtonControl"	005a28b0	UI element factory registration 'RichTextWireButtonControl' (vtable 005cb554 -> 005e6218)	ctor FUN_005a4ed0(this=0067ddb8,"RichTextWireButtonControl"): name[32] at +0xc, len at +8, FUN_0059dab0 pushes onto registry list head DAT_0067dcec; atexit 005a28b0 -> 00579380 (reset vtable 005cb554, FUN_0059dad0 unlink)
+006100a0	005a28c0	scalar_init	0067dd90,0067dd94,0067dd98,0067dd9c,0067dda0,0067dda4,0067dda8,0067ddb4,0067ddb5	imm=1 reads=	-		
+006100a4	005a2900	scalar_init	0067dd68,0067dd6c,0067dd70,0067dd74,0067dd78,0067dd7c,0067dd80,0067dd8c,0067dd8d	imm=1 reads=	-		
+006100a8	005a5940	const_copy	0067e7ac	= 0xbf19999a (-0.6, from .rdata 005e63f4)	-	float/dword constant copy (static const from .rdata)	
+006100ac	005a5950	const_copy	0067e7a8	= 0xbf19999a (-0.6, from .rdata 005e63f4)	-	float/dword constant copy (static const from .rdata)	
+006100b0	005a5960	const_copy	0067e7a4	= 0x3f19999a (0.6, from .rdata 005e63f8)	-	float/dword constant copy (static const from .rdata)	
+006100b4	005a5970	scalar_init	0067e7a0,0067e7a2	imm= reads=	-		
+006100b8	005a5980	scalar_init	0067e79c,0067e79e	imm=0,1 reads=	-		
+006100bc	005a59a0	scalar_init	0067e798,0067e79a	imm= reads=	-		
+006100c0	005a59c0	scalar_init	0067e794,0067e796	imm=2,1 reads=	-		
+006100c4	005a59e0	scalar_init	0067e790,0067e792	imm=3,1 reads=	-		
+006100c8	005a5a00	scalar_init	0067e78c,0067e78e	imm=4,1 reads=	-		
+006100cc	005a5a20	create_id	0067e788	= CreateID("objective_complete")	-	uint ID = CreateID(name)	
+006100d0	005a5a40	create_id	0067e784	= CreateID("objective_failed")	-	uint ID = CreateID(name)	
+006100d4	005a6270	object_ctor	0067e770	ctor=FUN_005a67c0 args=	005a62a0	std::map/set (MSVC6 _Tree, node 0x24 => value_type 0x14 bytes)	ctor FUN_005a67c0(this=0067e770): node=new(0x24) {left,parent,right,value@0xc,color@0x20,isnil@0x21}, per-instance nil node at +8, head at +4, _Multi(+0xc)=0, size +0x10; atexit 005a62a0 -> 0x5a62b0
+006100d8	005a7fa0	const_copy	0067ea38	= 0xbf19999a (-0.6, from .rdata 005e6448)	-	float/dword constant copy (static const from .rdata)	
+006100dc	005a7fb0	const_copy	0067ea34	= 0xbf19999a (-0.6, from .rdata 005e6448)	-	float/dword constant copy (static const from .rdata)	
+006100e0	005a7fc0	const_copy	0067ea30	= 0x3f19999a (0.6, from .rdata 005e644c)	-	float/dword constant copy (static const from .rdata)	
+006100e4	005a7fd0	scalar_init	0067ea2c,0067ea2e	imm= reads=	-		
+006100e8	005a7fe0	scalar_init	0067ea28,0067ea2a	imm=0,1 reads=	-		
+006100ec	005a8000	scalar_init	0067ea24,0067ea26	imm= reads=	-		
+006100f0	005a8020	scalar_init	0067ea20,0067ea22	imm=2,1 reads=	-		
+006100f4	005a8040	scalar_init	0067ea1c,0067ea1e	imm=3,1 reads=	-		
+006100f8	005a8060	scalar_init	0067ea18,0067ea1a	imm=4,1 reads=	-		
+006100fc	005a81c0	object_ctor	0067e7b8	ctor=FUN_005a8be0 args=	005a81e0	multiplayer DP client object (derived from CDPClient, vtables 005c9348/005e6508/005e6520, OnReceive 005e64f0) with std::map (node 0x38)	ctor FUN_005a8be0 (this per dtor = 0067e7bc; tsv target 0067e7b8): CDPClient::CDPClient, strings "SinglePlayer", "FLListServer2", std::basic_string<ushort>; dtor 005a81e0 -> 005a9040
+00610100	005a8980	const_copy	0067ea48	= 0xbf19999a (-0.6, from .rdata 005e64b4)	-	float/dword constant copy (static const from .rdata)	
+00610104	005a8990	const_copy	0067ea44	= 0xbf19999a (-0.6, from .rdata 005e64b4)	-	float/dword constant copy (static const from .rdata)	
+00610108	005a89a0	const_copy	0067ea40	= 0x3f19999a (0.6, from .rdata 005e64b8)	-	float/dword constant copy (static const from .rdata)	
+0061010c	005b0140	const_copy	0067ec98	= 0xbf19999a (-0.6, from .rdata 005e6618)	-	float/dword constant copy (static const from .rdata)	
+00610110	005b0150	const_copy	0067ec94	= 0xbf19999a (-0.6, from .rdata 005e6618)	-	float/dword constant copy (static const from .rdata)	
+00610114	005b0160	const_copy	0067ec90	= 0x3f19999a (0.6, from .rdata 005e661c)	-	float/dword constant copy (static const from .rdata)	
+00610118	005b0170	scalar_init	0067ec8c,0067ec8e	imm= reads=	-		
+0061011c	005b0180	scalar_init	0067ec88,0067ec8a	imm=0,1 reads=	-		
+00610120	005b01a0	scalar_init	0067ec84,0067ec86	imm= reads=	-		
+00610124	005b01c0	scalar_init	0067ec80,0067ec82	imm=2,1 reads=	-		
+00610128	005b01e0	scalar_init	0067ec7c,0067ec7e	imm=3,1 reads=	-		
+0061012c	005b0200	scalar_init	0067ec78,0067ec7a	imm=4,1 reads=	-		
+00610130	005b0810	scalar_init	0067ea78	imm=0 reads=	-		
+00610134	005b0820	object_ctor	-	ctor= args=	005b0830	empty/no-op: only registers atexit of a bare 'ret'	init 005b0820: FUN_005b7e6c(005b0830); 005b0830 = 'ret' (trivial object, e.g. empty-class global with user-declared empty dtor)
+00610138	005b0840	scalar_init	0067ea6c,0067ea64,0067ea68	imm=0,5e6674,5e6668 reads=	-		
+0061013c	005b23a0	object_ctor	0067ea60	ctor=FUN_005b23c0 args=	005b2550	event-listener object vtable 005e6d20 subscribed to event ids 0xc5,0x14,0x15,0x17,0xcb	ctor FUN_005b23c0: FUN_005760d0 per id -> global event multimap DAT_0067c3a4; dtor 005b2550 -> 005b2560
+00610140	005b34e0	const_copy	0067ed34	= 0xbf19999a (-0.6, from .rdata 005e6df4)	-	float/dword constant copy (static const from .rdata)	
+00610144	005b34f0	const_copy	0067ed30	= 0xbf19999a (-0.6, from .rdata 005e6df4)	-	float/dword constant copy (static const from .rdata)	
+00610148	005b3500	const_copy	0067ed2c	= 0x3f19999a (0.6, from .rdata 005e6df8)	-	float/dword constant copy (static const from .rdata)	
+0061014c	005b4180	object_ctor	0067ecfc	ctor= args=	-	PerfOption registration 'AtmosphereMaterialConfig' (heap obj 0x24 bytes, vtable 005e6f80)	init 005b4180: new(0x24){vtbl,name,id=0x5c9,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecfc is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610150	005b4300	object_ctor	0067ecfb	ctor= args=	-	PerfOption registration 'HUDAnimConfig' (heap obj 0x24 bytes, vtable 005e6f80)	init 005b4300: new(0x24){vtbl,name,id=0x65e,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecfb is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610154	005b4420	object_ctor	0067ecfa	ctor= args=	-	PerfOption registration 'level_of_detail' (heap obj 0x28 bytes, vtable 005e6fc0)	init 005b4420: new(0x28){vtbl,name,id=0x5d5,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecfa is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610158	005b45f0	object_ctor	0067ecf9	ctor= args=	-	PerfOption registration 'use_environment_maps' (heap obj 0x1c bytes, vtable 005e6fe4)	init 005b45f0: new(0x1c){vtbl,name,id=0x657,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf9 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0061015c	005b4760	object_ctor	0067ecf8	ctor= args=	-	PerfOption registration 'high_detail_textures' (heap obj 0x1c bytes, vtable 005e7008)	init 005b4760: new(0x1c){vtbl,name,id=0x658,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf8 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610160	005b49b0	object_ctor	0067ecf7	ctor= args=	-	PerfOption registration 'sound_max_dist_scale' (heap obj 0x1c bytes, vtable 005e7034)	init 005b49b0: new(0x1c){vtbl,name,id=0x77a,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf7 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610164	005b4ac0	object_ctor	0067ecf6	ctor= args=	-	PerfOption registration 'sound_level_of_detail' (heap obj 0x1c bytes, vtable 005e7058)	init 005b4ac0: new(0x1c){vtbl,name,id=0x77b,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf6 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610168	005b4c10	object_ctor	0067ecf5	ctor= args=	-	PerfOption registration 'USE_3D_SOUNDS' (heap obj 0x1c bytes, vtable 005e707c)	init 005b4c10: new(0x1c){vtbl,name,id=0x77e,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf5 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0061016c	005b4d30	object_ctor	0067ecf4	ctor= args=	-	PerfOption registration 'audio_music' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b4d30 -> FUN_005b4d40: new(0x1c){vtbl,name,id=0x539,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf4 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610170	005b4e70	object_ctor	0067ecf3	ctor= args=	-	PerfOption registration 'audio_ambient' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b4e70 -> FUN_005b4e80: new(0x1c){vtbl,name,id=0x584,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf3 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610174	005b4fb0	object_ctor	0067ecf2	ctor= args=	-	PerfOption registration 'audio_sfx' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b4fb0 -> FUN_005b4fc0: new(0x1c){vtbl,name,id=0x538,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf2 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610178	005b50f0	object_ctor	0067ecf1	ctor= args=	-	PerfOption registration 'audio_interface' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b50f0 -> FUN_005b5100: new(0x1c){vtbl,name,id=0x583,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf1 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0061017c	005b5230	object_ctor	0067ecf0	ctor= args=	-	PerfOption registration 'audio_voice' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b5230 -> FUN_005b5240: new(0x1c){vtbl,name,id=0x581,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecf0 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610180	005b5370	object_ctor	0067ecef	ctor= args=	-	PerfOption registration 'rtc_performance' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b5370 -> FUN_005b5380: new(0x1c){vtbl,name,id=0x656,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecef is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610184	005b54b0	object_ctor	0067ecee	ctor= args=	-	PerfOption registration 'general_graphics' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b54b0 -> FUN_005b54c0: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecee is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610188	005b55f0	object_ctor	0067eced	ctor= args=	-	PerfOption registration 'advanced_graphics' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b55f0 -> FUN_005b5600: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067eced is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0061018c	005b5730	object_ctor	0067ecec	ctor= args=	-	PerfOption registration 'default_graphics' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b5730 -> FUN_005b5740: new(0x1c){vtbl,name,id=0/none,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecec is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610190	005b5870	object_ctor	0067eceb	ctor= args=	-	PerfOption registration 'skip_transition_scripts' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b5870 -> FUN_005b5880: new(0x1c){vtbl,name,id=0x5d7,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067eceb is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610194	005b59b0	object_ctor	0067ecea	ctor= args=	-	PerfOption registration 'enable_tooltips' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b59b0 -> FUN_005b59c0: new(0x1c){vtbl,name,id=0x578,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ecea is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+00610198	005b5af0	object_ctor	0067ece9	ctor= args=	-	PerfOption registration 'enable_rollover' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b5af0 -> FUN_005b5b00: new(0x1c){vtbl,name,id=0x579,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ece9 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+0061019c	005b5c30	object_ctor	0067ece8	ctor= args=	-	PerfOption registration 'cockpit' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b5c30 -> FUN_005b5c40: new(0x1c){vtbl,name,id=0x5da,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ece8 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+006101a0	005b5d70	object_ctor	0067ece7	ctor= args=	-	PerfOption registration 'USE_DYNAMIC_COMM_HEAD' (heap obj 0x1c bytes, vtable 005e7104)	init 005b5d70: new(0x1c){vtbl,name,id=0x631,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ece7 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+006101a4	005b5e90	object_ctor	0067ece6	ctor= args=	-	PerfOption registration 'DIFFICULTY_SCALE' (heap obj 0x1c bytes, vtable 005e7128)	init 005b5e90: new(0x1c){vtbl,name,id=0x57f,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ece6 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+006101a8	005b5fb0	object_ctor	0067ece5	ctor= args=	-	PerfOption registration 'autohide_maneuver_bar' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b5fb0 -> FUN_005b5fc0: new(0x1c){vtbl,name,id=0x613,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ece5 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+006101ac	005b60f0	object_ctor	0067ece4	ctor= args=	-	PerfOption registration 'max_submitted_sounds' (heap obj 0x1c bytes, vtable 005d6d50)	init 005b60f0 -> FUN_005b6100: new(0x1c){vtbl,name,id=0x687,..,float value=-1.0 @+0x14}; pushed onto function-static std::list<PerfOption*> at DAT_0067ed04 (guard bit1 of DAT_0067ed0c, lazily created, via FUN_005b3520 or inline); target 0067ece4 is a 1-byte dummy registrar object; list dumped by FUN_005b3ec0 as [PerfOptions] '%s = %.2f'
+006101b0	005b6270	const_copy	0067ed50	= 0xbf19999a (-0.6, from .rdata 005e715c)	-	float/dword constant copy (static const from .rdata)	
+006101b4	005b6280	const_copy	0067ed4c	= 0xbf19999a (-0.6, from .rdata 005e715c)	-	float/dword constant copy (static const from .rdata)	
+006101b8	005b6290	const_copy	0067ed48	= 0x3f19999a (0.6, from .rdata 005e7160)	-	float/dword constant copy (static const from .rdata)	

@@ -1,0 +1,11 @@
+{
+ "addr": "0041c1b0",
+ "name": "GetConnectResult",
+ "size": 4,
+ "signature": "long GetConnectResult(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8b417cc3"
+}

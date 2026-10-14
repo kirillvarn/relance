@@ -1,0 +1,11 @@
+{
+ "addr": "0041a5d0",
+ "name": "lead_object_event",
+ "size": 3,
+ "signature": "void lead_object_event(uint param_1, uint param_2, LeadProgressType param_3, float param_4, Vector * param_5)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "c21400"
+}

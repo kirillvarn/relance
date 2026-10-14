@@ -1,0 +1,78 @@
+
+undefined4 * __fastcall FUN_004bfb60(undefined4 *param_1)
+
+{
+  FUN_0059f860();
+  param_1[0xcb] = &PTR_LAB_005cbed8;
+  *param_1 = &PTR_FUN_005d62ac;
+  param_1[0x1f] = &PTR_OnReceive_005d629c;
+  param_1[0xcb] = &PTR_LAB_005d6294;
+  DAT_006724b4 = param_1;
+  param_1[0xcc] = 0;
+  param_1[0xcd] = 0;
+  param_1[0xce] = 0;
+  param_1[0x109] = 0;
+  param_1[0x10a] = 0;
+  param_1[0xe8] = 0;
+  param_1[0xe9] = 0;
+  param_1[0xea] = 0;
+  param_1[0xe6] = 0;
+  param_1[0xe7] = 0;
+  param_1[0x10c] = 0;
+  param_1[0xed] = 0;
+  param_1[0xee] = 0;
+  param_1[0xef] = 0;
+  param_1[0xf6] = 0;
+  param_1[0xf7] = 0;
+  param_1[0xf8] = 0;
+  param_1[0xf0] = 0;
+  param_1[0xf1] = 0;
+  param_1[0xfa] = 0;
+  param_1[0xfb] = 0;
+  param_1[0xfc] = 0;
+  param_1[0xfd] = 0;
+  *(undefined1 *)(param_1 + 0x106) = 0;
+  *(undefined1 *)((int)param_1 + 0x419) = 0;
+  param_1[0x104] = 0;
+  param_1[0x105] = 0;
+  param_1[0xeb] = 0;
+  param_1[0xec] = 0;
+  param_1[0xe4] = 0;
+  param_1[0xcf] = 0;
+  param_1[0xd1] = 0;
+  param_1[0xd2] = 0;
+  param_1[0xd3] = 0;
+  param_1[0xd4] = 0;
+  param_1[0xd5] = 0;
+  param_1[0xd6] = 0;
+  param_1[0xd9] = 0;
+  *(undefined1 *)(param_1 + 0xd8) = 0;
+  param_1[0x107] = 0;
+  param_1[0x108] = 0;
+  param_1[0xda] = 0;
+  param_1[0xdb] = 0;
+  param_1[0xdc] = 0;
+  param_1[0xdd] = 0;
+  param_1[0xde] = 0;
+  param_1[0xdf] = 0;
+  param_1[0xe0] = 0;
+  param_1[0xe1] = 0;
+  param_1[0xe2] = 0;
+  param_1[0xe3] = 0;
+  param_1[0xd0] = 0;
+  *(undefined1 *)(param_1 + 0x10d) = 0;
+  *(undefined1 *)((int)param_1 + 0x435) = 0;
+  param_1[0xf2] = 0;
+  param_1[0xf3] = 0;
+  param_1[0xfe] = 0;
+  param_1[0xff] = 0;
+  param_1[0xf4] = 0;
+  param_1[0xf5] = 0;
+  param_1[0x100] = 0;
+  param_1[0x101] = 0;
+  param_1[0x102] = 0;
+  param_1[0x103] = 0;
+  param_1[0x10b] = 0xffffffff;
+  return param_1;
+}
+

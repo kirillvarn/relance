@@ -1,0 +1,80 @@
+
+undefined4 * __fastcall FUN_0059f860(undefined4 *param_1)
+
+{
+  void *local_c;
+  undefined1 *puStack_8;
+  undefined4 local_4;
+  
+  local_4 = 0xffffffff;
+  puStack_8 = &LAB_005c4ed8;
+  local_c = ExceptionList;
+  ExceptionList = &local_c;
+  param_1[3] = 0;
+  param_1[2] = 0;
+  param_1[1] = 0;
+  param_1[5] = 0;
+  *(undefined1 *)(param_1 + 6) = 0;
+  FUN_004215b0();
+  param_1[0x1a] = 0;
+  param_1[0x19] = 0;
+  param_1[0x18] = 0;
+  *param_1 = &PTR_FUN_005d5544;
+  param_1[4] = 0;
+  param_1[0x1c] = 0;
+  param_1[0xe] = 0;
+  param_1[0x1d] = 0;
+  param_1[0x1e] = 0;
+  *(byte *)(param_1 + 0x1b) = *(byte *)(param_1 + 0x1b) & 0xf8 | 8;
+  DAT_0067dcd4 = DAT_0067dcd4 + 1;
+  local_4 = 0;
+  param_1[0x1f] = &PTR_LAB_005e5efc;
+  FUN_00420d40();
+  param_1[0x28] = 0x3f800000;
+  param_1[0x27] = 0x3f800000;
+  param_1[0x26] = 0x3f800000;
+  param_1[0x25] = 0x3f800000;
+  param_1[0x29] = 0x3f800000;
+  param_1[0x20] = &PTR_FUN_005d2efc;
+  param_1[0x24] = 0xffffffff;
+  param_1[0xc6] = 0x3f800000;
+  param_1[0xc2] = 0x3f800000;
+  param_1[0xbe] = 0x3f800000;
+  param_1[0xc5] = 0;
+  param_1[0xc4] = 0;
+  param_1[0xc3] = 0;
+  param_1[0xc1] = 0;
+  param_1[0xc0] = 0;
+  param_1[0xbf] = 0;
+  param_1[0xc9] = 0;
+  param_1[200] = 0;
+  param_1[199] = 0;
+  param_1[0x2a] = 0;
+  param_1[0x2b] = 0;
+  param_1[0x2c] = 0;
+  param_1[0x2d] = 0;
+  param_1[0x2e] = 0;
+  param_1[0x2f] = 0;
+  *param_1 = &PTR_FUN_005e5e44;
+  param_1[0x1f] = &PTR_OnReceive_005e5e38;
+  *(undefined1 *)(param_1 + 0xb4) = 0;
+  *(undefined1 *)((int)param_1 + 0x2d1) = 0;
+  param_1[0x33] = 0;
+  param_1[0xbb] = 0;
+  param_1[0xbc] = 0;
+  *(byte *)(param_1 + 0xbd) = *(byte *)(param_1 + 0xbd) | 1;
+  *(undefined1 *)((int)param_1 + 0x2d3) = 1;
+  param_1[0x30] = 0;
+  param_1[0x31] = 0;
+  param_1[0x32] = 0;
+  param_1[0xb8] = 0;
+  param_1[0xb9] = 0;
+  *(undefined1 *)(param_1 + 0xca) = 0;
+  *(undefined1 *)(param_1 + 0x34) = 0;
+  *(undefined1 *)(param_1 + 0x74) = 0;
+  *(undefined1 *)((int)param_1 + 0x2d2) = 0;
+  param_1[0xba] = 0x461c4000;
+  ExceptionList = local_c;
+  return param_1;
+}
+

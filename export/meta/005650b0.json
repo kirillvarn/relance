@@ -1,0 +1,14 @@
+{
+ "addr": "005650b0",
+ "name": "FUN_005650b0",
+ "size": 30,
+ "signature": "undefined FUN_005650b0()",
+ "calling_convention": "unknown",
+ "is_thunk": false,
+ "callees": [
+  "00565010",
+  "005b7e1d"
+ ],
+ "callers": [],
+ "bytes": "568bf1e858fffffff644240801740956e8582d050083c4048bc65ec20400"
+}

@@ -1,0 +1,312 @@
+address	proposed_name	category	status	summary
+00401380	game_alelib_shutdown	game	todo	ALELib::Shutdown: walks ALE map DAT_00616444, FDUMP "ALELib::Shutdown(): %s has %d dangling refs" (ALELib.cpp), clears tree (00401780/00401b50); returns dangling count
+00401780	stl_tree_erase_node_alelib	library	skip	std::_Tree::erase(iterator) for the ALELib map: red-black unlink/rebalance (color byte +0x18, isnil +0x19), operator delete 005b7e1d, --size at this+0x10, returns next iterator
+00401b50	stl_tree_erase_subtree_00401b50	library	skip	std::_Tree::_Erase: recursive post-order free of RB-tree nodes (recurse node[2]=right, walk node[0]=left), nil head at this+8, frees via 005b7e1d
+00401e90	idpmsghandler_on_disconnect_empty	compiler-artifact	skip	Empty virtual (single RET c3), COMDAT-folded: exported as IDPMsgHandler::OnDisconnect and AI::pub::ContentCallback::combat_drift_event; 97 callers/vtable slots incl. 0x5cb094 vtable
+00402180	str_vsprintf_8k	crt-wrapper	skip	Formats varargs into caller buffer with _vsnprintf(buf,0x2000,fmt,&args) and returns buf; 10 callers
+00402d50	game_clear_global_map_0061647c	game	todo	guess: clears global std::map rooted at DAT_0061647c (count DAT_00616488) via tree erase (00405510/00405820, delete 005b7e1d), then DAT_00616474=DAT_00616490, DAT_00616498=0; called from 004174a0
+00405840	render_state_guard_restore	platform	todo	RAII render-state restorer: calls (*obj)->vtbl+0xf0 (Pipeline SetRenderState) with saved state id/value at this[1],this[2]. Used by 00565a10 and others to undo D3D render-state changes
+0040eac0	game_load_effects_ini	game	todo	Parses effects INI: [Effect] (new 0x58, 0040e300 per key), [EffectLOD] 0042dae0, [EffectType] 004fd5a0, [VisEffect] 0042dc40, [BeamSpear]/[BeamBolt] 0042e850; from 005b0c30. Big frame: garbage params
+0040ef30	game_effect_arch_destroy_all	game	todo	Destroys effect archetype map DAT_006164b4 (count DAT_006164c0); FDUMP "Destroying effect archetype (%s) with %d dangling references" (EffectArch.cpp:0x25); then 0042e2f0; no callers
+0040f0d0	stl_tree_erase_subtree	library	skip	std::_Tree::_Erase recursive subtree delete: recurse on right (node+8), operator delete 005b7e1d, follow left until _Nil (this+8)
+0040f8c0	render_camera_set_fov	game	todo	Camera set FOV: this+0x98=fov deg; tan(fov*0.0174533)->+0x88, aspect +0xa0, vfov deg (*57.2958 via atan)->+0x9c; normalizes frustum side-plane normals +0x80/+0x8c; sets +0x78/+0x7c
+0040fb60	game_obj_set_a4_a8	game	todo	guess: thiscall setter storing two dwords at this+0xa4 and this+0xa8; 6 callers in 004cd350/0051c200..00522850 region; object class unknown
+0040fd60	render_camera_set_viewport	game	todo	thiscall: stores viewport rect at +0xac..+0xb8, computes aspect (+0xa0), half extents, center, fov via fptan/fpatan (+0x98/+0x9c) and normalized frustum side-plane normals (+0x80..+0x94)
+004142a0	str_wbuf_reserve	game	todo	guess: custom UTF-16 buffer reserve: if capacity this[1] < n, realloc(buf, n*2) or malloc(n*2) and zero-terminate; this[0]=ptr,this[1]=capacity. Uses msvcrt realloc/malloc
+004174a0	render_text_shutdown	platform	todo	guess: text renderer shutdown: free(DAT_00616660), SelectObject/DeleteObject/DeleteDC (GDI DC DAT_00616664), glyph textures freed via Pipeline vtbl+0xb8, DAT_00616650 VRAM counter -= w*h*2
+00417620	ui_text_object_create	game	todo	guess: new(0x2c) object, vtable 005c8cb8, default color 0xff080808, calls vtbl slot +0x20(1); used by IMEFocus-derived text input (005a1eb0) and 00564060 per-slot cache
+004177b0	game_find_named_entry	game	todo	Walks global list DAT_0061651c; for each element calls vtbl+4 (get name) and stricmp (DACOM) against param; returns pointer to element or NULL; 13 callers
+00417800	ui_load_fonts_ini	game	todo	Loads [TrueType] (nickname,font,fixed_height) from INI named by [Data] fonts= (caller 005b0c30); registers each, FDUMP on fail; returns count. __chkstk frame: in_stack_* garbage
+00417c50	str_copy_bounded	crt-wrapper	skip	Bounded strcpy(dst,size,src): copies min(strlen(src),size-1) bytes and NUL-terminates; no-op if src NULL; 23 callers
+00418fa0	ui_obj_scalar_deleting_dtor_00416490	compiler-artifact	skip	Scalar deleting destructor: calls dtor 00416490 then operator delete (005b7e1d) if (flags&1)
+00419100	igraph_object_dtor	game	todo	guess: IGraph element dtor (vtable PTR_LAB_005c8eb4): free(this[7]), releases MSVC6 COW std::string at this[2] (refcount byte at ptr-1). Called by 004197e0
+004197e0	game_igraph_load_file	game	todo	IGraph INI loader: [IGraph] nickname/type/point, ElemType 1..3; MessageBoxA "Error: unknown IGraph parameter"/"invalid IGraph::ElemType"/"(duplicate?)". in_stack_* = alloca artifacts
+00419e50	ui_fonts_shutdown	game	todo	guess: font list shutdown (called from atexit handler 005b2190 @5b2286): calls virtual +0x24 on each object in std::list DAT_006166a0, then unlinks/destroys nodes (dtor 00419100), DAT_006166a4--
+0041ade0	render_asset_cache_acquire	platform	todo	Find/create cache entry (0041a9a0), load (0041ad30), query MaterialLib +0x20/MatAnimLibrary +0xc/VMeshLibrary +0xc; if all fail erase entry under CS DAT_006166ec; optional material param set
+0041b030	render_asset_cache_release	platform	todo	Refcount dec (+0x14) under CS DAT_006166ec; at 0 frees TextureLib(+0x1c)/MaterialLib(+0x28)/MatAnimLibrary(+0x10)/VMeshLibrary(+0x10) handles and erases map node (0041b590); nulls *param_1
+0041b150	render_cache_release_all	game	todo	Under CritSec DAT_006166ec walks map DAT_006166dc releasing TextureLib/MaterialLib/MatAnimLibrary/VMeshLibrary handles, then clears map; returns entry count; no direct callers
+0041b640	stl_tree_erase_node_0041b640	library	skip	std::_Tree::erase(iterator): RB-tree node removal + rebalance (color byte +0x24, isnil +0x25), frees node, size this+0x10--, returns next iterator via param_2
+0041ba80	stl_tree_erase_subtree_0041ba80	library	skip	std::_Tree::_Erase: recursive post-order free of subtree (right via node[2], then left), stops at head nil (this+8); frees with 005b7e1d
+0041bd70	stl_tree_min_0041bd70	library	skip	std::_Tree::_Min: follow left links until node isnil byte at +0x25 set
+0041d8a0	str_wchar_copy_n	library	skip	Copies n 16-bit chars src->dst forward (char_traits<wchar_t>::copy-style loop); 16 callers
+0041dd90	input_get_cursor_enabled	game	todo	guess: returns bool DAT_006107dc (setter 0041dda0). Gates UI mouse hover in 0059e080 and popup in 0045a270; likely "mouse cursor/UI input enabled" flag
+0041e5c0	input_load_mouse_ini	game	todo	Loads "mouse.ini" (Data path) via shape loader 00425b30 and cursor loader 0041df30, sets DAT_00616855=1, selects cursor "DEFAULT" (0041dde0)
+0041e610	input_dinput_shutdown	platform	todo	Lazy DirectInput8Create(GetModuleHandleA(0),0x800)->DAT_006167c4, device DAT_006167c8 (guess: mouse); then Unacquire/Release both, frees DAT_00616744[DAT_00616740], DAT_00616855=0
+0041e740	input_mouse_ctor	platform	todo	Constructor of static mouse-input object at 0x6167b8 (from 0041ecf0 via fastcall ecx=0x6167b8): allocs std::list head (0x2c) at +4, zeroes fields +8..+0x28,+0x44..+0x64,+0x68,+0x70
+0041e890	input_mouse_on_mousemove	platform	todo	WM_MOUSEMOVE (WndProc 005b2570), if DAT_0061685c: lazy DirectInput8 mouse init, GetCursorPos/ScreenToClient -> DAT_00616840/44 clamped to DAT_00610850/54, ShowCursor(0) loop
+0041eac0	input_mouse_on_setfocus	platform	todo	WM_SETFOCUS: DirectInput8Create+CreateDevice(mouse DAT_006167c8)+SetDataFormat+SetProperty(BUFFERSIZE 0x80), sync cursor pos, hide cursor, DAT_0061685c=1
+0041ecf0	input_mouse_release	platform	todo	From WndProc (5b2610): lazy DirectInput8Create + CreateDevice(GUID_SysMouse), SetDataFormat, buffer 0x80; Unacquire, SetCooperativeLevel(DAT_0067eca0,6); restore cursor pos, ShowCursor(1)
+0041ef20	input_mouse_dispatch_queued	platform	todo	Lazy DI8 mouse init (GetDoubleClickTime, SetProperty bufsize 0x80, buf DAT_006167e0); drains queue DAT_006167bc/c0 -> keymap 00577680 or 0045a270(0x201 WM_LBUTTONDOWN)/005763b0
+0041f150	input_mouse_update_and_draw_cursor	platform	todo	Per-frame: reads DI mouse (0041fa10 buffered/0041fd90 immediate) -> DAT_00616840/44/48, wheel 0041f8a0; draws cursor DAT_00616858 quad via Pipeline renderstates; stack garbled
+00420350	input_set_mouse_captured	platform	todo	p1!=0: capture mouse (004201a0(1), DAT_0061685c=1). Else lazy DirectInput8Create(0x800)+CreateDevice, Unacquire, SetCooperativeLevel(DAT_0067eca0,6), restore cursor pos, ShowCursor
+004214a0	render_reset_option_flags	game	todo	Zeroes DAT_00664990/DAT_0066498c and sets DAT_00610844 = (option[0x3e]==0) using 005792b0 (int option table DAT_00679be8); only caller 00425140
+004214d0	render_set_color_rs8	platform	todo	Takes 4 floats (r,g,b,a 0..1, x87 args missed by Ghidra), *255 (0x5c75d8) clamps to 0..255, packs ARGB, calls Pipeline->vtbl+0x14(8,color). guess: state 8 = clear/ambient color
+004215e0	render_clear	platform	todo	guess: Pipeline vtbl+0x5c(0,1.0f) then +0x3c(mask,0); mask bit0 from flag 0x4000, bit1 from 0x100 (clear color/depth). Called from WinMain loop and 005b1300 with 0x4100
+00421dd0	render_gl_enable	platform	todo	glEnable emulation via Pipeline vtbl+0xf0 SetRenderState: 0xb71 DEPTH_TEST, 0xb44 CULL_FACE, 0xb50 LIGHTING (DAT_006648d8), 0xbe2 BLEND, 0xde1 TEXTURE_2D; else FDUMP "glEnable - invalid"
+00421ed0	render_gl_disable	platform	todo	glDisable emulation over Pipeline renderstates (vt+0xf0): 0xb71 DEPTH_TEST, 0xb44 CULL_FACE, 0xb50 LIGHTING, 0xb60 FOG, 0xbe2 BLEND, 0xde1 TEXTURE_2D; else FDUMP "GL: glDisable" (OpenGL.cpp:0x2bf)
+00422120	render_set_zfunc	platform	todo	Stores DAT_006648cc; Pipeline vtbl+0xf0 SetRenderState(0x17 D3DRS_ZFUNC=param), (7 ZENABLE=DAT_006648c4!=0), (0xe ZWRITEENABLE=DAT_006648c8)
+00422190	render_gl_depth_mask	platform	todo	glDepthMask emulation: DAT_006648c8=flag, re-applies SetRenderState 0x17 ZFUNC=DAT_006648cc, 7 ZENABLE=DAT_006648c4, 0xe ZWRITEENABLE=flag via Pipeline vtbl+0xf0
+004225e0	render_set_ortho_screen	platform	todo	Calls 004221f0(0, (float)DAT_00610850, (float)DAT_00610854, 0, -1.0, 1.0): orthographic projection over screen size
+00422610	render_set_viewport	platform	todo	Viewport from rect object (vtbl+0x14) or full screen DAT_00610850xDAT_00610854; stores DAT_00664994..006649a0 with Y flipped; Pipeline vtbl+0x54 set viewport
+004242e0	app_parse_display_switches	game	todo	thiscall on display cfg (DAT_00679bc0): scans argv for +/-B (+0x24), +/-F (+0x25 fullscreen), -M<w> (res 320/512/640/800/1024 -> +8/+0xc), W (windowed). Decomp of +/- sense is garbled; verify asm
+004246e0	app_create_main_window	platform	todo	(class,&DAT_00679bc0 cfg,title): size +8/+0xc (def 640x480), windowed if +0x25==0 (AdjustWindowRect style 0x2ca0000); CreateWindowExA -> DAT_006679f4, also returned (WinMain -> DAT_0067eca0)
+004247a0	render_device_check	platform	todo	guess: returns true if Pipeline (*Pipeline_exref) exists and vtbl+0xc(0) returns HRESULT >= 0 (device capability/validity check). Called from app init 005b1300
+004247c0	app_leave_fullscreen	platform	todo	Reentrancy guard DAT_006679f9; 00424870(hwnd,windowed,10,10); if Pipeline and arg: reapply saved mode DAT_00679bc0 with fullscreen=0 via 00424ce0; VertexBuffer->vtbl+0x10, Pipeline->vtbl+0x38
+00424870	platform_window_set_mode	platform	todo	Sets w DAT_00610850, h DAT_00610854, fullscreen DAT_006679f0. Fullscreen: desktop-size topmost SetWindowPos; windowed: style 0x2ca0000+AdjustWindowRectEx. SetWindowLongA via MSLU; garbage stack
+004249c0	render_mgr_set_display_mode	platform	todo	RenderMgr.cpp: copy 10-dword mode, clamp to desktop, Pipeline->vtbl+0x30, VertexBuffer init(1,0x252,0xfc00); FPU precision via _control87; InitializeRichText, UI resize (DAT_0067ecac+0x2c)
+00424c60	render_on_activate_app	platform	todo	WM_ACTIVATEAPP: if fullscreen DAT_006679f0 and reactivating, clears device-ready DAT_00610864; DAT_00610865=active; calls 00420350(active,DAT_00610850,DAT_00610854,fullscreen)
+00424cb0	app_can_handle_close	game	todo	guess: returns DAT_00610865 && DAT_00610864 && DAT_006679f8; used by WndProc on WM_SYSCOMMAND SC_CLOSE (0xf060) and 00578f70
+00424ce0	render_set_video_mode_fallback	platform	todo	Tries 004249c0 with requested mode; on fail retries bpp 32/24/16 then current mode DAT_00679bc0 (w=DAT_00679bc8,h=DAT_00679bcc); last resort 00424870(...,640,480)
+00424dd0	render_init_display_mode	platform	todo	Startup mode: if no size, Pipeline caps (vt+0x20 cap3=vidmem MB, cap4) -> 800x600x16 or 32bpp/768 line; tries up to 3 modes via 004249c0 into DAT_00679bc0; from 005b1300
+00424f30	render_begin_frame	platform	todo	guess: begin-frame device check: 0 if inactive (DAT_00610865); _control87 precision 24/53 bit (DAT_0061084c); Pipeline vtbl+0xe4, on loss Sleep(1000)+reset 004249c0; DITHER, MIPFILTER
+00425080	render_reset_state	platform	todo	MaterialBatcher vt+0x28(1), Pipeline vt+0xe8, glDisable FOG/BLEND, glEnable DEPTH_TEST/CULL_FACE; if DAT_0067ecbc 005b27c0(1); restores FPU precision via _control87 per DAT_00610848 (0x18/0x35)
+00425140	render_refresh_device_state	game	todo	Calls 004214a0 then DAT_00610864 = (Pipeline->vtbl+0x40() == 0). guess: query device-lost/ready status
+00425160	render_is_device_ready	platform	todo	Returns DAT_00610864 (device ready flag, cleared on device loss in 004249c0/00424c60). WndProc WM_ERASEBKGND returns 1 when set
+00425a20	render_texture_cache_clear	platform	todo	thiscall on map-like container (instances 0x679a2c, 0x67d9c8): releases TextureLib->vtbl+0x38(node+0x28) per node, then erases all nodes (tree head this+4, count +0x10)
+00425b30	ui_load_shapes_ini	game	todo	Parses INI [Texture]/[Shape] (floats, "unknown [Shape] parameter %s"), TextureLib vtbl calls, path via _makepath or IFileSystem+0x84; static map DAT_00667a0c..18 + atexit. Huge frame, garbage
+00427730	stl_uninitialized_fill_n_dword	library	skip	std::uninitialized_fill_n for 4-byte elements: for n: if(p) *p=*val; p++
+00427a70	audio_load_soundcfg_ini	game	todo	Parses audio\SoundCFG.ini [CFG]: COCKPIT_ATTENUATION->DAT_00667c9c, ducking_* ->DAT_006108d8..f8, music_fade_time, cross_fade_silence, dialogue pan, ear_doppler/rolloff->Sound vtbl+0x48/+0x4c
+00428430	audio_stop_all_sounds	game	todo	guess: stop sounds: DAT_00667cb0/cb4 vtbl+0x60 stop,+8 Release; stops list DAT_00667c70 entries with field[6]!=param_1; Sound_exref vtbl+0xb8(0); DAT_00610904=-1.0f
+004284f0	audio_sound_shutdown	game	todo	Calls 00428430(0); FDUMP warning "sound reference count leaks detected: %d sounds" (Sound.cpp:0x4da) if DAT_00667cbc; Heap::Shrink on DAT_00667a44/a34/a24
+0042a7e0	stl_list_buynode	library	skip	std::list _Buynode: operator new(0xc), sets next/prev to given or self; 59 callers
+0042b030	audio_load_sounds_ini	game	todo	Parses [Sound]: nickname->CreateID, other keys 0042b940, "Sound has no nickname!", clamps attenuation, inserts via 0042aef0 into map (size DAT_00667cd0); returns count added. Big frame
+0042b4d0	audio_sound_map_clear	game	todo	Iterates sound map DAT_00667cc4 releasing each entry (vtbl+0x10 until 0), then erases all nodes (0042c750/0042cbc0), resets size DAT_00667cd0; called from atexit shutdown 005b2190 by direct call
+0042c370	stl_tree_erase_node_sound_map	library	skip	std::_Tree::erase(iterator) with red-black rebalance; color byte +0x38, isnil +0x39; used by 0042b4d0 for sound map
+0042c750	stl_tree_erase_subtree_0042c750	library	skip	std::_Tree::_Erase recursive; resets element vtable (node+0xc = 0x5ca36c) before freeing node
+0042c9e0	stl_tree_min	library	skip	_Tree::_Min: follows left links until node isnil flag (+0x39); Ghidra dropped the return value (EAX)
+0042cbc0	obj_5ca36c_scalar_deleting_dtor	compiler-artifact	skip	Scalar deleting destructor: sets vtable 0x5ca36c, frees if flag&1
+0042d680	game_get_frame_dt	game	todo	Get frame delta time: returns constant _DAT_005c8ba8 if DAT_00667d68 set (guess: paused/fixed step), else _DAT_00667d40
+0042d6a0	app_get_frame_dt_or_zero	game	todo	Returns 0.0 (double 0x5c8ba8) if DAT_00667d68 (guess: paused) else last frame dt double DAT_00667d48 (x87 return)
+0042d740	game_is_sp_with_count	game	todo	Returns SinglePlayer() && DAT_00667d54 > 0; 8 callers
+0042d770	app_frame_timing_update	game	todo	Frame limiter: Sleep(1) until dt >= 1/DAT_00610a0c (200 fps cap) via Timing::Delta DAT_00667cf8; clamps dt<=1/DAT_00610a08; FPS avg over 2s; timeGetTime; MP: DAT_00667d58=1 if no server msg >1000ms
+0042e160	render_effect_release	game	todo	Refcount dec at +0x20; at 0 releases each asset handle in vector [+0x2c,+0x30) via 0041b030, clears vector, 00401300(+0x24), sets +0x24=-1; returns 1 if freed
+0042e2f0	render_fx_libraries_flush	game	todo	Calls Alchemy vt+0x24 and FxEffectLibrary vt+0x24 (guess: unload/flush), DAT_00667e14=0; called from effect arch teardown 0040ef30
+00430990	audio_voice_clear	game	todo	guess: clears a voice/sound DB object: frees two hash/tree tables (+0x14/+0x18, +0x44/+0x48), refcounted string +0x34, std::list +0x28; used as element dtor by 004330a0
+00430b00	audio_load_voices_ini	game	todo	Loads [Data] voices= INI (caller 005b0c30): [Voice] nickname/script, [Sound]/VoiceSound (attenuation,priority,duration,extend,file); returns #added (DAT_00667e28 delta). __chkstk frame
+00431850	audio_voice_map_clear	game	todo	Clears global map DAT_00667e1c (size DAT_00667e28) of voice entries ([Voice]/VoiceSound parsed in 00430b00); node erase 00432cc0 / 004330a0 / 00430990
+004323f0	stl_tree_iter_postinc_004323f0	library	skip	RB-tree iterator ++ returning old value (isnil byte +0x25)
+00432cc0	stl_tree_erase_node_00432cc0	library	skip	std::_Tree::erase(iterator) RB-tree rebalance + delete (isnil +0x61, color +0x60), dec size +0x10; node dtor 00430990
+004330a0	stl_tree_erase_subtree_004330a0	library	skip	std::_Tree::_Erase recursive, element dtor 00430990
+00433330	stl_tree_iter_inc_00433330	library	skip	RB-tree iterator ++ (isnil byte +0x61)
+00434720	platform_load_string_w	platform	todo	LoadStringW clone: picks resource module via 0057d980 (id>>16 indexes DAT_0067c400 table), FindResourceExA(RT_STRING=6, (id>>4)+1), walks block, wcsncpy into buffer; returns length
+004347e0	str_load_resource_string	platform	todo	Load wide string id param_2 from module param_1 (resources.dll DAT_0067eca8) via 00434720; fallback 0057d980/0057d9c0 string table copy (UTF-16, truncated to param_4-1); returns length
+00435500	game_clear_anim_lists_00668664	game	todo	guess: frees list DAT_00668664 (size DAT_00668668, each 00595300), tree DAT_00668670, list DAT_00668684 (size DAT_00668688); releases Anim handle DAT_0066868c via Anim vtbl+0x10
+004362f0	stl_tree_erase_range	library	skip	std::_Tree::erase(first,last): clear-all fast path (00436800 recursive erase) else per-node erase 00436420
+00437420	game_get_gameflow_state	game	todo	Singleton getter returning &DAT_006686a0; vtable 005cae24 set in 00437140; slots reference Gameflow.cpp ("Invalid non-empty location %d in multiplayer"); state ids 3/4 in 005b2a30 (in-game)
+00438930	stl_tree_iter_inc_00438930	library	skip	std::_Tree::iterator::_Inc (successor), isnil byte at +0x39
+0043d2a0	ui_element_destroy_tree	game	todo	Recursive UI element tree destroy: recurse children (list [3], sibling +8), then vtbl+0x28 and scalar deleting dtor vtbl+0(1). Same pattern inlined in 005b2190/00469b30
+0043d560	game_get_briefing_black_state	game	todo	Getter &DAT_00668774 (vtable 0x5cb094, static init 0043d120); state 8 in 005b2a30. guess: blank transition state (vt 0x43d170 makes BriefingParentWindow + "...\repairblack")
+00444e20	mem_buffer_free	crt-wrapper	skip	fastcall: if (p[0]) free(p[0]) (MSVCRT free), zero p[0],p[1]; 180 callers
+00458860	game_destroy_map_0066d320	game	todo	guess: if DAT_0066d320 != 0: destruct (004582e0), delete, null. Global map created in 00458790 (looked up by id in 00458890); called from 0045a140
+00459900	game_destroy_obj_0066d334	game	todo	guess: if DAT_0066d334 != 0: destruct (00459060), delete, null; called from 0045a140 shutdown helper
+0045a140	ui_shutdown_subsystems	game	todo	guess: destroys DAT_0066d3f0 (vt+0x28 then delete), sends 0xef02 to DAT_006724b4 (vt+0xa8), then 00459900/00458860/0045b380/004b9bb0/0048a130
+0045a270	ui_show_location_popup	game	todo	guess: if 0041dd90 && !DAT_0067dcc8: 004c80f0(args) or popup with IDS 0x45e (0x3a0 if base == MakeLocationID(..,"Cityscape")) via 004b62d0(ids,8.0f). Caller 0041ef20
+0045a9f0	ui_reset_input_state	game	todo	guess: resets transient UI/input state: 005a2a20, 005a29b0 (clears mouse drag DAT_0067ddb4/DAT_0067dd8c), 00559c20, 00559c10, 00417f10; 5 callers
+0045b380	ui_destroy_tree_0066d398	game	todo	Destroys UI widget tree DAT_0066d398 (children list +0xc via 0043d2a0, then vtbl+0x28 and deleting dtor). Does NOT null DAT_0066d398 (dangling ptr?)
+0045eeb0	util_delete_owned_ptr	library	skip	Owned-pointer reset: if *p call scalar deleting dtor (vt[0])(1), *p=0; 360 callers
+0045f860	ui_nn_chat_add_channel	game	todo	NN_Chat add/modify channel: new list (0046ba60), copies members from param_3, FDUMP "Channel add successful." / "...existing channel. Modifying instead." (NN_Chat.cpp); ++this+0x14
+004688b0	ui_chat_mgr_clear	game	todo	guess: destructor of chat/NeuroNet manager (caller 00469b30 shutdown): resets list items (+4), frees lists/vectors at +0x10,+0x20,+0x30 and node lists; SEH frame
+00468c20	ui_register_text_styles	game	todo	Registers ~30 rich-text styles via StyleCollection::set_style(hash ids 0xd5ec..) from globals DAT_0066d94c..DAT_0066da14, colors from DAT_00679bb4/DAT_00679ba4; builds TRANode/JustifyNode style 0x4433
+004690c0	ui_chat_init	game	todo	NeuroNet chat init: "Interface\NeuroNet\Chat\" -> DAT_0066d8e4; allocs DAT_0066da70/74/78, DAT_0066da60=004699d0(0x20,0x20,10000); RDL text res 0x60035..0x60053, fallback "DEBUG - New player:"
+004699d0	game_pool_ctor	game	todo	guess: thiscall ctor: creates two list heads (+4,+0x10) and two lists via 0042a7e0, preallocates N 0x10-byte entries into list +0x10, stores params at +0x40/+0x3c
+00469b30	ui_nn_chat_shutdown	game	todo	NN_Chat globals teardown (from 005b2190): destroy UI trees DAT_0066da84/80, channel mgr DAT_0066da7c (00469e60), DAT_0066da60, DAT_0066da70/74/78 (00469d20)
+00469d20	game_owned_map_dtor	game	todo	guess: dtor for map at +4 whose values own buffer (val+4) -> frees, then clears tree (0046d8e0/0046c8c0) and frees head/nil
+00469e60	ui_nn_chat_channels_clear	game	todo	Destructor body of NN_Chat channel manager: deletes per-channel objects (node[4], 0046ba90), clears/free tree at +4/+8, lists at +0x1c/+0x20, counters +0x14/+0x28. Mostly inlined STL teardown
+0046b170	net_mp_reset_client_state	game	todo	guess: if !SinglePlayer(): clears lists in DAT_0066da84(+0x344,+0x358), resets DAT_0066da7c/80/88, iterates DAT_0066da60 entries, copies DAT_0066da40->DAT_0066d3fc; callers 005a8080.. (net)
+0046ba60	stl_list_ctor	library	skip	std::list constructor: copies allocator byte, allocates 0xc-byte head node (operator new 005b7e84) linked to itself, size=0
+0046ba90	stl_list_owned_ptr_dtor	library	skip	Destroys std::list of owned pointers: unlink each node, delete element via 0045eeb0, free node, free head
+0046c800	stl_list_insert_node_0046c800	library	skip	std::list::insert: new(0xc) node linked before param_3, construct value via 0046ea00, ++size (this+8)
+0046c8c0	stl_tree_erase_node_15	library	skip	std::_Tree::erase(iterator) RB-tree rebalance (isnil +0x15, color +0x14) + delete node; 39 callers
+0046ce80	stl_tree_ctor_0046ce80	library	skip	std::map/_Tree constructor: allocates nil node (0x20, color/isnil at +0x1c/+0x1d) and head node, size=0
+0046d680	stl_list_erase_owned	library	skip	std::list::erase(it) for owned-ptr elements: unlink, virtual delete element(1), free node, --size, return next
+0046ea00	stl_construct_clone	library	skip	std::_Construct-like helper: if (p) *p = (*src)->vtbl+0x1c() (polymorphic clone, ECX=*src per asm 46ea2b..46ea33). Used by NN_Chat code
+00471f30	ui_show_exit_dialog	game	todo	Shows "NN_Exit" dialog if absent (0059d9c0): 0059db20("NN_Exit","NN_Exit",0,0), vtbl+0xa8(0x42,..), result byte at +0x338, vtbl+0x80 show. From WinMain and WndProc SC_CLOSE
+00473be0	ui_has_network_op_dialog	game	todo	Returns FUN_0059d9c0("NN_NetworkOperation") != 0 (guess: UI window lookup by name)
+00473ca0	ui_find_error_dialog	game	todo	Returns 0059d9c0("NN_Error") - find UI element named NN_Error (Ghidra typed void, WndProc uses return as int). Used on SC_CLOSE to block close while error dialog shown
+00473cb0	ui_show_error_dialog_modal	game	todo	Creates "NN_Error" window (0059db20), sets msg id p1 (vtbl+0xa8 0x1e); Sleep(10)+005b0b60 pump+UI update until closed; p2 picks DAT_0067ecd0 tick vs Wait/GiveServerRunPermission
+00473e00	ui_show_error_text_modal	game	todo	Like 00473cb0 but text param mbstowcs'd into NN_Error (vtbl+0xa8 0x1d); modal Sleep/pump loop; returns DAT_0066dc04==0. No direct callers (function pointer)
+004899c0	str_wchar_move_n	library	skip	Overlap-safe copy of n 16-bit chars (char_traits<wchar_t>::move)
+0048a130	ui_destroy_global_0067_1ff4	game	todo	guess: if DAT_00671ff4: DAT_0067dcc8=0, frees child chain (+0xc, next +8) via 0043d2a0, then vt+0x28 and delete; called from 0045a140
+004a2f80	stl_list_erase_range_004a2f80	library	skip	std::list::erase(first,last): unlink+free each node (005b7e1d), --size at this+8, return last
+004a92a0	app_auto_detect_detail_level	game	todo	Detail factor from Pipeline vt+0x20 caps and Timing::GetMachineSpeed (MHz <700/<800/<=1000 thresholds -> constants), min of both; float return; Ghidra garbled cap value
+004a9380	app_auto_detect_graphics_options	game	todo	Creates options obj (0x980, vt 0x5d4a5c), loads "../Data/interface/optlist.ini", sets perf options "default_graphics"/"general_graphics"/"advanced_graphics" (005b36b0) from 004a92a0, applies 004b0370
+004a95e0	ui_obj_scalar_deleting_dtor_004a9600	compiler-artifact	skip	Scalar deleting destructor: dtor 004a9600 then operator delete if (flags&1)
+004afe30	ui_load_options_ini	game	todo	Parses options INI [Interface]/[Audio]/[Video] "option" entries (004afd80/004a3680), padding each section to 15 slots; calls 005b40f0 if this+0x32e; extraout_ECX = this, big frame garbage
+004b0370	ui_options_apply_graphics	game	todo	guess: apply graphics options: three 0x18-byte option vectors (+0x508/+0x528/+0x548) -> 004b1450/004b1d20(id,val,-1); id 0x767 from perf var "default_graphics"; resets "advanced_graphics"
+004b6290	game_forward_if_0067_2288	game	todo	guess: if DAT_00672288 != 0 call 004b5600(p1,p2); caller 0059e080
+004b6580	ui_popup_singleton_destroy	game	todo	guess: destroys singleton UI object DAT_00672288 (vtable 005d5454, created in 004b6630): vtbl+0x28 then deleting dtor(1). Called from shutdown 005b2190
+004b6800	stl_tree_ctor	library	skip	std::_Tree (map/set) constructor: copies comparator/alloc bytes, allocates _Nil node (0x18, color=1,isnil=1) and head node (0x18) self-linked, size=0
+004b6c50	app_stub_return_true	compiler-artifact	skip	Empty stub: returns 1; called at start of 005b0c30 data loader with result ignored
+004b9bb0	ui_clear_message_log	game	todo	Unless DAT_0066d35a: clears std::list<FmtStr> DAT_00672328 (count DAT_0067232c), DAT_00672404=0; 0059dd00(DAT_00672400,0) then destroys UI tree DAT_00672400 (not nulled)
+004be2b0	ui_singleton_window_update	game	todo	guess: if DAT_0067244c (UI window 0x170, vtable 005d5f7c, created 004be420) call 004bdda0(dt); called from UI update 0059e080
+004c4810	game_has_location	game	todo	Returns (DAT_00673358 & 0x3fffffff) != 0; used by 005b20a0/005b2a30 to choose Gameflow (in base/space) vs other state. guess: current location/base id set
+004c4bc0	game_clear_player_loadout	game	todo	Clears list<CollisionGroupDesc> DAT_0067296c, list<EquipDesc> DAT_00672960, tree DAT_00672950, container DAT_00673324; then 004b9bb0 + 004b9b20(0). Called on server/session change (005a8xxx)
+004c5a10	stl_tree_ctor_2	library	skip	std::_Tree constructor (another instantiation, multi flag=0): same layout as 004b6800, allocates _Nil and head nodes of 0x18 bytes
+004c7370	game_set_hud_ini_path	game	todo	Copies path (max 0x103 chars) to DAT_0067340c, length DAT_00673408; NULL clears. Caller 005b0c30 near string "HUD"
+004d9980	md5hash_get_state_ptr	game	todo	MD5Hash::GetStatePtr returns this+4 (COMDAT; also called from WinMain, so likely folded generic +4 accessor)
+004dd9a0	stl_string_tidy	library	skip	MSVC6 COW std::string _Tidy: refcount byte at ptr-1 (0/0xff -> delete else decrement), zero ptr/len/res; 19 callers
+004f67e0	fx_create_runtime_callback	game	todo	new(8): vtable 0x5d98bc, refcount 1, stores in *out; returns 1 even on alloc failure
+004f70d0	render_load_shapes_and_fx	game	todo	For each ini in vector DAT_00674f18..DAT_00674f1c calls 00425b30 (texture/[Shape] loader); if FxRuntime and DAT_00674cdc==0 creates callback (004f67e0) and FxRuntime->vtbl+0x24(cb)
+004f7140	game_effect_cache_shutdown	game	todo	guess: effect cache shutdown: 47 buckets DAT_00674ce4..0x674f18 (stride 12), unlink, refcount [0x16]--, vtbl+0x20 delete; Release DAT_00674cdc; Heap::Shrink DAT_00674ccc/00674cbc
+004f7230	game_add_effect_shapes_file	game	todo	Called from 005b0c30 for [Data] "effect_shapes": StringAlloc(path) pushed into global vector<CacheString> DAT_00674f18..20 (inlined grow; Ghidra mislabels destroy as IDPMsgHandler::OnReceive)
+004f73b0	stl_vector_clear_00674f18	library	skip	guess: DAT_00674f1c = DAT_00674f18 (vector end=begin clear of global); no direct callers
+00527440	stl_tree_min_00527440	library	skip	std::_Tree::_Min: follow left links until isnil byte at +0x15
+0052afa0	stl_tree_iter_decrement	library	skip	std::_Tree iterator operator-- (isnil byte at +0x15): go to rightmost of left subtree else climb parents
+00530d20	game_load_debris_ini	game	todo	INI_Reader open path, for each [Debris] calls 00530a20; returns count added (DAT_00675504 delta); big frame: alloca not modeled, path in in_stack_00001570; called from 005b0c30
+00530fa0	game_tree_clear_006754f8	game	todo	guess: shutdown clear of global std::map DAT_006754f8 (size DAT_00675504) via 005312d0/005316a0 (lookup in 005309c0 keyed by uint). Map contents unknown. Called from 005b2190
+005312d0	stl_tree_erase_node_005312d0	library	skip	std::_Tree::erase(iterator) with red-black rebalance (color +0x34, isnil +0x35), frees node; called from 00530fa0 (shutdown path of 005b2190)
+005316a0	stl_tree_erase_recursive	library	skip	std::_Tree::_Erase recursive subtree free
+00531930	stl_tree_iter_inc_00531930	library	skip	RB-tree iterator ++ (isnil byte +0x35)
+00535980	stl_list_clear_00535980	library	skip	std::list::clear (fastcall this): unlink and free every node, --size this+8
+00536020	stl_tree_iter_inc	library	skip	std::_Tree::iterator::_Inc (isnil +0x19)
+00537260	stl_vector_insert_n_ptr	library	skip	std::vector<4-byte>::_Insert_n(pos,n,val) with reallocation (operator new / 005b7e1d); 31 callers
+0053aaa0	IDPMsgHandler_OnReceive	game	todo	Exported empty virtual IDPMsgHandler::OnReceive(uchar*,ulong) (ret 8); 68 callers due to identical-code folding (also used as no-op destroy-range in vector code e.g. 0057d800)
+0053ab20	stl_list_iter_postinc	library	skip	std::list iterator post-increment: *out = cur; this = cur->next
+0053e430	stl_container_begin_0053e430	library	skip	list/tree begin(): *out = head->next (*(this+4))
+0054bd30	game_get_space_state	game	todo	Singleton getter returns &DAT_00678b98: static state object ctor 00549300 (vtables 0x5e0554/0x5e0548), methods use strings "player","third_person","death" near space.cpp; guess: space-flight state
+00559d20	game_shutdown_clear_00679a48	game	todo	Atexit shutdown (called 5b2237 from 005b2190): destroys vector DAT_00679a48 (0x24-byte elems, dtor 004dd9a0), then texture cache clear 00425a20(this=0x679a2c)
+005621a0	app_load_freelancer_ini	game	todo	this=ECX (extraout_ECX): defaults (0x400x0x300,...), reads [Freelancer] data path, [Startup] movie_file(<=3), [Data] gate_tunnels/jump_effect; cmdline +/-Q (this+0x879), +/-X -> DAT_0067ecbc
+00564060	platform_ime_init	platform	todo	LoadLibraryA("ImeUi.dll"); new(0x1c) IMEFocus(hwnd DAT_0067eca0), vtable 005e2210, text obj "ConfirmPlayerText" (004177b0); DAT_0067a4a4; deleted if +0x17 init flag false
+00564150	ime_focus_deleting_dtor	compiler-artifact	skip	Scalar deleting destructor of IMEFocus subclass: calls dtor 00564170, operator delete 005b7e1d if flags&1
+005641d0	game_shutdown_delete_0067a4a4	game	todo	Atexit shutdown (5b2349): virtual deleting dtor on DAT_0067a4a4 then nulls it
+00564520	game_zero_0067a4a8	game	todo	Zeroes 0x2d dwords at DAT_0067a4a8 (struct init); called from 005b1300
+00564540	audio_ui_sounds_release	game	todo	Releases cached UI sound handles array DAT_0067a4a8..0x67a55c (vtbl+0x10, zeroed); sounds created lazily in 00564650 from name table PTR_s_ui_select_item_006149e8
+00564b00	game_get_flag_0067c200	game	todo	Returns DAT_0067c200 != 0 (also written at 573883/57388f)
+00564b10	game_set_flag_0067c200	game	todo	DAT_0067c200 = arg; callers include per-frame update 005b2890
+00564b20	game_get_flag_0067c204	game	todo	guess: returns byte DAT_0067c204 (set 0/1 inside 005739c0, a menu/state function); checked in per-frame update 005b2890 before 00564b10(3)
+00565010	ui_intro_image_dtor	game	todo	Dtor for class vt 0x5e2718: Release (vt+8) member [5] (BigImage), reset to base vt 0x5e2708; callers 005650b0, 005b1300
+005650d0	util_release_member_14	game	todo	guess: releases interface at this+0x14 (vtbl+8 = Release) and nulls; called on a stack object in 005b1300
+005650f0	ui_intro_load_big_image	platform	todo	Builds path DAT_00679e0c+"\\"+DAT_0067c18c+name, LoadImageA(0x2010 LOADFROMFILE|CREATEDIBSECTION), GetObjectA, checks 16/24/32bpp, creates "BigImage" via Dacom vt+0xc; error Intro.cpp:0x1ab
+00565430	ui_intro_image_load	game	todo	Intro/splash image loader (vtable 005e2718 obj): strrchr '.', stricmp ext "bmp" -> 005650f0, else (incl. "tga" at 005e2798) -> 00565490 TGA loader
+00565490	ui_intro_load_tga	platform	todo	Intro.cpp TGA loader: file via Data_exref FileSystem, TGA header (type [2]&7, bpp [0x10]) -> pixel format 005b7050, Dacom creates "BigImage" into this+0x14; FDUMP on failure
+00565a10	ui_intro_image_render	platform	todo	Intro.cpp: draw BigImage this+0x14 fullscreen: saves/sets render states (Pipeline 0xf4/0xf0: CULL,ZFUNC,ZWRITE,ZENABLE,blend 5/6), TSS tables 005e2558/2590. Decomp garbled (unaff_ESI) - read asm
+00565d90	ui_intro_image_new	game	todo	operator new(0x18), [5]=0, vtable 0x5e2718 (class of 00565010); caller 00579220
+00575430	ui_get_intro_state	game	todo	Singleton getter returning &DAT_0067a598 (ctor 00573840, vtable 005e3034); Intro.cpp front-end state (PAGE_CharacterSelect, PAGE_ServerSelect...); state 6 in 005b2a30
+00575440	thunk_ui_load_intro_images_ini	compiler-artifact	skip	jmp thunk to 00564b30, which parses [Images] TgaPath/ScreenType/ScreenExit/Screen1-4/bDrawScripts, logo "FRONT_freelancerlogo.tga", rand()%3 -> DAT_0067bf40 (target needs porting)
+005763b0	input_reset_modifier_state	platform	todo	If !p2: zeroes DAT_0067c278[7], GetKeyState(VK_SHIFT/CONTROL/MENU) -> flags 1/4/0x10 in DAT_0067c280, DAT_0067c290=1; then 00576410; 18 callers
+00576410	input_dispatch_command	game	todo	guess: dispatch keymap command: if DAT_0067c3a4, DAT_0067c278=cmd, collect handlers from multimap (filter DAT_0067c3ac), call vtbl+0 in reverse until consumed; cmd 0xf pops dialog DAT_0067c270
+00576550	input_keybinding_matches	game	todo	guess: key binding match predicate: flags at this+0xc vs event (param_3 +0x18 up/down byte, +0x19 modifier, +8 key code) and param_2+4 key; flag 8 = always match
+005765b0	input_keymap_parse_key	game	todo	Parses KeyMap.ini key value: '"c' char, 0xHEX via sscanf %X, or atoi (-8..255 else KeyMap.cpp error); modifiers shift=1 control=4 alt=0x10 into out[1]
+005766e0	input_keycmd_parse	game	todo	Parses keymap command entry: nickname matched against 0xcc names table 0x614dd8 (USER_NONE..), ids_name, ids_info, state (keydown/keyup/repeat/shift_ignore -> flags 1/2/4/8), key (005765b0)
+00576ac0	input_keymap_entry_clear	library	skip	guess: container dtor: erases list +0x14 (00516f70), frees head, COW string tidy at +4
+00576b60	input_keymap_find_group	game	todo	Linear search of accelerator-group list DAT_0067c228 comparing name (node[3], default _C_exref "") with stricmp; returns &node[2] or NULL
+00576bb0	input_keymap_load_ini	game	todo	GetFileSysPath+INI_Reader: needs "KeyMap=1.1", per section nickname/key (00577ef0 parse, 005947a0 insert); returns count; alloca not modeled (garbled stack); from 00577490/00577590
+00576f40	input_keymap_load	game	todo	Keymap INI loader: header "KeyMap=1.1", [KeyCmd] nickname vs 0xcc names PTR_s_USER_NONE_00614dd8, key= (005765b0/00578690); returns count. "IDPMsgHandler::OnReceive" import likely mis-resolved
+00577490	input_keymap_activate_group	game	todo	Lazy load interface\KeyMap.ini (00576bb0) + GetUserDataPath\UserKeyMap.ini (00576f40), flag DAT_0067c3b0; finds group, adds to active list DAT_0067c21c; "Invalid accelerator" MessageBoxA
+00577680	input_keymap_handle_event	game	todo	Copies 7-dword input event to DAT_0067c278, maps mouse codes -1..-9 to cmds, modifiers via GetKeyState(VK_SHIFT/CONTROL/MENU)->DAT_0067c280, fires cmd via 00576410; scans active groups' bindings
+00577850	input_keymap_handle_msg	platform	todo	Keymap filter for WM_KEYDOWN/UP/SYSKEY*/WM_CHAR: Shift/Ctrl/Alt via GetKeyState -> DAT_0067c280, held keys DAT_0067c264, active groups DAT_0067c21c, fires 00576410; 1=consumed
+00577ef0	input_keymap_find_command	game	todo	Maps command name to index in 0xcc-entry name table PTR_s_USER_NONE_00614dd8 (stricmp), then finds binding node in list DAT_0067c258; returns &node[2] or NULL
+00578580	stl_list_insert_pair_00578580	library	skip	std::list<pair<int,int>>::insert: new(0x10) node before param_3, copy 8-byte value, ++size
+005785d0	stl_list_insert_0x28	library	skip	std::list insert: new node 0x28, links before pos, constructs value via 00578980, size++
+00578630	stl_list_insert_node	library	skip	std::list insert: new node(0x24) before param_3, copy-construct value (00578a40), ++size at this+8, returns iterator
+00578690	stl_vector_insert_n_pair	library	skip	std::vector<8-byte elem>::_Insert_n(pos,n,val) with reallocation via operator new/005b7e1d
+00578b20	keymap_scalar_deleting_dtor	compiler-artifact	skip	Scalar deleting destructor: dtor 0052d3f0, delete if flag&1
+00578f70	render_frame	game	todo	Per-frame render: read_ticks->+0x18; if device ok (00424cb0): scene vtbl+8 or clear (004214d0(0,0,0,0)+004215e0(0x4100)); UI anim time +0x330 wrap; 00417f10, 00425080 (end), 00425140
+00579180	ui_register_loading_screen	game	todo	RegisterLoadingScreen(&DAT_0067c3b8) (COMMON.DLL); called from 005b1300
+00579190	ui_loading_screen_reset	game	todo	DAT_0067c3c8=Timing::read_ticks(), DAT_0067c3e0=0, DAT_0067c3d9=0, DAT_0067c3da=1
+005791c0	ui_shutdown_0067c3bc	game	todo	Atexit shutdown (5b2195): deletes DAT_0067c3bc, destroys UI tree DAT_0067c3c0 (not nulled), sets DAT_0067c3db=1
+00579220	ui_intro_create	game	todo	Deletes previous DAT_0067c3bc, creates intro image object (00565d90: new 0x18, vtable 005e2718), calls its vtbl+4(param_1) (=00565430 load). Called from app init 005b1300
+00579280	ui_set_flag_0067c3d9	game	todo	DAT_0067c3d9 = arg (byte); callers 0056ce30, game-state switch 005b2a30
+00579290	ui_loading_screen_redraw	game	todo	Sets DAT_0067c3e0=1 and calls loading-screen render 00578f70(this=0x67c3b8, -1.0f) (Timing::read_ticks, clear 004215e0(0x4100), progress anim); used from 005b2a30/005b1300
+0057d800	res_register_module	game	todo	Push_back HMODULE into resource-module vector DAT_0067c400..408, returns index<<16 (string id base). WinMain registers resources.dll; 005b0c30 others. Decomp garbled by folded no-op calls
+0057d980	util_handle_resolve	game	todo	guess: resolve handle: index in high ushort at param+2 into pointer table DAT_0067c400..c404 (registered by 0057d800 returning idx<<16); clears high word and returns entry, else 0
+0057d9c0	platform_load_rt23_resource	platform	todo	FindResourceExA(hmod,type 0x17 RT_HTML,name)/SizeofResource/LoadResource/LockResource -> *out ptr, *out len in wchars (size>>1)
+0057da40	platform_load_xml_resource_by_ids	platform	todo	IDS: hiword=index into resource DLL vector DAT_0067c400..404; RT_HTML(23) XML parsed via XMLReader::read_buffer into RenderDisplayList (skips BOM 0xfeff), else RT_STRING table -> 0057db50; 25 callers
+0057e310	ui_load_rich_fonts_ini	game	todo	[TrueType] font=idx,name,size -> SetStandardFont; [Style] name (CRC16 hash), font/bold/italic/underline/color/justify -> TRANode/JustifyNode -> StyleCollection::set_style; alloca garbled
+0057eb40	game_list_erase_first_match	game	todo	guess: walks list (+4) and erases/deletes first element whose vt+0x38 returns nonzero; --size +8
+005947a0	stl_list_insert	library	skip	std::list::insert(where, val): new 0xc node, link before, ++size
+00595300	obj_004dd9a0_scalar_deleting_dtor	compiler-artifact	skip	Scalar deleting destructor: calls dtor 004dd9a0, frees if flag&1
+00595400	render_texture_cache_clear_67d9c8	game	todo	Atexit shutdown (5b2295): if DAT_0067d9e0, tail-calls 00425a20 with this=0x67d9c8
+00597c70	stl_uninitialized_copy_ptr	library	skip	std::uninitialized_copy for 4-byte elements (skips null dest); 27 callers
+005999b0	stl_construct_copy	library	skip	std::_Construct: if (p) *p=*val (4-byte); 42 callers
+0059d5a0	ui_system_init	game	todo	UI init (from 005b1300): screen rect (w-1,h-1) via 0040fd60/0040fb60/0040f8c0, 005a2970, loads "interface\\interface.generic.vms" into _DAT_0067dbc8 (0041ade0). piStack_8 is decomp confusion
+0059d6d0	ui_global_dtor_0067dbc8	game	todo	guess: atexit dtor for global at DAT_0067dbc8..: frees node lists DAT_0067dbdc/DAT_0067dbe8, marks items flag 4 (+0x6c), clears DAT_0067dcdc/e0/d8, calls 0059e8d0, 0041e610 input shutdown, 005a2990
+0059d9c0	ui_find_element_by_nickname	game	todo	Walks UI element list DAT_0067dbe8 (next +4, element +8) and returns element whose name at +0x10 stricmp-matches param_1, else 0
+0059da10	ui_find_element_by_name	game	todo	Same list walk as 0059d9c0 but compares inline string at element+0x18 (stricmp) - second name/ID field
+0059da50	ui_get_top_window	game	todo	guess: returns window ptr (+8) of head node of UI window list DAT_0067dbe8, or 0; list searched by name in 0059da10 (e.g. "NN_Preferences"); no direct callers (ptr)
+0059db20	ui_create_window_by_class	game	todo	Walks class registry DAT_0067dcec (name at +0xc, strcmp), calls factory vtbl[0](param_3,param_4), copies instance name (lost param in EBX, max 31 chars) to +0x18, len +0x14
+0059dd80	ui_hit_test_topmost	game	todo	Finds hovered UI element in DAT_0067dbe8: flag byte +0x6c bits 1/2/8 (parents visible), depth via vtbl+0x6c or parent chain, tie-break float [0x1a], hit-test vtbl+0x10(pt)
+0059de50	ui_find_window_at_point	game	todo	Hit test over window list DAT_0067dbe8: visible/enabled flags (+0x6c bits 1,2,8), vtbl+0xc contains, deepest (vtbl+0x6c or parent chain) wins, tie by z float +0x68, vtbl+0x10 accept
+0059e080	ui_update	game	todo	UI update(double dt): blink timer _DAT_0067dce8/DAT_0067dce4, hover DAT_0067dcd8 (vtbl+0x40 leave,+0x3c/+0x38 enter), modal DAT_0067dccc, elements vtbl+0x2c/+0x30, delete list DAT_0067dbdc
+0059e300	ui_render_windows	game	todo	Win3D.cpp UI pass: render states (00421ed0 0xb50..), MaterialBatcher; sorts top-level windows by layer +0x70 / z +0x68 (stack array 0x400, __chkstk), draws vtbl+0x34 in 8 groups (+0x78)
+0059e500	render_ui_reset_states	platform	todo	Win3D.cpp: glDisable (00421ed0) LIGHTING/TEXTURE_2D/CULL/DEPTH/FOG, resets DAT_0067dbf8, MaterialBatcher vtbl+0x20(1,-1), SetRenderState 0x8b=-1 (AMBIENT), 0x1a DITHER=0
+0059e7d0	ui_window_unlink_child	game	todo	guess: removes param_2 from singly linked child list headed at this+8 (next ptr at +8); called from 0059d6d0
+0059e810	util_ptrlist_push_back	game	todo	Custom (non-STL) doubly linked list {count,head,tail}: new node(0xc){next,prev,data} appended; returns 1
+0059e860	stl_list_free_all	library	skip	Frees singly linked node chain (next +4) from p[1], zeroes p[0..2]
+0059e8d0	game_release_engine_handles	game	todo	For each 12-byte entry in vector (+4..+8): Engine vt+0x3c(handle) if !=-1, releases refs 0041b030 x2; then vector clear
+0059f860	ui_window_ctor	game	todo	guess: UI window base ctor (vtables 005d5544->005e5e44, sub-objects 005e5efc/005d2efc/OnReceive 005e5e38), ++DAT_0067dcd4 instance count, scales=1.0f, +0x2e8=10000.0f
+005a2970	ui_init_subsystems	game	todo	guess: calls 005a2df0 twice and sets DAT_0067dd8d=1 (init flag). Called from 0059d5a0 UI init
+005a2990	game_destroy_two_globals_67dd	game	todo	Calls 005a2e80 as thiscall on ECX=0x67dd90 then 0x67dd68 (asm; Ghidra lost ECX); guess: clears two global containers
+005a5910	platform_install_crash_handler	platform	todo	wcsncpy app name (L"Freelancer") to DAT_0067e670 (0x80 wchar), SetUnhandledExceptionFilter(005a54e0); called from WinMain
+005a6900	stl_vector_ctor_005a6900	library	skip	std::vector ctor: copy allocator byte, first/last/end = 0
+005a8260	net_session_shutdown	game	todo	If !00564b00: 0046b170, shut down server obj DAT_0067ecd0 (005aa440, vt+0x28), 005b6fd0 FreeLibrary server dll, clear DAT_0067ecd0/d4, DAT_00673344=0; 004c4bc0; tail-jmp CleanUpDatabases
+005a82d0	net_load_config	game	todo	Loads freelancer.ini [Freelancer] local_server/AppGUID, [ListServer] hostname/port (into net obj 0x0067e7b8 via 005ab400/005ab4b0), [Login] name/password/char (0x67e940/0x67e950, 005ab3e0)
+005a8770	net_connect_server	game	todo	guess: connect to server: RefreshLoadingProgress, 005a8080 ("RemoteServer.dll"), 005a9990(1) ("tcpip, %S:"); errors -> NN_Error IDS 0x73d/0x73e/0x73f; cleanup DAT_0067ecd0, CleanUpDatabases
+005a8840	net_connect_result_or_shutdown	game	todo	If DAT_0067ecd0: SinglePlayer() branch, polls 005aa510; 1 -> 0046b2b0 return 1; else shows error ids 0x742/0x753/0x743/0x739 by DAT_0067e969 via 00473cb0 and does same shutdown as 005a8260
+005a8960	net_start_session	game	todo	guess: if 005a8770(p1) succeeds returns 005a8840() result else 0; callers 005b20a0, 005b2a30
+005a89b0	net_wait_for_server_reply	game	todo	Polls DAT_0067ecd0 (vtbl+0x2c) with timeouts p2(MP)/p3(SP) via Timing::read; pumps 005b0b60, UI update; result from DAT_0067ea50 HRESULTs 0x80158410/0x80158610 -> 0..6. p1 lost (EDI)
+005a9300	net_client_reset_server_list	game	todo	CDPClient::CancelEnums(this+4), clears vectors +0x144/+0x164/+0x174, re-adds 0x9c-byte server entries (+0x154..0x158) via 005adfc0; clears flags +0x1b0,+0x1d4,+0x21c,+0x25c
+005a96b0	net_get_login_name	game	todo	Returns copy of std::wstring at this+0x188 (inlined MSVC6 wstring copy, MSVCP60 _Grow/_Split/_Tidy). Called with this=0x0067e7b8 -> 0x67e940 = [Login] name from 005a82d0
+005a9ea0	net_server_desc_assign	game	todo	Compiler-generated operator= for 0x9c-byte server description: wstring +0, vector +0x18, ints +0x28..0x40, wstrings +0x44/+0x54, strings +0x64/+0x74, ints +0x84..0x98
+005aa440	net_client_logout	game	todo	guess: if DAT_00673344 (client id): server iface DAT_0067ecd0->vtbl+0x40(id,0), clears DAT_0067ecbe/bf, flags, frees char list +0x1b8 (pool +0x1c4 if +0x1c0)
+005aa680	net_request_character_list	game	todo	guess: frees cached character entries (list this+0x1b8, free-list +0x1c4), calls DAT_0067ecd0 vtbl+0x4c(DAT_00673344,0), then waits 005a89b0 with 5.0s/60.0s timeouts
+005ab0f0	game_find_and_load_save	game	todo	Walks save list (this+0x1b8) comparing names _wcsicmp with this+0x1e8, "AutoSave" special-case, SinglePlayer() check, prefers flag +0x201; calls 005ab250 on match; in_EAX garbled
+005ab1f0	net_select_character_by_id	game	todo	Finds entry in character list (this+0x1b8) whose CHARACTER_ID matches (operator==), calls 005ab250(entry) or 005ab250(0); called from 005b2a30
+005ab250	net_client_select_character	game	todo	guess: server vtbl+0x50(char,DAT_00673344), waits 005a89b0(flag,5.0,60.0); on ok copies char data (+0x26c,+0x244,+0x230,...) to player globals via 004c4xxx, name wcscpy -> DAT_006732f0
+005ab3e0	net_set_login_char	game	todo	wcscpy(this+0x1e8, param) - stores [Login] char wstring (this=0x0067e7b8 -> DAT_0067e9a0). Called from 005a82d0
+005ab400	net_set_server_hostname	game	todo	Assigns char* to std::string at this+0x220 (inlined MSVC6 COW string assign, _Xlen/_Copy/_Tidy) - [ListServer] hostname, this=0x0067e7b8
+005ab4b0	net_set_server_port	game	todo	this+0x230 = param - [ListServer] port (ftol of get_value_float), this=0x0067e7b8
+005abc60	net_release_child	game	todo	guess: if this+0x234 object present, deleting dtor via vtbl+4(1) and clear. this=0x0067e7b8 (net client obj); called in shutdown 005b2190 and state code 005743f8/574b2c
+005ac2a0	net_client_set_guid	game	todo	Thin wrapper: CDPClient::SetGUID(this+4, guid) via import thunk 005b73aa; called from 005a82d0 network config load
+005ac710	net_add_server_from_cmdline	game	todo	-s<host>:<port>: strdup, split at ':', mbstowcs name, inet_addr (WS2 ord 11)/ntohl (ord 14), atoi port, adds server record via 005adfc0 to list at local_8ac+0x158 (uninitialized local; this lost)
+005accb0	net_account_is_valid	game	todo	guess: returns true if param+0x28 and param+0x98 are both non-zero; called with &DAT_0067e84c from 005b20a0 when not SinglePlayer (gate before state 6)
+005ad910	stl_destroy_range_0x9c	library	skip	std::_Destroy range: for each 0x9c-byte element in [first,last) call dtor 005686b0 (releases COW strings at +0x78/+0x68...)
+005ad970	stl_vector_size_ptr	library	skip	vector<4-byte>::size: (end-begin)>>2 or 0 if null; 36 callers
+005adfc0	stl_vector_insert_n_9c	library	skip	std::vector<T (0x9c bytes)>::insert(pos,n,val) with realloc; copy-ctor 005af3b0, assign 005a9ea0, dtor 005686b0
+005af6a0	game_char_info_clear	game	todo	guess: clears character/loadout record: erase std::list<CollisionGroupDesc> (+0x254/0x258) and std::list<EquipDesc> (+0x248/0x24c), releases two COW wstrings at +0x208/+0x218
+005b0220	app_build_sysreq_warning	game	todo	GlobalMemoryStatus: RAM<120MB -> res string 0xcb, avail virtual<400MB -> 0xd6; Pipeline vtbl+0x20 cap 0xf -> strings 0xcd..0xcf; appends to wstring + L"\n\n"; skipped if DAT_0067a439; returns nonempty
+005b08a0	app_fatal_error	platform	todo	FatalErrorFn (__chkstk frame, args in_stack_*): title/text via 004347e0 (fallback "Freelancer Fatal Error"), appends msg (MSLU MultiByteToWideChar), 004247c0, ShowCursor, MessageBoxW, exit(1)
+005b09b0	app_critical_warning	platform	todo	CriticalWarningFn: strings via 004347e0 or default L"Freelancer Critical Warning"/"...unknown issue"; ShowCursor loop; MessageBoxW (PTR_FUN_00616430); != IDYES -> 004247c0 + exit(1); alloca frame
+005b0b00	app_error_msgbox	platform	todo	ErrorHandler callback(text,caption,flag): if fullscreen DAT_00679be5 and UI ready (0059da50) shows in-game dialog 00473e00 (returns 4/5); else MessageBoxA(MB_ABORTRETRYIGNORE|(flag?0:MB_ICONERROR))
+005b0b60	app_pump_messages	platform	todo	0041ef20 then PeekMessage/GetMessage loop; IMEFocus::IgnoreHotKey and keymap 00577850 filter before Translate/DispatchMessageA; returns 0 + wParam on WM_QUIT
+005b0c30	app_load_data_config	game	todo	freelancer.ini [Data]: fonts,rich_fonts(0057e310),sounds,voices,effects,effect_shapes,debris(00530d20),intro,HUD,igraph; [Resources] DLL -> LoadLibraryA + 0057d800; then "audio\SoundCFG.ini"
+005b1300	app_init	game	todo	App init (known): DALib::Startup, movies, DataConfig::startup, PerfOptions 005b38d0, intro 00579220, UI 0059d5a0, IME 00564060; MSLU MessageBoxW+exit(1) on fail. in_stack_* = alloca garbage
+005b20a0	app_compute_initial_state	game	todo	ComputeInitialEnvironment: 005a96b0/DAT_0067e9a0, MP connect 005accb0(DAT_0067e84c), 005a8960, 005aa680, 005ab0f0; returns state 2/3 (004c4810), 6 (intro) or 1 on fail (main.cpp:0x476)
+005b2190	app_shutdown	game	todo	atexit shutdown: CGunWrapper/Async, state objs vtbl+0x24 (575430/437420/54bd30/43d560), DataConfig::shutdown, sound/voice maps, DALib::Shutdown, FreeLibrary(DAT_0067eca8), CoUninitialize
+005b2360	app_frame_timing	game	todo	Per-frame timing: 0042d770, then DAT_0067ecd8 (double global time) += dt from 0042d680 (SinglePlayer) or 0042d6a0 (MP)
+005b2570	app_wndproc	platform	todo	Main WndProc: IMEFocus::WndProc first; WM_ACTIVATEAPP -> DAT_00615ba9/ba8, 00424c60; WM_DESTROY PostQuitMessage; focus->input; SC_CLOSE quit logic; WM_NCHITTEST; WM_MOUSEMOVE 0041e890
+005b27c0	platform_set_fp_exceptions	platform	todo	If p1: _clearfp, _controlfp(0,0), _control87(cw&~0x1c,0x8001f) unmask invalid/zerodiv/overflow; else _control87(0x9001f,0x8001f) mask all; used with -X flag DAT_0067ecbc
+005b2800	app_open_spew_log	platform	todo	GetUserLocalDataPath + "\FLSpew.txt" -> ErrorHandler::new_log(path,-1,7); converts path to UTF-16 (CP 0xfde9, MSLU 0061641c) into DAT_0067de50
+005b2890	app_frame_update	game	todo	Per-frame update(double dt): Timing::UpdateGlobalTime, MP disconnect (DAT_0067ecbe -> NN_Error 0x737), UI 0059e080, state DAT_0067ecac vtbl+0x38 -> next id -> 005b2a30; PostQuitMessage if none
+005b2a30	app_switch_game_state	game	todo	Game-state switch (known): state ids 1..8 select singletons 00575430/00437420/0054bd30/0043d560 etc., uses 005a8960/005aa680/005ab1f0 for MP, 00579280/00579290; returns new state object
+005b2cb0	app_apply_cmdline_switches	game	todo	For argv entries starting '+'/'-': G -> DAT_0067ecc0=1; P<port> -> CDPClient::SetSourcePort(atoi); S<host:port> -> 005ac710. Decomp loop entry mangled
+005b2d60	app_eula_check	platform	todo	LoadLibraryA "..\\EBUEula.dll" then "EBUEula.dll", GetProcAddress (MSLU 00616418), GetFileAttributesA "..\\Warranty.rtf", calls EULA fn; on failure MessageBoxW "Freelancer Fatal Error" + exit(1)
+005b2f50	app_winmain	platform	todo	WinMain: mutex "FreelancerClient"; chdir to exe dir; no FACIALMALE.ANM -> run FLServer.exe; EULA; FatalErrorFn hooks; resources.dll; cmdline; ini; class "Freelancer"; 005b1300 init; main loop
+005b33f0	util_zero_init	game	todo	guess: trivial ctor *this=0 (fastcall); called once from WinMain
+005b3400	app_parse_cmdline	game	todo	Copies cmdline into this+0x44, splits on space/tab honoring "quotes" into argv[] at this+4, argc at this[0]; no bounds check on argv count
+005b34b0	app_make_version_dword	game	todo	Returns (major<<24)|((minor&0xff)<<16)|(build&0xffff); WinMain stores result in DAT_0067ecb8 from DACOM_GetDllVersion (fallback 1.0.11)
+005b36b0	app_perf_option_find	game	todo	Lazy static list DAT_0067ed04 (atexit 005b3640, count DAT_0067ed08); linear strcmp of option name (+4) with param; returns option or 0; e.g. "default_graphics"
+005b38d0	app_load_perf_options	game	todo	Loads PerfOptions.ini (005d5088) from GetUserDataPath: [PerfVersion] version/SkipMachineWarnings (DAT_0067a439), [PerfCount], [PerfOptions] into var list DAT_0067ed04, [Display] size/bpp
+005b3ec0	app_perf_options_save	game	todo	GetUserDataPath+_makepath+fopen: writes [PerfVersion], SkipMachineWarnings, [PerfCount], [PerfOptions] "%s = %.2f", [Display] size DAT_00679bc8/cc, color_bpp/depth_bpp DAT_00679bd0/d4
+005b4050	app_perf_vars_clear	game	todo	Clears perf-option variable list DAT_0067ed04 (function-static, lazy init with atexit LAB_005b3640, count DAT_0067ed08), freeing each entry's data. Lookup by name is 005b36b0
+005b40f0	app_perf_options_apply	game	todo	For each perf option in DAT_0067ed04 list: if value(+0x10) != applied(+0x14) then copy and call vt+4(value)
+005b6fd0	net_unload_server_dll	platform	todo	FreeLibrary(DAT_0067ed54) (loaded by 005b6f40 server DLL w/ GetServerInterface/GetChatServerInterface), clears DAT_0067ed54/58/5c
+005b7368	thunk_cdpclient_get_last_msg_timestamp	compiler-artifact	skip	Import jmp thunk to CDPClient::GetLastMsgTimestamp
+005b7398	imp_thunk_CDPClient_CancelEnums	compiler-artifact	skip	Import jump thunk to CDPClient::CancelEnums
+005b73aa	cdpclient_setguid_thunk	compiler-artifact	skip	Import thunk: jmp [0x5c6d8c] = CDPClient::SetGUID (DLL import)
+005b73c8	thunk_cdpclient_cleanup	compiler-artifact	skip	Import jmp thunk to CDPClient::Cleanup (remote client DLL)
+005b73ce	thunk_cgunwrapper_shutdown	compiler-artifact	skip	Import jmp thunk to CGunWrapper::Shutdown; no direct callers
+005b73d4	imp_thunk_CDPClient_SetSourcePort	compiler-artifact	skip	Import jump thunk to CDPClient::SetSourcePort (used by cmdline -p<port> handler 005b2cb0)
+005b74fe	mslu_getprocaddress_stub	compiler-artifact	skip	MSLU (unicows) delay-load stub: 005b7b3d("kernel32.dll","GetProcAddress",&PTR_FUN_00616418,...) then jmp [00616418]
+005b7548	mslu_stub_MultiByteToWideChar	compiler-artifact	skip	MSLU/unicows loader stub: resolves kernel32 MultiByteToWideChar into PTR_FUN_0061641c via 005b7b3d (fallback GodotFailMultiByteToWideChar), then jumps to it
+005b75b7	mslu_stub_messageboxw	compiler-artifact	skip	MSLU (unicows) loader stub: resolves user32 MessageBoxW into PTR_FUN_00616430 via 005b7b3d then jumps to it
+005b7b3d	mslu_resolve_api	compiler-artifact	skip	MSLU (Godot) resolver: detects Win9x (GetFileAttributesW probe), LoadLibrary target dll or unicows (005b7892), GetProcAddress, InterlockedExchange into slot, else fail stub
+005b7e1d	crt_operator_delete	crt-wrapper	skip	operator delete wrapper: free(p) (via 005b805e)
+005b7e40	crt_onexit	crt-wrapper	skip	CRT onexit: _onexit(fn) if DAT_0067ee48==-1 else __dllonexit(fn,&DAT_0067ee48,&DAT_0067ee44)
+005b7e6c	crt_atexit	crt-wrapper	skip	atexit(fn): returns (005b7e40(fn)!=0)-1. Used by function-static initializers (e.g. 0041e890, 005b4050)
+005b7e84	crt_operator_new_thunk	compiler-artifact	skip	Import thunk jmp to MSVCRT operator new
+005b7e90	crt_alloca_probe	compiler-artifact	skip	__chkstk/_alloca_probe: touches stack pages for frames > 4KB (EAX=size); Ghidra does not model it, callers show garbage in_stack_* params
+005b7ec0	crt_ftol_thunk	compiler-artifact	skip	Import jmp thunk to msvcrt _ftol (float->int truncation)
+005b805e	crt_free_thunk	compiler-artifact	skip	Import jmp thunk to MSVCRT free; called by operator delete wrapper 005b7e1d
+005b81ec	imp_thunk___dllonexit	compiler-artifact	skip	Import jump thunk to msvcrt __dllonexit (used by atexit 005b7e40)
+005b82d0	dinput8_create_thunk	compiler-artifact	skip	Import thunk: jmp [0x5c6e00] = DINPUT8.DirectInput8Create

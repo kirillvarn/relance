@@ -1,0 +1,11 @@
+{
+ "addr": "005c227f",
+ "name": "Unwind@005c227f",
+ "size": 12,
+ "signature": "undefined Unwind@005c227f()",
+ "calling_convention": "unknown",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8d8da0feffffff25c8625c00"
+}

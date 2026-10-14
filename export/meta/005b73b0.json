@@ -1,0 +1,13 @@
+{
+ "addr": "005b73b0",
+ "name": "EnumerateHosts",
+ "size": 6,
+ "signature": "bool EnumerateHosts(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "005ac2b0"
+ ],
+ "bytes": "ff25ec6d5c00"
+}

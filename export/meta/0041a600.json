@@ -1,0 +1,11 @@
+{
+ "addr": "0041a600",
+ "name": "IClient",
+ "size": 11,
+ "signature": "undefined IClient(IClient * param_1)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8bc1c70034905c00c20400"
+}

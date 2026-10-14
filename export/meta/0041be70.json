@@ -1,0 +1,11 @@
+{
+ "addr": "0041be70",
+ "name": "GetHost",
+ "size": 4,
+ "signature": "IGunHost * GetHost(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8b4110c3"
+}

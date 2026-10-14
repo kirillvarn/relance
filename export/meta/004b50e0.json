@@ -1,0 +1,11 @@
+{
+ "addr": "004b50e0",
+ "name": "information_request",
+ "size": 5,
+ "signature": "bool information_request(InformationType param_1, int param_2, char * param_3)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "32c0c20c00"
+}

@@ -1,0 +1,11 @@
+{
+ "addr": "0053fd20",
+ "name": "GetLatestUpdate",
+ "size": 30,
+ "signature": "Vector GetLatestUpdate(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8b44240483c110568b318bd089328b71048972048b4908894a085ec20400"
+}

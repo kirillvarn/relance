@@ -1,0 +1,13 @@
+{
+ "addr": "004ced60",
+ "name": "~OwnerList<pub::SpaceObj::CargoDesc>",
+ "size": 136,
+ "signature": "void ~OwnerList<pub::SpaceObj::CargoDesc>(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [
+  "005b7e1d"
+ ],
+ "callers": [],
+ "bytes": "53568bf15733dbc7061c715d0033ff903bfb75058b7e04eb028b3f3bfb74118b470850e895900e0083c404895f08ebe08b7e043bfb7420385e0c8bc78b3f740a8b4e108908894610eb0950e86d900e0083c4043bfb75e08b7e103bfbc70604775d00895e08895e0474178d9b000000008bc78b3f50e843900e0083c4043bfb75ef5f895e105e5bc3"
+}

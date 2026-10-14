@@ -1,0 +1,11 @@
+{
+ "addr": "0053fce0",
+ "name": "CalcPositionError",
+ "size": 48,
+ "signature": "double CalcPositionError(Vector * param_1)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8b442404d900d86174d94004d86178d94008d8617cd9c2decbd9c0d8c9dec3d9c1d8cadec3d9cad9fadddaddd8c20400"
+}

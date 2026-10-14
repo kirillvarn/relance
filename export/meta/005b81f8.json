@@ -1,0 +1,13 @@
+{
+ "addr": "005b81f8",
+ "name": "~type_info",
+ "size": 6,
+ "signature": "void ~type_info(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "005b803c"
+ ],
+ "bytes": "ff2590715c00"
+}

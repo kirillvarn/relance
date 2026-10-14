@@ -1,0 +1,11 @@
+{
+ "addr": "0053fcd0",
+ "name": "GetSimulationTime",
+ "size": 7,
+ "signature": "double GetSimulationTime(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "dd81c0020000c3"
+}

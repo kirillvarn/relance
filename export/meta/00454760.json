@@ -1,0 +1,15 @@
+{
+ "addr": "00454760",
+ "name": "FUN_00454760",
+ "size": 10,
+ "signature": "undefined FUN_00454760()",
+ "calling_convention": "unknown",
+ "is_thunk": false,
+ "callees": [
+  "00454250"
+ ],
+ "callers": [
+  "0044b570"
+ ],
+ "bytes": "b9a8d26600e9e6faffff"
+}

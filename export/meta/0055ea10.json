@@ -1,0 +1,13 @@
+{
+ "addr": "0055ea10",
+ "name": "thunk_FUN_0059fa50",
+ "size": 5,
+ "signature": "undefined thunk_FUN_0059fa50()",
+ "calling_convention": "unknown",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "0055e9f0"
+ ],
+ "bytes": "e93b100400"
+}

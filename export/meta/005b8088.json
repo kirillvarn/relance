@@ -1,0 +1,13 @@
+{
+ "addr": "005b8088",
+ "name": "_controlfp",
+ "size": 6,
+ "signature": "uint _controlfp(uint _NewValue, uint _Mask)",
+ "calling_convention": "__cdecl",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "005b820a"
+ ],
+ "bytes": "ff2574715c00"
+}

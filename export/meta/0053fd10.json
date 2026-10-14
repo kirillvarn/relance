@@ -1,0 +1,11 @@
+{
+ "addr": "0053fd10",
+ "name": "GetSampleCount",
+ "size": 7,
+ "signature": "ulong GetSampleCount(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8b81b8020000c3"
+}

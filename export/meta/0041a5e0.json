@@ -1,0 +1,11 @@
+{
+ "addr": "0041a5e0",
+ "name": "request_flee_destination",
+ "size": 5,
+ "signature": "bool request_flee_destination(uint param_1, FleeReason param_2, FleeDestinationType * param_3, Vector * param_4, uint * param_5, float * param_6)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "32c0c21800"
+}

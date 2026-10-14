@@ -1,0 +1,15 @@
+{
+ "addr": "0051b480",
+ "name": "OnDisconnect",
+ "size": 5,
+ "signature": "void OnDisconnect(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "0051cb70",
+  "0051e660",
+  "0051ea80"
+ ],
+ "bytes": "e90b6aeeff"
+}

@@ -1,0 +1,11 @@
+{
+ "addr": "004148a0",
+ "name": "GetConnection",
+ "size": 4,
+ "signature": "IGunConnection * GetConnection(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8b410cc3"
+}

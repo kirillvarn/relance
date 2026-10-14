@@ -1,0 +1,11 @@
+{
+ "addr": "0053f920",
+ "name": "NormalizeTrackedPosition",
+ "size": 78,
+ "signature": "void NormalizeTrackedPosition(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "d94174d94170d9416cd9c0d8c9d9c2d8cbdec1d9c3d8ccdec1d9fadddbddd8ddd8d815847e5d00dfe0f6c441751ddc3db8895c00d9c0d8496cd9596cd9c0d84970d95970d84974d95974c3ddd8c3"
+}

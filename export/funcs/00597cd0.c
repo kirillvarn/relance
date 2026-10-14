@@ -1,0 +1,82 @@
+
+undefined4 * __fastcall FUN_00597cd0(undefined4 *param_1)
+
+{
+  HANDLE pvVar1;
+  HCURSOR pHVar2;
+  undefined1 local_1;
+  
+  param_1[3] = 0;
+  param_1[2] = 0;
+  param_1[1] = 0;
+  param_1[5] = 0;
+  *(undefined1 *)(param_1 + 6) = 0;
+  FUN_004215b0();
+  param_1[0x1a] = 0;
+  param_1[0x19] = 0;
+  param_1[0x18] = 0;
+  *param_1 = &PTR_FUN_005d5544;
+  param_1[4] = 0;
+  param_1[0x1c] = 0;
+  param_1[0xe] = 0;
+  param_1[0x1d] = 0;
+  param_1[0x1e] = 0;
+  local_1 = (undefined1)((uint)param_1 >> 0x18);
+  *(byte *)(param_1 + 0x1b) = *(byte *)(param_1 + 0x1b) & 0xf8 | 8;
+  DAT_0067dcd4 = DAT_0067dcd4 + 1;
+  param_1[0x22] = 0;
+  param_1[0x23] = 0;
+  param_1[0x24] = 0;
+  *(undefined1 *)(param_1 + 0x21) = local_1;
+  *(undefined1 *)(param_1 + 0x25) = local_1;
+  param_1[0x26] = 0;
+  param_1[0x27] = 0;
+  param_1[0x28] = 0;
+  *(undefined1 *)(param_1 + 0x29) = local_1;
+  param_1[0x2a] = 0;
+  param_1[0x2b] = 0;
+  param_1[0x2c] = 0;
+  *(undefined1 *)(param_1 + 0x2d) = local_1;
+  param_1[0x2e] = 0;
+  param_1[0x2f] = 0;
+  param_1[0x30] = 0;
+  param_1[0x44] = 0;
+  param_1[0x43] = 0;
+  param_1[0x42] = 0;
+  param_1[0x40] = 0;
+  param_1[0x3f] = 0;
+  param_1[0x3e] = 0;
+  param_1[0x45] = 0x3f800000;
+  param_1[0x41] = 0x3f800000;
+  param_1[0x3d] = 0x3f800000;
+  param_1[0x48] = 0;
+  param_1[0x47] = 0;
+  param_1[0x46] = 0;
+  *param_1 = &PTR_FUN_005e5744;
+  param_1[0x1f] = 0;
+  param_1[0x20] = 0;
+  *(undefined1 *)(param_1 + 0x31) = 1;
+  *(undefined1 *)(param_1 + 0x34) = 0;
+  param_1[0x35] = 0;
+  *(undefined1 *)(param_1 + 0x36) = 0;
+  param_1[0x37] = 0;
+  param_1[0x3b] = 0x3b83126f;
+  *(undefined1 *)(param_1 + 0x3c) = 1;
+  *(undefined1 *)((int)param_1 + 0xf1) = 1;
+  param_1[0x38] = DAT_006156a8;
+  param_1[0x3a] = DAT_006156b0;
+  param_1[0x39] = DAT_006156ac;
+  pvVar1 = LoadImageA((HINSTANCE)0x0,(LPCSTR)0x7f85,2,0,0,0x8000);
+  param_1[0x49] = pvVar1;
+  pvVar1 = LoadImageA((HINSTANCE)0x0,(LPCSTR)0x7f84,2,0,0,0x8000);
+  param_1[0x4a] = pvVar1;
+  pHVar2 = GetCursor();
+  param_1[0x4b] = pHVar2;
+  *(undefined1 *)(param_1 + 0x4c) = 0;
+  *(undefined1 *)((int)param_1 + 0x131) = 0;
+  *(undefined1 *)((int)param_1 + 0x132) = 0;
+  param_1[0x4d] = 0;
+  param_1[0x4e] = 0;
+  return param_1;
+}
+

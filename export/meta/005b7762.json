@@ -1,0 +1,16 @@
+{
+ "addr": "005b7762",
+ "name": "_StringCatWorkerA@12",
+ "size": 49,
+ "signature": "undefined _StringCatWorkerA@12()",
+ "calling_convention": "unknown",
+ "is_thunk": false,
+ "callees": [
+  "005b75dc",
+  "005b7617"
+ ],
+ "callers": [
+  "005b7892"
+ ],
+ "bytes": "558bec568b750c578b7d088d450c505657e89ffeffff85c07c11ff75108b450c2bf05603c750e84ffeffff5f5e5dc20c00"
+}

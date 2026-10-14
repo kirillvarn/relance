@@ -1,0 +1,13 @@
+{
+ "addr": "005b8204",
+ "name": "initterm",
+ "size": 6,
+ "signature": "undefined initterm()",
+ "calling_convention": "__cdecl",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "005b808e"
+ ],
+ "bytes": "ff25a4715c00"
+}

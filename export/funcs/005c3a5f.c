@@ -1,0 +1,15 @@
+
+void Unwind_005c3a5f(void)
+
+{
+  int unaff_EBP;
+  
+                    /* WARNING: Could not recover jumptable at 0x005c3a65. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  std::basic_string<unsigned_short,std::char_traits<unsigned_short>,std::allocator<unsigned_short>_>
+  ::~basic_string<unsigned_short,std::char_traits<unsigned_short>,std::allocator<unsigned_short>_>
+            ((basic_string<unsigned_short,std::char_traits<unsigned_short>,std::allocator<unsigned_short>_>
+              *)(unaff_EBP + -0xa18));
+  return;
+}
+

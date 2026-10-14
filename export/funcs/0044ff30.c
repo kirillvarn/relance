@@ -1,0 +1,53 @@
+
+void __thiscall FUN_0044ff30(int param_1,int param_2,char *param_3,int param_4,char *param_5)
+
+{
+  int *piVar1;
+  int *piVar2;
+  long lVar3;
+  long lVar4;
+  int iVar5;
+  HardpointSummary local_4c [32];
+  HardpointSummary local_2c [32];
+  void *local_c;
+  undefined1 *puStack_8;
+  uint local_4;
+  
+  local_4 = 0xffffffff;
+  puStack_8 = &LAB_005b9de2;
+  local_c = ExceptionList;
+  iVar5 = *(int *)(*(int *)(param_1 + 0x5c) + 0x48);
+  piVar1 = *(int **)(iVar5 + param_2 * 4);
+  piVar2 = *(int **)(iVar5 + param_4 * 4);
+  if ((piVar1 != (int *)0x0) && (piVar2 != (int *)0x0)) {
+    ExceptionList = &local_c;
+    HardpointSummary::HardpointSummary(local_2c);
+    local_4 = 0;
+    HardpointSummary::HardpointSummary(local_4c);
+    local_4 = CONCAT31(local_4._1_3_,1);
+    lVar3 = (**(code **)(*piVar1 + 0x44))();
+    HardpointSummary::analyze_instance(local_2c,lVar3);
+    lVar3 = (**(code **)(*piVar2 + 0x44))();
+    HardpointSummary::analyze_instance(local_4c,lVar3);
+    iVar5 = **(int **)Engine_exref;
+    lVar3 = HardpointSummary::find_name_instance(local_2c,param_3);
+    lVar4 = HardpointSummary::find_name_instance(local_4c,param_5);
+    iVar5 = (**(code **)(iVar5 + 0xc0))(*(undefined4 *)Engine_exref,lVar4,lVar3);
+    if (iVar5 != 1) {
+      (**(code **)FDUMP_exref)
+                (0x100001,
+                 "%s(%d) : *** ERROR: Cannot disconnect hardpoint %s on entity %s from hardpoint %s on entity %s"
+                 ,"E:\\FL\\Scratch\\Source\\Client\\Gf\\ScriptBase.cpp",0x81,param_5,piVar2[0x19],
+                 param_3,piVar1[0x19]);
+    }
+    HardpointSummary::destroy(local_2c);
+    HardpointSummary::destroy(local_4c);
+    local_4 = local_4 & 0xffffff00;
+    HardpointSummary::~HardpointSummary(local_4c);
+    local_4 = 0xffffffff;
+    HardpointSummary::~HardpointSummary(local_2c);
+  }
+  ExceptionList = local_c;
+  return;
+}
+

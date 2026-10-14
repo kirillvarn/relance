@@ -1,0 +1,13 @@
+{
+ "addr": "005b72a8",
+ "name": "get_index",
+ "size": 6,
+ "signature": "long get_index(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "00548a20"
+ ],
+ "bytes": "ff25c8675c00"
+}

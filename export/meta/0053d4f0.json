@@ -1,0 +1,11 @@
+{
+ "addr": "0053d4f0",
+ "name": "follow_event",
+ "size": 3,
+ "signature": "void follow_event(uint param_1, uint param_2, FollowStatusType param_3, float param_4)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "c21000"
+}

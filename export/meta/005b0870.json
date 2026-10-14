@@ -1,0 +1,11 @@
+{
+ "addr": "005b0870",
+ "name": "GetChatClientInterface",
+ "size": 6,
+ "signature": "undefined GetChatClientInterface()",
+ "calling_convention": "unknown",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "b868ea6700c3"
+}

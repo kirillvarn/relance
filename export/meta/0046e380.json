@@ -1,0 +1,21 @@
+{
+ "addr": "0046e380",
+ "name": "FUN_0046e380",
+ "size": 55,
+ "signature": "undefined FUN_0046e380()",
+ "calling_convention": "unknown",
+ "is_thunk": false,
+ "callees": [
+  "0046e380",
+  "005b7e1d"
+ ],
+ "callers": [
+  "004600b0",
+  "0046bcd0",
+  "0046d380",
+  "0046d430",
+  "0046d560",
+  "0046e380"
+ ],
+ "bytes": "53568bd98b4308578b7c24103bf88bf7741f8b4608508bcbe8e3ffffff8b3657e8789a14008b430883c4043bf08bfe75e15f5e5bc20400"
+}

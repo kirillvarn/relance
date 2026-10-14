@@ -1,0 +1,13 @@
+{
+ "addr": "005b732c",
+ "name": "CRemotePhysicsSimulation",
+ "size": 6,
+ "signature": "undefined CRemotePhysicsSimulation(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "00540c30"
+ ],
+ "bytes": "ff25886a5c00"
+}

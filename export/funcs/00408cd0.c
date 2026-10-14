@@ -1,0 +1,23 @@
+
+undefined4 __thiscall FUN_00408cd0(int param_1,INI_Reader *param_2)
+
+{
+  char cVar1;
+  bool bVar2;
+  char *pcVar3;
+  uint uVar4;
+  
+  cVar1 = FUN_00406dc0(param_2);
+  if (cVar1 == '\0') {
+    bVar2 = INI_Reader::is_value(param_2,"particle_effect");
+    if (!bVar2) {
+      return 0;
+    }
+    pcVar3 = INI_Reader::get_value_string(param_2);
+    uVar4 = CreateID(pcVar3);
+    *(uint *)(param_1 + 0x54) = uVar4;
+    *(undefined1 *)(param_1 + 0x58) = 1;
+  }
+  return 1;
+}
+

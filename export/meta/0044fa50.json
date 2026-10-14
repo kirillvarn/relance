@@ -1,0 +1,13 @@
+{
+ "addr": "0044fa50",
+ "name": "CompoundInstanceFindFirstName",
+ "size": 6,
+ "signature": "long CompoundInstanceFindFirstName(long param_1, char * param_2)",
+ "calling_convention": "__cdecl",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "00445620"
+ ],
+ "bytes": "ff256c625c00"
+}

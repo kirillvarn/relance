@@ -1,0 +1,13 @@
+{
+ "addr": "005b737a",
+ "name": "GetClient",
+ "size": 6,
+ "signature": "IDirectPlay8Client * GetClient(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "00566510"
+ ],
+ "bytes": "ff256c6d5c00"
+}

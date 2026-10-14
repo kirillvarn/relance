@@ -1,0 +1,11 @@
+{
+ "addr": "0053f8c0",
+ "name": "GetSample",
+ "size": 14,
+ "signature": "Vector * GetSample(int param_1)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8b4424048d04408d448108c20400"
+}

@@ -1,0 +1,15 @@
+{
+ "addr": "005b77f7",
+ "name": "driveandpathC",
+ "size": 155,
+ "signature": "undefined driveandpathC()",
+ "calling_convention": "__stdcall",
+ "is_thunk": false,
+ "callees": [
+  "005b7723"
+ ],
+ "callers": [
+  "005b7892"
+ ],
+ "bytes": "558bec538b5d08568bc3578d50018a084084c975f92bc283f801721e807b013a75188b750c85f6740d6a025356e8fafeffffc64602004343eb0a8b450c85c07403c600008a0b33c084c98bd3743c80f92f740580f95c75038d4201428a0a84c975ec85c074248b7d1085ff74272bc38bf0b8ff0000003bf076028bf0565357e8a8feffffc6043e00eb0a8b451085c07403c600005f5e5b5dc20c00"
+}

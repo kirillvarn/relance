@@ -1,0 +1,11 @@
+{
+ "addr": "004c9790",
+ "name": "OwnerList<pub::SpaceObj::CargoDesc>",
+ "size": 11,
+ "signature": "undefined OwnerList<pub::SpaceObj::CargoDesc>(OwnerList<struct_pub::SpaceObj::CargoDesc> * param_1)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "8bc1c7001c715d00c20400"
+}

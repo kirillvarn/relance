@@ -1,0 +1,11 @@
+{
+ "addr": "0043d2e0",
+ "name": "get_creation_type",
+ "size": 6,
+ "signature": "CreationType get_creation_type(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [],
+ "bytes": "b803000000c3"
+}

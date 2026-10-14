@@ -1,0 +1,13 @@
+{
+ "addr": "0057a5f0",
+ "name": "CRect",
+ "size": 32,
+ "signature": "undefined CRect(int param_1, int param_2, int param_3, int param_4)",
+ "calling_convention": "__thiscall",
+ "is_thunk": false,
+ "callees": [],
+ "callers": [
+  "00579e90"
+ ],
+ "bytes": "8b5424088bc18b4c240489088b4c240c8950048b54241089480889500cc21000"
+}

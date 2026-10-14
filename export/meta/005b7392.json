@@ -1,0 +1,13 @@
+{
+ "addr": "005b7392",
+ "name": "CDPClient",
+ "size": 6,
+ "signature": "undefined CDPClient(void)",
+ "calling_convention": "__thiscall",
+ "is_thunk": true,
+ "callees": [],
+ "callers": [
+  "005a8be0"
+ ],
+ "bytes": "ff25c46d5c00"
+}
