@@ -5,9 +5,12 @@ Android (arm64) with SDL. The original exe is the specification.
 
 ## Layout
 - game/            original game files. READ-ONLY. Never modify.
-- export/funcs/    Ghidra decompiled C, one file per function (named by address)
-- export/meta/     JSON per function: name, signature, callers, callees, bytes
-- export/callgraph.json
+- decomp/<module>/ Ghidra output per exe/dll (tools/decomp/decomp_module.py,
+                   decomp_all.sh; gitignored, regenerable):
+    funcs/<addr>.c   decompiled C, one file per function
+    meta/<addr>.json name, signature, calling convention, is_thunk, callees,
+                     callers, imports (DLL!name), bytes
+    index.tsv, callgraph.json, exports.tsv, imports.tsv
 - notes/           your findings (markdown). This is your long-term memory.
 - notes/functions.tsv   address<TAB>proposed_name<TAB>category<TAB>status<TAB>summary
 - notes/structs.md      recovered struct layouts, with evidence (which functions)
@@ -15,7 +18,8 @@ Android (arm64) with SDL. The original exe is the specification.
 - include/         shared headers (types.h, structs.h, globals.h)
 
 ## Rules
-1. Never edit export/ or game/. They are inputs.
+1. Never edit decomp/ or game/ by hand. They are inputs (decomp/ is only
+   rewritten by tools/decomp/).
 2. Always write findings to notes/ before finishing a task. Assume your
    context will be lost; notes are the only thing that persists.
 3. Every claim needs evidence: cite function addresses and the exact

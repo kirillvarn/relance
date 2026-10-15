@@ -1,5 +1,8 @@
 # Recon summary — function counts (2026-10-14)
 
+> 2026-10-15: `export/` was replaced by `decomp/freelancer.exe/`, which includes the
+> functions this note lists as missing from export/. Counts below are from the old export.
+
 ## Functions in export/ (Ghidra): 8269
 | group | n | how identified |
 |---|---|---|

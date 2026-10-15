@@ -8,9 +8,10 @@ Ghidra's external functions.
     `stricmp` from both DACOM.dll and MSVCRT.dll.
   - `notes/externals.tsv` maps Ghidra's `EXTERNAL:000xxxxx` addresses to
     import names. It has 1105 rows.
-- Why `externals.tsv` matters: in `export/callgraph.json` and in the `callees`
-  field of `export/meta/*.json`, entries such as `0000037b` are Ghidra
-  EXTERNAL-space offsets, not code addresses. Look them up in that file.
+- `externals.tsv` was for the old `export/` (removed 2026-10-15), whose
+  callees held Ghidra EXTERNAL offsets such as `0000037b`. `decomp/*/meta`
+  lists imported callees by name in the `imports` field instead, and its
+  `callees`/`callgraph.json` hold only code addresses.
 - Identification: the PE header has PDB path
   `\\aus-usp-02\builds\freelancer\symbols\020403_release_1336_Iretail_ver1223\Freelancer.pdb`,
   a timestamp of 2003-02-04, and linker 6.24 (MSVC 6). The binary is the

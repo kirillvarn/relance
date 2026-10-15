@@ -1,5 +1,8 @@
 # Static initializers — _initterm table 0x0060f000..0x006101bc
 
+> 2026-10-15: `export/` was replaced by `decomp/freelancer.exe/`, which includes the
+> functions this note lists as missing from export/. Counts below are from the old export.
+
 - **Full per-entry table:** `notes/static_init.tsv`, 1134 rows.
   - Columns: slot, init_fn, kind, target_globals, detail, atexit_dtor,
     constructs, evidence.

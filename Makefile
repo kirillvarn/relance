@@ -1,6 +1,5 @@
 #   make linux   -> build/linux/libsystem.so  (native gcc)
 #   make win32   -> build/win32/system.dll    (MSVC x86 on the Windows host, via WSL)
-#   make export  -> re-run the Ghidra export into export/
 ROOT   := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 CC     ?= gcc
 CFLAGS := -std=c11 -Wall -Wextra -Werror -O2 -fPIC \
@@ -8,7 +7,7 @@ CFLAGS := -std=c11 -Wall -Wextra -Werror -O2 -fPIC \
 
 SYSTEM_SRC := $(wildcard $(ROOT)/src/dalibs/system/*.c)
 
-.PHONY: all linux win32 export clean-linux
+.PHONY: all linux win32 clean-linux
 all: linux win32
 
 linux: $(ROOT)/build/linux/libsystem.so
@@ -20,9 +19,6 @@ $(ROOT)/build/linux/libsystem.so: $(SYSTEM_SRC) $(wildcard $(ROOT)/include/*.h)
 
 win32:
 	sh $(ROOT)/tools/win32/build_system_dll.sh
-
-export:
-	python3 $(ROOT)/export.py $(ROOT)/game/EXE/Freelancer.exe $(ROOT)/export
 
 clean-linux:
 	rm -rf $(ROOT)/build/linux

@@ -1,8 +1,8 @@
 # Startup, main loop, shutdown — WinMain @ 005b2f50
 
-- Evidence comes from `export/funcs/005b2f50.c`, plus the disassembly of
+- Evidence comes from `decomp/freelancer.exe/funcs/005b2f50.c` (formerly `export/funcs/`), plus the disassembly of
   005b32c1..005b33e6 for the loop and SEH tail.
-- Functions marked † are **not in export/**. Ghidra never created them
+- Functions marked † were **not in the old export/** (now replaced by decomp/, which has them). Ghidra never created them
   because they are reached only by pointer. They were decompiled in a
   transient, read-only Ghidra session.
 - Signature: `int __stdcall WinMain(HINSTANCE hInst, HINSTANCE, LPSTR cmdline,

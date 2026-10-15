@@ -11,7 +11,9 @@
    - Is the port meant to cover Common.dll, Server.dll and DALib/engine
      DLLs too (each needs its own export), or to reimplement their APIs? A
      port of the exe alone cannot run.
-2. **The Ghidra export is incomplete.**
+2. **RESOLVED 2026-10-15:** `tools/decomp/decomp_module.py` seeds pointer-only
+   starts; output in `decomp/`, old `export/` removed. Original note:
+   **The Ghidra export is incomplete.**
    - About 24% of .text (440 KB) is outside any exported function.
      Roughly 2,278 function starts are referenced only by pointer
      (vtables, initterm, callbacks) and have no export.
@@ -23,7 +25,8 @@
      before `call 005b7e6c` (atexit).
    - That changes `ghidra_proj` and `export/`. CLAUDE.dm says not to edit
      export/, so this needs your approval.
-3. **`_alloca_probe` (005b7e90) is not modelled.**
+3. **RESOLVED 2026-10-15:** decomp_module.py applies the alloca_probe call
+   fixup. Original note: **`_alloca_probe` (005b7e90) is not modelled.**
    - Every big-frame function decompiles with garbage `in_stack_*` and
      `extraout_ECX` params. Examples: 005621a0, 005a82d0, 005b1300,
      005b0c30, 005b38d0, 005b08a0, 0040eac0, 00425b30, 0042b030, 004afe30.
