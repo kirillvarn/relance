@@ -14,6 +14,8 @@ Android (arm64) with SDL. The original exe is the specification.
 - notes/           your findings (markdown). This is your long-term memory.
 - notes/functions.tsv   address<TAB>proposed_name<TAB>category<TAB>status<TAB>summary
 - notes/structs.md      recovered struct layouts, with evidence (which functions)
+- notes/dll_porting.md  playbook for porting a DA DLL (recon, port, differential test)
+- tools/emu/            run original DLL code under unicorn for golden tests (make golden)
 - src/             ported code (later phases)
 - include/         shared headers (types.h, structs.h, globals.h)
 

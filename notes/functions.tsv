@@ -310,3 +310,40 @@ address	proposed_name	category	status	summary
 005b805e	crt_free_thunk	compiler-artifact	skip	Import jmp thunk to MSVCRT free; called by operator delete wrapper 005b7e1d
 005b81ec	imp_thunk___dllonexit	compiler-artifact	skip	Import jump thunk to msvcrt __dllonexit (used by atexit 005b7e40)
 005b82d0	dinput8_create_thunk	compiler-artifact	skip	Import thunk: jmp [0x5c6e00] = DINPUT8.DirectInput8Create
+06f81000	bigimage_build_from_source	game	done	ximage.dll: tiles from an image source (GetFormat/GetSize/GetPixels slots 6/5/3); asks for the wanted format, falls back to the source format. Port: build_from_source (src/dalibs/ximage/bigimage.c)
+06f81180	bigimage_build_tiles	game	done	ximage.dll: cuts w*h pixels into tile_w*tile_h textures (pipeline slots 45/53), pow2 or square edge tiles; WARNING lines 0x179..0x1ef. Port: build_tiles
+06f81a10	bigimage_next_pow2	game	done	ximage.dll: smallest power of two >= v (0 -> 0), arithmetic shifts. Port: next_pow2
+06f81a40	bigimage_format	crt-wrapper	done	ximage.dll: _vsnprintf(buf, 0x2000, fmt, ...). Port: snprintf in fail_alloc
+06f81a70	pixfmt_copy	compiler-artifact	skip	ximage.dll: thiscall 4-byte copy of a DAPIXFMT (by-value argument)
+06f81a80	bigimage_set_data	game	done	ximage.dll IBigImage2 slot 10: re-upload pixels into existing tiles; -2 bad args, NOTICE + -1 on upload failure. Port: bi_set_data
+06f81de0	bigimage_slot11	game	done	ximage.dll IBigImage slot 11: returns -7. Port: bi_slot11
+06f81df0	bigimage_compute_uvs	game	done	ximage.dll: per-tile UVs of a source rect (unsigned compares, edge tiles divide by the real remainder). Port: compute_uvs
+06f82060	bigimage_draw	game	done	ximage.dll IBigImage slot 4: stretch source rect to dst, per-tile callback(tex, argb, quad-0.5, uv); x87-order float math. Port: bi_draw
+06f822d0	bigimage_normalize_rect	game	done	ximage.dll: order rect corners, 0 if empty. Port: normalize_rect
+06f82320	bigimage_register_factory	game	done	ximage.dll: DACOM_Acquire + RegisterComponent("BigImage", 0x40000000). Port: ximage_dll_process_attach
+06f82370	bigimage_factory_query_interface	game	done	ximage.dll factory vtbl 06f83070 slot 0: only "1.11_IComponentFactory". Port: bf_query_interface
+06f823b0	bigimage_factory_addref	game	done	ximage.dll factory slot 1. Port: bf_addref
+06f823c0	bigimage_factory_release	game	done	ximage.dll factory slot 2. Port: bf_release
+06f823f0	bigimage_factory_create_instance	game	done	ximage.dll factory slot 3: BIGIMAGEDESC (0x2c) -> 0x48-byte BigImage; pipeline props 5/6/7, QI ITextureLibraryA. Port: bf_create_instance
+06f82640	bigimage_slot3	game	done	ximage.dll IBigImage slot 3: empty (ret 0xc). Port: bi_slot3
+06f82650	bigimage_get_size	game	done	ximage.dll IBigImage slot 5. Port: bi_get_size
+06f82670	bigimage_set_alpha	game	done	ximage.dll IBigImage slot 6: _ftol(a*255). Port: bi_set_alpha
+06f82690	bigimage_set_color	game	done	ximage.dll IBigImage slot 7: packs 0xff,r,g,b (top byte quirk). Port: bi_set_color
+06f826f0	bigimage_get_texture_count	game	done	ximage.dll IBigImage slot 8. Port: bi_get_texture_count
+06f82700	bigimage_get_texture	game	done	ximage.dll IBigImage slot 9: handle + SetRect(0,0,w,h). Port: bi_get_texture
+06f82740	bigimage_release_ptr	game	done	ximage.dll: release-and-null helper (fastcall). Inlined in bf_create_instance
+06f82760	bigimage_query_interface	game	done	ximage.dll IBigImage slot 0: table 06f830e4 (IBigImage2, IBigImage at offset 0). Port: bi_query_interface
+06f82810	bigimage_addref	game	done	ximage.dll IBigImage slot 1. Port: bi_addref
+06f82820	bigimage_release	game	done	ximage.dll IBigImage slot 2 + inlined destructor (destroys textures, releases texlib and pipeline). Port: bi_release/bi_destroy
+06f828d0	ximage_dllmain	platform	done	ximage.dll DllMain: reason 1 registers the factory. Port: dll_process_attach
+06f828f0	pixfmt_d3dfmt_table	library	done	ximage.dll: returns .data 06f84150 (22 D3DFORMAT/FourCC). Port: xi_pf_d3dfmt (generated)
+06f82900	pixfmt_from_d3dfmt	library	done	ximage.dll: D3DFORMAT -> pixel-format index, 0 if unknown. Port: xi_pf_from_d3dfmt
+06f82920	pixfmt_desc	library	done	ximage.dll: index -> 0x4c-byte descriptor at 06f841a8 (>14 -> 0); +4 = bpp. Port: xi_pf_desc_of
+06f82940	thunk_operator_new	compiler-artifact	skip	ximage.dll: jmp [IAT] operator new
+06f82950	alloca_probe	compiler-artifact	skip	ximage.dll: _alloca_probe
+06f82980	thunk_operator_delete	compiler-artifact	skip	ximage.dll: jmp [IAT] operator delete
+06f82986	thunk_purecall	compiler-artifact	skip	ximage.dll: jmp [IAT] _purecall
+06f8298c	thunk_ftol	compiler-artifact	skip	ximage.dll: jmp [IAT] _ftol (port: msvc_ftol)
+06f82992	crt_init	compiler-artifact	skip	ximage.dll: _CRT_INIT; initterm table 06f84000..06f84004 is empty
+06f82a3d	dllmain_crt_startup	compiler-artifact	skip	ximage.dll: _DllMainCRTStartup (entry)
+06f82ada	thunk_initterm	compiler-artifact	skip	ximage.dll: jmp [IAT] _initterm

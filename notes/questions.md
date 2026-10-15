@@ -101,11 +101,23 @@
     debuglib.dll (dev HTTP server, `dacomsrv.ini`). Port it anyway, for
     completeness? It is a Henry Spencer-style regexp, about 2.5 KB of code
     (065b4a10..065b5e20).
-16. **Differential test harness.** dacom was verified by running the
+16. **RESOLVED 2026-10-15:** the user said to check the tooling in. It
+    lives in `tools/emu/` (`pe_emu.py`, generic, plus `emu_<module>.py`),
+    with unicorn in the venv via `tools/requirements.txt`. `make golden`
+    re-records the golden files. The dacom and readfile harnesses were
+    already lost with their sessions' scratchpads; rebuild them on
+    `pe_emu.py` if those ports change. Original question:
+    **Differential test harness.** dacom was verified by running the
     original machine code under the unicorn emulator against the port.
     Should that harness be checked in under `tools/`? It needs `unicorn`
     added to the project venv. Today it lives only in the session
     scratchpad.
+    - ximage.dll (2026-10-15) used the same approach. Its result is
+      checked in as `tests/ximage_golden.txt`, so `make test` needs no
+      emulator.
+    - Regenerating that golden file after changing
+      `tests/ximage_cases.py` does need the harness (`emu_ximage.py`).
+      This makes the case for checking the harnesses in stronger.
 17. **Shared-object model.** Each original DLL becomes `lib<name>.so`,
     loaded with dlopen by DACOM AddLibrary and exporting
     `dll_process_attach`. This keeps the DLL architecture, and Android can
@@ -126,3 +138,15 @@
     it if it ever bites?
 21. (answered 2026-10-15) `decomp/` is gitignored and regenerable
     (CLAUDE.md layout). `export/` and `export.py` are gone.
+
+## ximage.dll (added 2026-10-15)
+22. **x87 precision mode at run time.** The ximage port, like every float
+    port so far, assumes MSVC's default 53-bit precision.
+    - D3D8 switches the FPU to 24-bit precision unless the device is
+      created with D3DCREATE_FPU_PRESERVE. The exe imports `_controlfp`.
+    - In BigImage::Draw (06f82060), 24-bit precision changes the last bit
+      of some tile step and quad values. That is 23 of the test's log
+      lines.
+    - Find the CreateDevice flags in rp8.dll, and the exe's `_controlfp`
+      calls, before porting float-heavy game code. Then decide whether the
+      port should emulate 24-bit rounding.

@@ -216,3 +216,12 @@ int win32_dos_datetime_to_filetime(uint16_t fat_date, uint16_t fat_time, uint32_
     ft[1] = (uint32_t)(t >> 32);
     return 1;
 }
+
+int64_t msvc_ftol(double x)
+{
+    /* x87 `fistp qword` with round-toward-zero: NaN and out-of-range
+     * values give the integer indefinite 0x8000000000000000. */
+    if (!(x >= -9223372036854775808.0 && x < 9223372036854775808.0))
+        return INT64_MIN;
+    return (int64_t)x;
+}

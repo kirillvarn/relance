@@ -3,3 +3,4 @@ ghidra_proj/
 build/
 ghidra_mods/
 /decomp/
+__pycache__/

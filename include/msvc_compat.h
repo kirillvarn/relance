@@ -40,4 +40,9 @@ int msvc_access(const char *path, int mode);
  * date, like the original. */
 int win32_dos_datetime_to_filetime(uint16_t fat_date, uint16_t fat_time, uint32_t *ft);
 
+/* _ftol: truncate toward zero to 64 bits (the original returns EDX:EAX;
+ * callers mostly keep the low bits). NaN and out-of-range values give
+ * INT64_MIN, the x87 integer indefinite. */
+int64_t msvc_ftol(double x);
+
 #endif /* MSVC_COMPAT_H */
