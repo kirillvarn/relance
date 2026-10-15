@@ -1,6 +1,6 @@
 # Porting status — what is done and what is next
 
-Last updated: 2026-10-15 (ximage.dll done; readfile.dll done; whole-game decompile prework done). Update this file whenever a module changes state.
+Last updated: 2026-10-15 (x86math.dll done; ximage.dll done; readfile.dll done; whole-game decompile prework done). Update this file whenever a module changes state.
 Per-module details live in `notes/<module>_dll.md`.
 
 **Status legend:**
@@ -19,6 +19,7 @@ Per-module details live in `notes/<module>_dll.md`.
 | system.dll | 2,974 B | `src/dalibs/system/` | asm-level review; smoke test (mock DACOM) under ASan/UBSan; MSVC drop-in build; **now also loads for real through the dacom port** (`make test`) | `notes/system_dll.md` |
 | dacom.dll | 20,928 B | `src/dalibs/dacom/` → `build/linux/libdacom.so` | see below | `notes/dacom_dll.md` |
 | ximage.dll | 6,880 B | `src/dalibs/ximage/` → `build/linux/libximage.so` | `make test`: 1000 random cases run through the factory against mocks, byte-identical to the original machine code under an x86 emulator (`tests/ximage_golden.txt`). Covers every error path; ASan/UBSan clean; 32-bit layout asserts. | `notes/ximage_dll.md` |
+| x86math.dll | 6,904 B | `src/dalibs/x86math/` → `build/linux/libx86math.so` | `make test`: 15,917 cases over all 26 slots (aliased outputs, NaN/inf, denormals, cancellation-sensitive values, all 27 specialised dot products), byte-identical to the original under an x86 emulator at 53-bit x87 precision (`tests/x86math_golden.txt`). 25 of 26 mutations of the port are caught. ASan/UBSan clean; 32-bit layout asserts. | `notes/x86math_dll.md` |
 | readfile.dll | 29,758 B | `src/dalibs/readfile/` → `build/linux/libreadfile.so` | `make test`: 308 real UTF archives (98,334 nodes) walked and read through DACOM → DOS → UTF, identical to an independent oracle; API checks under ASan/UBSan; wildcard matcher identical to original code under emulation | `notes/readfile_dll.md` |
 
 **dacom.dll verification:**
@@ -102,9 +103,10 @@ Per-module details live in `notes/<module>_dll.md`.
 | `include/dafile.h` | IFileSystem (42 slots), DAFILEDESC, DA_FIND_DATA, IDataBuffer, ISearchPath | done (readfile) |
 | `include/platform.h` + `src/platform/platform_posix.c` | **started** | see the list below |
 | `include/msvc_compat.h` + `src/compat/msvc_compat.c` | _stricmp, _strnicmp, _splitpath, _makepath, _ftol | grows per module |
+| `include/mathengine.h` | IMathEngine ("3DMathEngine", 26 slots), MATHENGINEDESC | done (x86math); slot names are guesses from the math |
 | `include/bigimage.h`, `include/rendpipe.h` | IBigImage and BIGIMAGEDESC; partial IRenderPipeline (slots 8/45/46/53) and ITextureLibraryA (slot 44), from ximage's calls | slot names are guesses until rp8.dll is ported |
 | DLL loading | DACOM `AddLibrary` → `platform_lib_load`: "x.dll" maps to `libx.so`, dlopen, then calls `dll_process_attach(handle)` (each module provides it, as in `src/dalibs/system/linux_dllmain.c`) | done |
-| build | `make linux`, `make test` (check32, dacom, readfile, ximage), `make golden`, `make win32` (system.dll only) | Makefile |
+| build | `make linux`, `make test` (check32, dacom, readfile, ximage, x86math), `make golden`, `make win32` (system.dll only) | Makefile |
 | test tooling | `tools/emu/pe_emu.py` runs original DLL code under unicorn (mock imports, mock COM objects); `tools/emu/emu_<m>.py` per module records `tests/<m>_golden.txt`; `tools/stub32/` for `make check32`. How to use it: `notes/dll_porting.md` | done 2026-10-15 |
 
 **platform_posix.c + platform_posix_file.c so far:**
@@ -127,7 +129,6 @@ was analysed").
 
 | # | module | .text | class (guess) | why this order |
 |---|---|---|---|---|
-| 1 | x86math.dll | 6,904 B | game/library (math) | Small leaf. Watch x87 precision (CLAUDE.md). |
 | 4 | zlib.dll | 38,490 B | library | Check whether it is stock zlib; if so, link real zlib instead of porting. |
 | 5 | dalib.dll | 24,389 B | game/platform facade | Imported by the exe, common, server. Exports `DALib::*` interface pointers. |
 | 6 | engbase.dll | 95,168 B | game (engine base) | |
@@ -164,4 +165,8 @@ See `notes/questions.md`. The ones that block the next steps:
   needed to run the client".
 - dacom: should the RegExp component be ported for completeness?
 - #22: which x87 precision mode the game runs in (D3D8 FPU handling).
-  Settle it before porting float-heavy game code.
+  Mostly settled (2026-10-15): game code runs at 53-bit, because the exe
+  restores it after CreateDevice. Only the scene-render span
+  00424f30..00425080 runs at 24-bit. What remains open is whether to
+  emulate 24-bit for render-time math; x86math changes 33% of its test
+  log under 24-bit.

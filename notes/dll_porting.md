@@ -1,6 +1,6 @@
 # How to port a DA DLL — the short playbook
 
-This is distilled from the system, dacom, readfile and ximage ports (2026-10-14/15).
+This is distilled from the system, dacom, readfile, ximage and x86math ports (2026-10-14/15).
 Copy from those ports; don't reinvent. Per-module details live in
 `notes/<module>_dll.md`, and the module order is in `notes/porting_status.md`.
 
@@ -94,7 +94,16 @@ run to `test:` and the golden rule to `golden:`.
   - `fild QWORD` of `{u32, 0}` is an unsigned → double conversion.
   - `fcomp` + `test ah,0x44` + `jnp` means "equal → skip"; NaN takes the
     other branch.
-  - Precision mode is open: `questions.md` #22.
+  - A result returned in st(0) (`fld ...; ret`) is unrounded: return
+    `double` in the port. Under the emulator, call it through a small
+    native helper that does `fstp QWORD` (see `DET_CALL` in
+    `emu_x86math.py`). Otherwise the x87 stack overflows after 8 calls.
+  - Values the original spills to the stack (`fstp DWORD [esp+N]` and a
+    later reload) are float roundings too, even when the slot is an
+    argument slot being reused.
+  - Precision mode is open: `questions.md` #22. Unicorn honours the
+    precision-control bits, so `PeEmu(dll, fpcw)` can measure how much a
+    module depends on it (0x07f = 24-bit, 0x27f = 53-bit, 0x37f = 64-bit).
 
 ## 4. Verify: a differential test against the original
 This is the most valuable step. It found zero bugs in ximage only because
@@ -122,6 +131,8 @@ it was there to prove it.
      `_default_imports` if it's generic CRT/Win32, or override it in the
      module harness.
    - Setup: `venv/bin/pip install -r tools/requirements.txt` (unicorn).
+   - Large case sets: write only the words that differ from a known fill
+     (`index:hex`, as in `x86math_cases.txt`).
 4. **Golden.** Add a `golden-<m>` rule to the Makefile, as for ximage:
    regenerate the cases, then record the original. `make golden` runs them
    all and writes `tests/<m>_golden.txt`. `make test` compares the port's
@@ -130,6 +141,17 @@ it was there to prove it.
 5. **Mutation check.** Break 2 or 3 subtle things in a scratch copy of the
    port: a float rounding point, a quirk, a min/max. Confirm that each one
    changes the log. If one doesn't, add targeted cases.
+   - **Reordered additions** in double almost never change a float result
+     for random inputs. Add a cancellation mode that draws values from
+     {±1, ±1.5, ±2^31, ±2^62}, so that 2^62 - 2^62 + 1 depends on the
+     order (`tests/x86math_cases.py`, `POOL`).
+   - **Not real mutants:**
+     - re-associating a product of three floats, because the inner
+       two-float product is exact in double;
+     - a mutation that an explicit `(float)` cast in the code
+       neutralises.
+   - **Counting what is hit:** instrument a scratch copy, for example a
+     counter per function printed from a destructor.
 6. **Layout.** `make check32`, which `make test` also runs, compiles
    every `src/dalibs/*/*.c` for 32-bit, so the `_Static_assert`s on original
    layouts are checked. It uses stub libc headers in `tools/stub32/`; add a
@@ -154,6 +176,14 @@ under the emulator. dacom and readfile did that.
   shared headers.
 - **`notes/questions.md`** — anything you had to guess, or that the user
   must decide.
+
+**Make pitfall:** `$(OUT)` is an absolute path. So `make
+build/linux/test_x` matches no rule, and the old binary silently stays.
+Use `make test`, or give the absolute path.
+
+**Decompile gap:** a function referenced only by `mov r/m32, imm32` (a
+function pointer stored into a struct) is not seeded. x86math's 27 dot
+functions were missing that way. Check the asm for such stores.
 
 ## Known shared facts
 - **ICOManager slots:** 3 = CreateInstance, 4 = RegisterComponent,

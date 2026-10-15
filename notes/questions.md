@@ -150,3 +150,58 @@
     - Find the CreateDevice flags in rp8.dll, and the exe's `_controlfp`
       calls, before porting float-heavy game code. Then decide whether the
       port should emulate 24-bit rounding.
+    - **PARTLY ANSWERED 2026-10-15 (x86math session): game code runs at
+      53-bit, and the scene-render span runs at 24-bit.** Evidence:
+      - rp8.dll 06d05da0 builds the CreateDevice BehaviorFlags `[obj+0x124]`
+        from [RenderPipeline] keys in dacom.ini. `or ecx,0x2` at 6d06db8
+        only if `FPU_PRESERVE`, but dacom.ini line 66 has
+        `;FPU_PRESERVE = false` commented out. So the flags are 0x40
+        (HARDWARE_VERTEXPROCESSING, line 71), or 0x20 on the retry
+        (6d09038). CreateDevice is called at 6d09011. **D3D therefore
+        switches the FPU to 24-bit.**
+      - Freelancer.exe:
+        - The CRT `_setdefaultprecision` (005b820a) sets PC_53 at startup:
+          `_controlfp(0x10000, 0x30000)`.
+        - 004249c0 (RenderMgr device init) reads the control word after
+          device creation. It sets 0x61084c to 24 or 53 (424b4d..), and if
+          that differs from 0x610848 it calls
+          `_control87(0x10000, 0x30000)`. 0x610848 is .data 0x35 (53) and
+          is only read: 424b4d, 424f5d, 4250ec.
+        - 00424f30 (render begin) switches to PC_24 if the two differ
+          (cmp at 424f5d). 00425080 (render end) switches back to PC_53.
+        - 005b27c0 only toggles exception masks (mask 0x8001f).
+      - rp8.dll's own `fldcw` sites (6d35a84, 6d37ac8, 6d4443d) only set
+        truncation rounding (`or 0xc00`), and later restore the saved
+        control word.
+      - **Consequence:** simulation and game logic, including x86math
+        calls made outside rendering, run at 53-bit. The ports are right to
+        use double.
+      - **Still open:** code that runs between 00424f30 and 00425080 runs
+        at 24-bit. That is the rp8 draw path, and any x86math or ximage
+        call made from it (BigImage::Draw is called while drawing). x86math
+        changes 33% of its test log at 24-bit (notes/x86math_dll.md).
+      - **Decision needed:** emulate 24-bit rounding for render-time math
+        (a per-call precision flag, or float-step rounding helpers), or
+        accept 53-bit everywhere? Render-time results only affect pixels,
+        not game state (guess), so 53-bit everywhere looks safe.
+
+## x86math.dll (added 2026-10-15)
+23. **NaN bits.** The port gives the same NaN-or-not results and takes the
+    same branches on NaN as the original. It does not reproduce x87 NaN
+    signs and payloads:
+    - x87's default NaN is negative (0xffc00000), and AArch64's is
+      positive;
+    - with two NaN operands, x87 and SSE propagate different payloads.
+
+    The x86math test logs any NaN as "nan". Does anything depend on the
+    exact NaN bits, such as saved games, network packets or hashes of
+    float data? If so, those writers need canonicalising instead.
+24. **Guesses in the 3DMathEngine interface** (`include/mathengine.h`).
+    Settle these when the callers are ported:
+    - the descriptor's +8 field ("variant", compared with "x86");
+    - every slot name, because QueryInterface never succeeds, so no
+      interface string exists;
+    - why slots 11/12 and 13/14 point at the same code (maybe vector and
+      normal variants);
+    - whether callers of slot 23 use `det_out`, which is about 1.0 for an
+      invertible matrix (notes/x86math_dll.md).

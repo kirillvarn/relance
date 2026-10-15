@@ -347,3 +347,70 @@ address	proposed_name	category	status	summary
 06f82992	crt_init	compiler-artifact	skip	ximage.dll: _CRT_INIT; initterm table 06f84000..06f84004 is empty
 06f82a3d	dllmain_crt_startup	compiler-artifact	skip	ximage.dll: _DllMainCRTStartup (entry)
 06f82ada	thunk_initterm	compiler-artifact	skip	ximage.dll: jmp [IAT] _initterm
+06f71000	mathengine_static_init	compiler-artifact	skip	x86math.dll: initterm static ctor: builds the rsqrt table (06f71010) and atexit(06f71070). Port: table built once in x86math_dll_process_attach
+06f71010	mathengine_build_rsqrt_table	game	done	x86math.dll: 1024-byte 1/sqrt mantissa table at 06f74030 for x in [0.5,2): (bits(float(1/sqrt(x)))+0x2000)>>15; entry 0x200 forced to 0xff. Port: build_rsqrt_table
+06f71060	mathengine_register_static_dtor	compiler-artifact	skip	x86math.dll: atexit(06f71070)
+06f71070	mathengine_static_dtor	compiler-artifact	skip	x86math.dll: sets bit 0 of byte 06f74430; nothing reads it
+06f71090	mathengine_dllmain	game	done	x86math.dll: DllMain attach: new(8) {vtbl 06f73090, factory vtbl 06f73080} -> global 06f74438, builds rsqrt table, RegisterComponent(obj+4, "3DMathEngine", 0x40000000). Port: x86math_dll_process_attach
+06f71150	mathengine_query_interface	game	done	x86math.dll slot 0: always -1, *out=NULL. Port: me_query_interface
+06f71160	mathengine_addref_release	game	done	x86math.dll slots 1/2: return 1 (no refcount). Port: me_addref_release
+06f71170	mathengine_factory_create_instance	game	done	x86math.dll factory slot 3: desc NULL/name NULL -> -2; size!=0xc or strcmp("3DMathEngine") -> -3; variant non-NULL and stricmp("x86") -> -3; else AddRef, *out=obj. Port: mf_create_instance
+06f711f0	mathengine_invert3	game	done	x86math.dll slot 3: 3x3 inverse via slot 5; |det|<=1e-8f -> adjugate, -2. Port: me_invert3
+06f71380	mathengine_invert_transform	game	done	x86math.dll slot 23 (out, det_out, xf): affine inverse; det_out = det2*(1/det); singular -> inv=1, -2. Port: me_invert_transform
+06f715b0	mathengine_scale3	game	done	x86math.dll slot 4: out = s*m (9 floats). Port: me_scale3
+06f71620	mathengine_determinant3	game	done	x86math.dll slot 5: 3x3 determinant returned in st(0) unrounded. Port: me_determinant3 (double)
+06f71670	mathengine_multiply3	game	done	x86math.dll slot 8: 3x3 a*b row by row (re-reads a after stores). Port: me_multiply3
+06f716f0	mathengine_transform_multiply	game	done	x86math.dll slot 7: transform a after b (R=Ra*Rb, t=Ra*tb+ta). Port: me_transform_multiply
+06f71830	mathengine_rotate	game	done	x86math.dll slots 11/12: M v. Port: me_rotate
+06f71890	mathengine_transform_point	game	done	x86math.dll slot 10: M v + t. Port: me_transform_point
+06f718f0	mathengine_rotate_transposed	game	done	x86math.dll slots 13/14: M^T v. Port: me_rotate_transposed
+06f71950	mathengine_inverse_transform_point	game	done	x86math.dll slot 15: M^T (v - t). Port: me_inverse_transform_point
+06f719b0	mathengine_rotate_array	game	done	x86math.dll slot 17: array M v; specialised per-row dot fns (06f71af0) when cost sum >= 4. Port: me_rotate_array
+06f71af0	mathengine_row_specialise	game	done	x86math.dll: thiscall; classifies row entries 0.0 (fcomp) / 1.0 (bits) / other, picks one of 27 dot fns 06f71d60..06f71f90 and a cost. Port: row_specialise
+06f71d60	mathengine_dot_zzz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zzz
+06f71d70	mathengine_dot_zzo	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zzo
+06f71d80	mathengine_dot_zzr	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zzr
+06f71d90	mathengine_dot_zoz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zoz
+06f71da0	mathengine_dot_zoo	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zoo
+06f71db0	mathengine_dot_zor	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zor
+06f71dc0	mathengine_dot_zrz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zrz
+06f71dd0	mathengine_dot_zro	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zro
+06f71de0	mathengine_dot_zrr	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_zrr
+06f71e00	mathengine_dot_ozz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_ozz
+06f71e10	mathengine_dot_ozo	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_ozo
+06f71e20	mathengine_dot_ozr	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_ozr
+06f71e30	mathengine_dot_ooz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_ooz
+06f71e40	mathengine_dot_ooo	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_ooo
+06f71e50	mathengine_dot_oor	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_oor
+06f71e70	mathengine_dot_orz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_orz
+06f71e80	mathengine_dot_oro	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_oro
+06f71ea0	mathengine_dot_orr	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_orr
+06f71ec0	mathengine_dot_rzz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_rzz
+06f71ed0	mathengine_dot_rzo	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_rzo
+06f71ee0	mathengine_dot_rzr	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_rzr
+06f71f00	mathengine_dot_roz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_roz
+06f71f10	mathengine_dot_roo	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_roo
+06f71f30	mathengine_dot_ror	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_ror
+06f71f50	mathengine_dot_rrz	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_rrz
+06f71f70	mathengine_dot_rro	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_rro
+06f71f90	mathengine_dot_rrr	game	done	x86math.dll: specialised row dot (thiscall, st(0) result); row x/y/z = z:0.0 o:1.0 r:other; not in decomp index. Port: dot_rrr
+06f71fb0	mathengine_transform_points	game	done	x86math.dll slot 16: array M v + t; t all 0.0 -> slot 17. Port: me_transform_points
+06f72150	mathengine_rotate_array_transposed	game	done	x86math.dll slot 18: transposes m to a local, calls slot 17. Port: me_rotate_array_transposed
+06f721c0	mathengine_inverse_transform_points	game	done	x86math.dll slot 19: {M^T, slot14(M, -t)} -> slot 16. Port: me_inverse_transform_points
+06f72290	mathengine_quat_from_matrix	game	done	x86math.dll slot 20: quaternion {w,x,y,z} from 3x3, trace>0 or largest diagonal with next[]={1,2,0} (06f73068). Port: me_quat_from_matrix
+06f723c0	mathengine_matrix_from_quat	game	done	x86math.dll slot 21: 3x3 from quaternion, s=2/|q|^2, float spills kept. Port: me_matrix_from_quat
+06f724d0	mathengine_quat_nlerp	game	done	x86math.dll slot 22: lerp a->b (a - (a+b)t if a.b<0), then normalise. Port: me_quat_nlerp
+06f725d0	mathengine_quat_rotate	game	done	x86math.dll slot 9: rotate v by q: (w^2-|q|^2)v + 2(q.v)q + 2w(q x v), three passes over out. Port: me_quat_rotate
+06f72720	mathengine_vec3_set	game	done	x86math.dll: thiscall vec3 constructor (x,y,z). Port: vec3_set
+06f72740	mathengine_quat_multiply	game	done	x86math.dll slot 6: quaternion product a*b, float spills kept. Port: me_quat_multiply
+06f72830	mathengine_fast_rsqrt	game	done	x86math.dll slot 24: 1/sqrt(x): exponent+table seed, 2 Newton steps (first unrounded). Port: me_fast_rsqrt
+06f728b0	mathengine_fast_sqrt	game	done	x86math.dll slot 25: slot 24 times x. Port: me_fast_sqrt
+06f72940	mathengine_factory_qi_thunk	compiler-artifact	done	x86math.dll factory slot 0: adjustor thunk (this-4) -> 06f71150. Port: mf_query_interface
+06f72950	mathengine_factory_addref_thunk	compiler-artifact	done	x86math.dll factory slots 1/2: adjustor thunk (this-4) -> 06f71160. Port: mf_addref_release
+06f72960	crt_onexit	crt-wrapper	skip	x86math.dll: CRT _onexit for a DLL (__dllonexit when the table exists)
+06f7298c	crt_atexit	crt-wrapper	skip	x86math.dll: CRT atexit -> 06f72960
+06f7299e	thunk_operator_new	compiler-artifact	skip	x86math.dll: import thunk MSVCRT operator new
+06f729a4	crt_init_dll	crt-wrapper	skip	x86math.dll: CRT _CRT_INIT: onexit table, _initterm(06f74000..06f74008), runs onexit list at detach
+06f72a4f	crt_dllmain_startup	crt-wrapper	skip	x86math.dll: entry _DllMainCRTStartup -> _CRT_INIT + DllMain 06f71090
+06f72aec	thunk_dllonexit	compiler-artifact	skip	x86math.dll: import thunk MSVCRT __dllonexit
+06f72af2	thunk_initterm	compiler-artifact	skip	x86math.dll: import thunk MSVCRT _initterm

@@ -1,9 +1,10 @@
 #   make linux   -> build/linux/libdacom.so, libsystem.so, libreadfile.so,
-#                   libximage.so  (native gcc)
-#   make test    -> dacom + readfile + ximage tests (readfile: every 10th UTF
-#                   archive in game/DATA, diffed against tests/utf_oracle.py;
-#                   ximage: tests/ximage_cases.txt diffed against
-#                   tests/ximage_golden.txt, recorded from the original DLL)
+#                   libximage.so, libx86math.so  (native gcc)
+#   make test    -> dacom + readfile + ximage + x86math tests (readfile: every
+#                   10th UTF archive in game/DATA, diffed against
+#                   tests/utf_oracle.py; ximage/x86math: tests/<m>_cases.txt
+#                   diffed against tests/<m>_golden.txt, recorded from the
+#                   original DLL)
 #   make check32 -> compile src/dalibs/ as 32-bit (stub libc in tools/stub32/)
 #                   to check the _Static_asserts on original layouts; part of test
 #   make decomp  -> regenerate decomp/ for every module (slow)
@@ -23,12 +24,14 @@ DACOM_SRC    := $(wildcard $(ROOT)/src/dalibs/dacom/*.c)
 SYSTEM_SRC   := $(wildcard $(ROOT)/src/dalibs/system/*.c)
 READFILE_SRC := $(wildcard $(ROOT)/src/dalibs/readfile/*.c)
 XIMAGE_SRC   := $(wildcard $(ROOT)/src/dalibs/ximage/*.c)
+X86MATH_SRC  := $(wildcard $(ROOT)/src/dalibs/x86math/*.c)
 HEADERS      := $(wildcard $(ROOT)/include/*.h $(ROOT)/src/dalibs/*/*.h $(ROOT)/src/platform/*.h)
 
-.PHONY: all linux test check32 win32 decomp golden golden-ximage clean-linux
+.PHONY: all linux test check32 win32 decomp golden golden-ximage golden-x86math clean-linux
 all: linux win32
 
-linux: $(OUT)/libdacom.so $(OUT)/libsystem.so $(OUT)/libreadfile.so $(OUT)/libximage.so
+linux: $(OUT)/libdacom.so $(OUT)/libsystem.so $(OUT)/libreadfile.so $(OUT)/libximage.so \
+       $(OUT)/libx86math.so
 
 # libdacom.so carries the platform layer and the CRT compat wrappers for now.
 $(OUT)/libdacom.so: $(DACOM_SRC) $(PLATFORM_SRC) $(HEADERS)
@@ -46,6 +49,10 @@ $(OUT)/libreadfile.so: $(READFILE_SRC) $(OUT)/libdacom.so $(HEADERS)
 $(OUT)/libximage.so: $(XIMAGE_SRC) $(OUT)/libdacom.so $(HEADERS)
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -shared -o $@ $(XIMAGE_SRC) -L$(OUT) -ldacom -Wl,-rpath,'$$ORIGIN'
+
+$(OUT)/libx86math.so: $(X86MATH_SRC) $(OUT)/libdacom.so $(HEADERS)
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) -shared -o $@ $(X86MATH_SRC) -L$(OUT) -ldacom -lm -Wl,-rpath,'$$ORIGIN'
 
 $(OUT)/test_dacom: $(ROOT)/tests/test_dacom.c $(OUT)/libdacom.so $(OUT)/libsystem.so
 	$(CC) $(CFLAGS) -fsanitize=address,undefined -o $@ $< \
@@ -68,6 +75,14 @@ $(OUT)/test_ximage: $(ROOT)/tests/test_ximage.c $(OUT)/libdacom.so $(OUT)/asan/l
 	$(CC) $(CFLAGS) -fsanitize=address,undefined -o $@ $< \
 	    $(DACOM_SRC) $(PLATFORM_SRC) -ldl -rdynamic
 
+$(OUT)/asan/libx86math.so: $(X86MATH_SRC) $(HEADERS)
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) -fsanitize=address,undefined -shared -o $@ $(X86MATH_SRC) -lm
+
+$(OUT)/test_x86math: $(ROOT)/tests/test_x86math.c $(OUT)/libdacom.so $(OUT)/asan/libx86math.so
+	$(CC) $(CFLAGS) -fsanitize=address,undefined -o $@ $< \
+	    $(DACOM_SRC) $(PLATFORM_SRC) -ldl -rdynamic
+
 # No i386 libc needed: declarations only, -fsyntax-only.
 check32:
 	@for f in $(wildcard $(ROOT)/src/dalibs/*/*.c); do \
@@ -75,7 +90,7 @@ check32:
 	        -isystem $(ROOT)/tools/stub32 -I$(ROOT)/include -I$$(dirname $$f) $$f || exit 1; \
 	done; echo "check32: 32-bit layouts OK"
 
-test: check32 $(OUT)/test_dacom $(OUT)/test_readfile $(OUT)/test_ximage
+test: check32 $(OUT)/test_dacom $(OUT)/test_readfile $(OUT)/test_ximage $(OUT)/test_x86math
 	$(OUT)/test_dacom $(ROOT)/game/EXE $(OUT)
 	sh $(ROOT)/tests/utf_list.sh $(ROOT)/game/DATA > $(OUT)/utf_list.txt
 	$(OUT)/test_readfile $(ROOT)/game $(OUT)/asan $(OUT)/utf_list.txt $(OUT)/utf_port.txt
@@ -83,14 +98,21 @@ test: check32 $(OUT)/test_dacom $(OUT)/test_readfile $(OUT)/test_ximage
 	cmp $(OUT)/utf_oracle.txt $(OUT)/utf_port.txt && echo "utf walk: identical to oracle"
 	$(OUT)/test_ximage $(OUT)/asan $(ROOT)/tests/ximage_cases.txt $(OUT)/ximage_port.txt
 	cmp $(ROOT)/tests/ximage_golden.txt $(OUT)/ximage_port.txt && echo "ximage: identical to the original"
+	$(OUT)/test_x86math $(OUT)/asan $(ROOT)/tests/x86math_cases.txt $(OUT)/x86math_port.txt
+	cmp $(ROOT)/tests/x86math_golden.txt $(OUT)/x86math_port.txt && echo "x86math: identical to the original"
 
 # Regenerate the case list and record the original's behaviour on it.
-golden: golden-ximage
+golden: golden-ximage golden-x86math
 
 golden-ximage:
 	python3 $(ROOT)/tests/ximage_cases.py > $(ROOT)/tests/ximage_cases.txt
 	$(PYTHON) $(ROOT)/tools/emu/emu_ximage.py $(ROOT)/game/EXE/ximage.dll \
 	    $(ROOT)/tests/ximage_cases.txt $(ROOT)/tests/ximage_golden.txt
+
+golden-x86math:
+	python3 $(ROOT)/tests/x86math_cases.py > $(ROOT)/tests/x86math_cases.txt
+	$(PYTHON) $(ROOT)/tools/emu/emu_x86math.py $(ROOT)/game/EXE/x86math.dll \
+	    $(ROOT)/tests/x86math_cases.txt $(ROOT)/tests/x86math_golden.txt
 
 win32:
 	sh $(ROOT)/tools/win32/build_system_dll.sh
