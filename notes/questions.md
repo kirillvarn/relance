@@ -95,3 +95,34 @@
   objects `0066d320`/`0066d334`.
 - The real logic behind thunk 00575440 is 00564b30 (the [Images] front-end
   loader). It is outside depth 3 and not yet in functions.tsv.
+
+## DA libs port (added 2026-10-15, dacom.dll session)
+15. **dacom RegExp component.** It is not ported. Its only user is
+    debuglib.dll (dev HTTP server, `dacomsrv.ini`). Port it anyway, for
+    completeness? It is a Henry Spencer-style regexp, about 2.5 KB of code
+    (065b4a10..065b5e20).
+16. **Differential test harness.** dacom was verified by running the
+    original machine code under the unicorn emulator against the port.
+    Should that harness be checked in under `tools/`? It needs `unicorn`
+    added to the project venv. Today it lives only in the session
+    scratchpad.
+17. **Shared-object model.** Each original DLL becomes `lib<name>.so`,
+    loaded with dlopen by DACOM AddLibrary and exporting
+    `dll_process_attach`. This keeps the DLL architecture, and Android can
+    dlopen .so files bundled in the APK. The alternative is to link
+    everything statically, with a table of built-in modules. Keep dlopen?
+18. **Message boxes in headless mode.** The POSIX platform layer answers
+    "Ignore" to every FDUMP error/warning box, so the program continues.
+    Should an ERROR (severity 1) abort instead, until an SDL box exists?
+
+## readfile.dll (added 2026-10-15)
+19. **DOS FindFirstFile never works** in the original: the check after the
+    path join is inverted (06b75360). The port keeps that. Does anything
+    in the game rely on enumerating a DOS directory through IFileSystem?
+    If so, the original behaviour would show up as missing files.
+20. **The DOS destructor Releases its parent twice** (06b741b0). That is
+    only reachable for "parent" DOS file systems, created when a file
+    opened from a directory is not a UTF archive. The port keeps it. Fix
+    it if it ever bites?
+21. (answered 2026-10-15) `decomp/` is gitignored and regenerable
+    (CLAUDE.md layout). `export/` and `export.py` are gone.

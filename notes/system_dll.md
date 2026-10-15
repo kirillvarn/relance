@@ -141,3 +141,17 @@ These are checked by `_Static_assert` under `-m32`.
   just as the original shares 06f11990.
 - **Not yet run in the game:** Wine isn't installed, and no copy of `game/`
   exists to swap the DLL into.
+
+## Update 2026-10-15: runs on the dacom port
+- `libsystem.so` now links against `build/linux/libdacom.so`, the port in
+  `notes/dacom_dll.md`. It is no longer left with undefined symbols.
+- `src/dalibs/system/linux_dllmain.c` exports `dll_process_attach`, which
+  DACOM's AddLibrary (`platform_lib_load`) calls after dlopen.
+- `make test` loads it from a `[Libraries]` list and creates a
+  SystemContainer. The container reads `[System]` through the manager's
+  ProfileParser and creates its children aggregated. Initialize and Update
+  then run under ASan/UBSan.
+- The smoke test with the mock DACOM is superseded by this test.
+- `include/dacom.h` now carries the full ICOManager and IProfileParser
+  vtables. The Win32 drop-in still builds clean with `/W4 /WX`, and its
+  imports are unchanged (DACOM_Acquire, FDUMP).
